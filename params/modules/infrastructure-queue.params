@@ -1,0 +1,4 @@
+###############################################################
+# queue-based infrastructure for catp
+
+cat.infrastructure = edu.cuny.cat.comm.QueueBasedInfrastructureImpl

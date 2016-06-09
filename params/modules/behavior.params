@@ -1,0 +1,5 @@
+##################
+# behavior control
+
+behavior.reconnection = 1
+behavior.request_at_wrong_time = 20

@@ -1,0 +1,6 @@
+parent.0 = learner.params
+
+##################
+# trading agent resetting
+
+periodic_resetting.days = -1

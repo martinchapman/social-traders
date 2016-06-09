@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="compile" name="jcat">
+	<property file="build.ant.properties" />
+
+	<property name="projectName" value="jcat" />
+	<property name="projectNameForHuman" value="JCAT" />
+	<property name="projectDescription" value="The Software Platform for TAC Market Design Tournament (CAT)" />
+	<property name="projectVersion" value="0.17" />
+
+	<property name="jvmVersion" value="1.5" />
+	<property name="memory" value="1000m" />
+
+
+	<property name="build.compiler" value="modern" />
+	<property name="sourceDir" value="src" />
+	<property name="testDir" value="test" />
+	<property name="docDir" value="doc" />
+	<property name="toolsDir" value="tools" />
+	<property name="paramDir" value="params" />
+	<property name="resourceDir" value="resources" />
+	<property name="libDir" value="lib" />
+	<property name="outputDir" value="classes" />
+	<property name="appletDir" value="applet" />
+	<property name="apidocDir" value="${docDir}/api/" />
+	<property name="logDir" value="log" />
+
+	<property name="jarFile" value="${projectName}.jar" />
+	<property name="tarFile" value="${projectName}-${projectVersion}.tar.gz" />
+	<property name="srcTarFile" value="${projectName}-src-${projectVersion}.tar.gz" />
+	<property name="libTarFile" value="lib.tar.gz" />
+
+	<property name="appletJarFile" value="jcat-all-${projectVersion}.jar" />
+	<property name="appletHtmlFile" value="index.html" />
+	<property name="specialistJarFile" value="specialist.jar" />
+
+	<property name="mainClass" value="edu.cuny.cat.Game" />
+	<property name="appletClass" value="edu.cuny.cat.GameApplet" />
+	<property name="serverClass" value="edu.cuny.cat.GameServer" />
+	<property name="serverWithTradersClass" value="edu.cuny.cat.GameServerWithTraders" />
+	<property name="traderClientClass" value="edu.cuny.cat.TraderClient" />
+	<property name="marketClientClass" value="edu.cuny.cat.MarketClient" />
+
+	<property name="repastLoc" value="${libDir}/Repast-3.1/RepastJ" />
+	<property name="junitLoc" value="${repastLoc}/lib/junit.jar" />
+	<property name="log4jLoc" value="${repastLoc}/lib/log4j-1.2.8.jar" />
+	<property name="coltLoc" value="${repastLoc}/lib/colt.jar" />
+	<property name="troveLoc" value="${libDir}/trove-1.1b4/lib/trove.jar" />
+	<property name="collectionsLoc" value="${libDir}/collections-generic-4.01/collections-generic-4.01.jar" />
+	<property name="commonsLoc" value="${libDir}/commons-io/commons-io-1.4.jar" />
+	<property name="jfreechartPath" value="${libDir}/jfreechart-1.0.13.jar:${libDir}/jcommon-1.0.16.jar" />
+    <property name="cglib2" value="${libDir}/cglib-nodep-2.2.jar" />
+    <property name="jungPath" value="${libDir}/jung2-2_0_1/col-1.2.0.jar:${libDir}/jung2-2_0_1/concurrent-1.3.4.jar:${libDir}/jung2-2_0_1/jung-algorithms-2.0.1.jar:${libDir}/jung2-2_0_1/jung-api-2.0.1.jar:${libDir}/jung2-2_0_1/jung-graph-impl-2.0.1.jar:${libDir}/jung2-2_0_1/jung-io-2.0.1.jar:${libDir}/jung2-2_0_1/jung-jai-2.0.1.jar:${libDir}/jung2-2_0_1/jung-visualization-2.0.1.jar:${libDir}/jung2-2_0_1/stax-api-1.0.1.jar:${libDir}/jung2-2_0_1/vecmath-1.3.1.jar:${libDir}/jung2-2_0_1/wstx-asl-3.2.6.jar" />
+    <property name="swingPath" value="${libDir}/swing-layout-1.0.3.jar" />
+    <property name="googlePath" value="${libDir}/guava-r08.jar" />
+
+
+	<path id="project.lib.path">
+		<pathelement location="${junitLoc}" />
+		<pathelement location="${log4jLoc}" />
+		<pathelement location="${coltLoc}" />
+		<pathelement location="${troveLoc}" />
+		<pathelement location="${commonsLoc}" />
+		<pathelement location="${collectionsLoc}" />
+		<pathelement path="${jfreechartPath}" />
+        <pathelement path="${cglib2}" />
+        <pathelement path="${jungPath}" />
+        <pathelement path="${swingPath}" />
+        <pathelement path="${googlePath}" />
+
+	</path>
+
+	<path id="project.compile.classpath">
+		<pathelement location="${outputDir}" />
+		<path refid="project.lib.path" />
+		<pathelement path="${java.class.path}" />
+	</path>
+
+	<path id="project.run.classpath">
+		<pathelement location="${jarFile}" />
+		<path refid="project.lib.path" />
+		<pathelement path="${java.class.path}" />
+	</path>
+
+	<target name="cleanOutput">
+		<delete dir="${outputDir}" />
+		<delete file="${jarFile}" failonerror="false" />
+	</target>
+
+	<target depends="cleanOutput" name="prepareOutput">
+		<mkdir dir="${outputDir}" />
+	</target>
+
+	<target name="cleanDoc">
+		<delete dir="${apidocDir}" />
+	</target>
+
+	<target depends="cleanDoc" name="prepareDoc">
+		<mkdir dir="${apidocDir}" />
+	</target>
+
+	<target name="cleanTar">
+		<delete file="${tarFile}" />
+	</target>
+
+	<target name="cleanSrcTar">
+		<delete file="${srcTarFile}" />
+	</target>
+
+	<target name="cleanData">
+		<delete dir="${logDir}" />
+		<delete>
+			<fileset dir="." includes="*.csv" />
+			<fileset dir="." includes="*.log" />
+		</delete>
+	</target>
+
+	<target depends="cleanOutput,cleanTar,cleanSrcTar,cleanDoc,cleanApplet,cleanSpecialist" name="cleanAll">
+	</target>
+
+	<target depends="prepareOutput" name="compile">
+		<javac debug="on" optimize="on" deprecation="on" destdir="${outputDir}" source="${jvmVersion}" srcdir="${sourceDir}">
+			<classpath refid="project.compile.classpath" />
+			<compilerarg value="-Xlint" />
+		</javac>
+	</target>
+
+	<target depends="compile" name="compiletests">
+		<javac debug="on" optimize="on" deprecation="off" destdir="${outputDir}" source="${jvmVersion}" srcdir="${testDir}">
+			<classpath refid="project.compile.classpath" />
+			<compilerarg value="-Xlint" />
+		</javac>
+	</target>
+
+	<target depends="jar,prepareDoc" name="doc">
+		<javadoc author="true" destdir="${apidocDir}" source="${jvmVersion}" overview="${sourceDir}/overview.html" windowtitle="${projectNameForHuman} ${projectVersion}" doctitle="${projectNameForHuman} - ${projectDescription} &lt;br&gt; API Specification for Version ${projectVersion}" useexternalfile="yes">
+			<classpath refid="project.run.classpath" />
+			<packageset dir="${sourceDir}">
+				<exclude name="**/cat09/**" />
+			</packageset>
+		</javadoc>
+	</target>
+
+	<target depends="compile,compiletests" name="jar">
+		<jar jarfile="${jarFile}">
+			<fileset dir="${outputDir}" includes="**/*.class" />
+			<fileset dir="." includes="${paramDir}/**/*.params" />
+			<fileset dir="." includes="${resourceDir}/**/*.gif" />
+		</jar>
+	</target>
+
+	<property name="keystore.location" value=".keystore" />
+	<property name="keystore.password" value="password" />
+
+	<condition property="key.exists">
+		<available file="${keystore.location}" />
+	</condition>
+
+
+	<target name="signjar">
+		<signjar jar="${jarFile}" alias="${projectName}" keystore="${keystore.location}" storepass="${keystore.password}" />
+	</target>
+
+	<target name="genkey" unless="key.exists">
+		<genkey dname="CN=Jinzhong Niu, OU=Agents Lab, O=CUNY, L=New York, S=New York, C=US" alias="jcat" validity="3650" keystore="${keystore.location}" storepass="${keystore.password}" />
+	</target>
+
+	<target name="deletekey" if="key.exists">
+		<delete file="${keystore.location}" />
+	</target>
+
+	<target name="cleanApplet">
+		<delete dir="${appletDir}" />
+	</target>
+
+	<target depends="cleanApplet" name="prepareApplet">
+		<mkdir dir="${appletDir}" />
+	</target>
+
+	<target depends="prepareApplet,jar,genkey" name="applet">
+
+		<jar jarFile="${appletDir}/${appletJarFile}">
+			<zipgroupfileset dir="${libDir}" includes="**/*.jar" excludes="**/mysql*.jar" />
+			<zipfileset src="${jarFile}" />
+			<manifest>
+				<attribute name="Version" value="${projectVersion}" />
+				<attribute name="Main-Class" value="${mainClass}" />
+			</manifest>
+		</jar>
+
+		<signjar jar="${appletDir}/${appletJarFile}" alias="${projectName}" keystore="${keystore.location}" storepass="${keystore.password}" />
+
+		<echo message="preparing ${appletDir}/${appletHtmlFile} ..." />
+		<echo file="${appletDir}/${appletHtmlFile}">
+&lt;!doctype html public "-//w3c//dtd html 4.0 transitional//en"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"&gt;
+&lt;title&gt;${projectName}&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;applet code="${appletClass}" archive="${appletJarFile}" width=100% height=100%&gt;
+&lt;/applet&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+		</echo>
+	</target>
+
+	<target depends="jar" name="specialist">
+
+		<jar jarFile="./${specialistJarFile}">
+			<zipgroupfileset dir="${libDir}" includes="**/*.jar" />
+			<zipfileset src="${jarFile}" />
+			<manifest>
+				<attribute name="Version" value="${projectVersion}" />
+				<attribute name="Main-Class" value="${marketClientClass}" />
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="cleanSpecialist">
+		<delete file="${specialistJarFile}" />
+	</target>
+
+
+	<target depends="jar,doc,cleanTar" name="tar">
+		<tar compression="gzip" tarFile="${tarFile}">
+			<tarfileset dir="." includes="${projectName}.jar,build.xml,readme.html,CHANGES.TXT,LICENSE.TXT,changelog*,${docDir}/**/*.pdf,${apidocDir}/**,${sourceDir}/**/*.java,${testDir}/**/*.java,${paramDir}/**/*.params,,${resourceDir}/**/*.gif,${toolsDir}/**,${libDir}/**" prefix="${projectName}">
+			</tarfileset>
+		</tar>
+	</target>
+
+	<target depends="cleanSrcTar" name="srctar">
+		<tar compression="gzip" tarfile="${srcTarFile}">
+			<tarfileset dir="." includes="build.xml,readme.html,CHANGES.TXT,LICENSE.TXT,changelog*,${docDir}/**/*.pdf,${sourceDir}/**/*.java,${testDir}/**/*.java,${paramDir}/**/*.params,${resourceDir}/**/*.gif,${toolsDir}/**,${libDir}/**" prefix="${projectName}">
+			</tarfileset>
+		</tar>
+	</target>
+
+	<target name="libtar">
+		<tar basedir="." compression="gzip" includes="${libPath}/**" tarfile="${libTarFile}" />
+	</target>
+
+	<property name="params" value="" />
+
+	<target name="run">
+		<java classname="${mainClass}" fork="true" maxmemory="${memory}">
+			<classpath refid="project.run.classpath" />
+			<arg line="${params}" />
+		</java>
+	</target>
+
+	<target name="server">
+		<java classname="${serverClass}" fork="true" maxmemory="${memory}">
+			<classpath refid="project.run.classpath" />
+			<arg line="${params}" />
+		</java>
+	</target>
+
+	<target name="servertraders">
+		<java classname="${serverWithTradersClass}" fork="true" maxmemory="${memory}">
+			<classpath refid="project.run.classpath" />
+			<arg line="${params}" />
+		</java>
+	</target>
+
+	<target name="traders">
+		<java classname="${traderClientClass}" fork="true" maxmemory="${memory}">
+			<classpath refid="project.run.classpath" />
+			<arg line="${params}" />
+		</java>
+	</target>
+
+	<target name="markets">
+		<java classname="${marketClientClass}" fork="true" maxmemory="${memory}">
+			<classpath refid="project.run.classpath" />
+			<arg line="${params}" />
+		</java>
+	</target>
+
+	<target name="customrun">
+		<echo message="The main class is ${main}." />
+		<java classname="${main}" fork="true" maxmemory="${memory}">
+			<classpath refid="project.run.classpath" />
+			<arg line="${params}" />
+		</java>
+	</target>
+
+	<target depends="jar" name="test">
+		<java classname="edu.cuny.cat.AllTests" fork="true">
+			<classpath refid="project.run.classpath" />
+			<jvmarg value="-ea" />
+		</java>
+	</target>
+
+	<target name="help">
+		<echo message="Usage: ant &lt;target&gt; [-Dparams=&lt;paramfile&gt;]" />
+		<echo message="" />
+		<echo message="&lt;target&gt; can be one of the followings:" />
+		<echo message="" />
+		<echo message="jar:             to build ${projectName}." />
+		<echo message="doc:             to build ${projectName} api pages." />
+		<echo message="tar:             to build a ${tarFile} file containing all source and class files." />
+		<echo message="srctar:          to build a ${srcTarFile} file containing only source files." />
+		<echo message="applet:          to build an applet that demonstrates ${projectName} with a graphical console." />
+		<echo message="specialist:      to build a ${specialistJarFile} file for market clients." />
+		<echo message="" />
+		<echo message="run:             to run ${projectName} with the server and clients together." />
+		<echo message="server:          to run the ${projectName} server only." />
+		<echo message="traders:         to run trader clients only." />
+		<echo message="markets:         to run market clients only." />
+		<echo message="servertraders:   to run the server and trader clients together." />
+		<echo message="test:            to run unit tests." />
+		<echo message="" />
+		<echo message="cleanOutput:     to clean up temporary class files and ${jarFile}." />
+		<echo message="cleanDoc:        to clean up ${projectName} api pages." />
+		<echo message="cleanTar:        to clean up the ${tarFile} file." />
+		<echo message="cleanSrcTar:     to clean up the ${srcTarFile} file." />
+		<echo message="cleanApplet:     to clean up applet files." />
+		<echo message="cleanSpecialist: to clean up the ${specialistJarFile} file." />
+		<echo message="cleanAll:        to clean up all files that can be automatically generated." />
+		<echo message="cleanData:       to clean up all .log and .csv files generated by ${projectName}." />
+	</target>
+
+
+</project>

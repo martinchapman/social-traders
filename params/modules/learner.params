@@ -1,0 +1,32 @@
+###############
+# learners
+
+rotherev_learner.k = 100
+rotherev_learner.recency = 0.1
+rotherev_learner.experimentation = 0.2
+rotherev_learner.scaling = 1.0
+
+widrowhoff_learner.learningrate = 0.85
+widrowhoff_learner.momentum = 0.5
+
+sliding_window_learner.windowsize = 4
+
+n_armed_bandit_learner.action_choosing = edu.cuny.ai.learning.EpsilonGreedyActionChoosingPolicy
+n_armed_bandit_learner.return_updating = edu.cuny.ai.learning.AdaptiveReturnUpdatingPolicy
+
+# pluggable learning policy
+
+epsilon_greedy_action_choosing.epsilon = 0.1
+epsilon_greedy_action_choosing.alpha = 1
+softmax_action_choosing.temperature = 0.2
+softmax_action_choosing.alpha = 1
+
+adaptive_return_updating.learner = edu.cuny.ai.learning.AveragingLearner 
+
+# deprecated, to be removed
+epsilon_greedy_learner.epsilon = 0.1
+epsilon_greedy_learner.alpha = 1
+
+# deprecated, to be removed
+softmax_learner.temperature = 0.2
+softmax_learner.alpha = 1

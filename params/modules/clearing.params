@@ -1,0 +1,7 @@
+parent.0 = learner.params
+
+#########################
+# clearing conditions
+
+# by default, CDA, clear the market whenever a shout arrives
+probabilistic_clearing.threshold = 1

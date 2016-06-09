@@ -1,0 +1,1343 @@
+Version 0.17 - 09/12/2009
+-------------------------
+
+
+* NEW FEATURES AND MODIFICATIONS
+
+
+- Auction policies grouped into separate packages, each for one type
+  - edu.cuny.cat.market.accepting
+  - edu.cuny.cat.market.charging
+  - edu.cuny.cat.market.clearing
+  - edu.cuny.cat.market.matching
+  - edu.cuny.cat.market.pricing
+  - edu.cuny.cat.market.quoting
+
+- edu.cuny.cat.market.matching.ShoutEngine refactored
+  now extends edu.cuny.cat.market.AuctioneerPolicy.
+- edu.cuny.cat.market.GenericDoubleAuctioneer
+  - P_SHOUTENGINE
+    renamed to P_MATCHING and so is the value of the string.
+
+- edu.cuny.cat.market.Auctioneer
+  - getShoutEngine() added
+    to make the shout engine available for policies that need more info about 
+    shouts.
+
+- edu.cuny.cat.market.MarketQuote
+  - getMid() added
+    to return the mid point of the ask and bid quotes.
+- edu.cuny.cat.market.quoting.QuotingPolicy
+  - midQuote() added
+    to call MarketQuote.getMid().
+
+- edu.cuny.cat.market.charging.ComboChargingPolicy added
+- edu.cuny.cat.market.charging.SerialChargingPolicy added
+  combines multiple charging policies and uses one at a time across multiple 
+  phrase.
+
+- new auction policy, subscribing, added for specialists to decide which 
+specialists they subscribe for info from
+  - edu.cuny.cat.market.subscribing.SubscribingPolicy added
+  - edu.cuny.cat.market.subscribing.SelfSubscribingPolicy added
+    to always subscribe with itself only.
+- edu.cuny.cat.market.GenericDoubleAuctioneer.subscribingPolicy added
+- edu.cuny.cat.market.Auctioneer.getSubscribingPolicy() added
+
+
+- registry classes added or refactored
+  - edu.cuny.cat.ClientRegistry added
+    includes code originally dispersing in edu.cuny.cat.GameClient.
+  - edu.cuny.cat.MarketRegistry added
+    extends ClientRegistry for market clients and includes features that are 
+    needed by certain CAT'09 entries.
+  - edu.cuny.cat.TraderRegisry added
+    extends ClientRegistry for trader clients.
+  - edu.cuny.cat.GameClient.shouts/transactions/traders/specialists removed
+  - edu.cuny.cat.GameClient.registry added
+    records the information on shouts, transactions, traders and specialists; 
+    traders and specialists in the registry are added by the game client, while 
+    shouts and transactions in the registry are added by itself via 
+    corresponding auction events.
+  - edu.cuny.cat.market.core.SpecialistInfo added
+    extends edu.cuny.cat.core.Specialist and is used in 
+    edu.cuny.cat.MarketRegistry to provide detailed information about a 
+    specialist.
+  - edu.cuny.cat.market.core.TraderInfo added
+    extends edu.cuny.cat.core.Trader and is used in edu.cuny.cat.MarketRegistry 
+    to provide detailed information about a trader.
+  - edu.cuny.cat.TraderClient.trader
+    now initialized in ShoutSession when it is needed rather than via 
+    GameStartingEvent as the trader's registry may already have the object for 
+    this trader.
+  - edu.cuny.cat.market.Auctioneer.getRegistry() added
+  - edu.cuny.cat.market.GenericDoubleAuctioneer.registry added
+
+
+- CATP specification changed on transaction notification
+  - TRANSACTION message added
+    for the server to notify the two involved traders that their shouts were 
+    matched, which leads to TransactionExecutedEvent;
+    POST TRANSACTION used previously in this occasion now only used for 
+    notifying subscribers.
+  - edu.cuny.cat.server.ConnectionAdaptor.TransactionToTraderSession added
+    to support the newly added TRANSACTION messages.
+  - edu.cuny.cat.server.ConnectionAdaptor.processTransactionExecuted() modified
+    to start a TransactionToTraderSession.
+  - edu.cuny.cat.server.ConnectionAdaptor.TransactionReactiveSession renamed 
+    to TransactionFromSpecialistSession and modified to dispatch 
+    TransactionPostedEvent only.
+  - edu.cuny.cat.GameClient.PostTransactionSession modified
+    to fire TransactionPostedEvent only rather than an additional 
+    TransactionExecutedEvent to traders involved in the transation.
+  - edu.cuny.cat.TraderClient.TransactionSession added
+    to fire TransactionExecutedEvent;
+    instance of TransactionSession added into the invocations of 
+    setExpectedReactiveSessions() that have PostTransactionSession previously.
+  - edu.cuny.cat.TraderClient.specialist renamed
+    to registeredSpecialist.
+  - version number of CATP advanced to 2.0.
+
+
+- edu.cuny.cat.GameClient
+  - postTransactionReceived() added
+    as an abstract method so as for trader clients and market clients to process 
+    posted transactions differently.
+  - id renamed to clientId
+- edu.cuny.cat.MarketClient
+  - postTransactionReceived() added
+    includes code moved from edu.cuny.cat.GameClient.PostedTransactionSession.
+  - specialist added
+    to represent the market client itself.
+- edu.cuny.cat.TraderClient
+  - postTransactionReceived() added
+    includes code moved from edu.cuny.cat.GameClient.PostedTransactionSession.
+
+
+- event-based mechanism used or replacing the observer/observable mechanism for 
+inter-module communications
+  - transaction request from auctioneer to market client
+  - subscribee request from subscribing policy to market client
+
+
+- edu.cuny.cat.core.Shout
+  - TRACE added
+    as a switch to control display traces of shout, for debugging purpose only.
+
+
+- edu.cuny.ai.learning.WidrowHoffLearner
+  - setup() updated
+    to check the validity of learningRate, the default value of which is changed 
+    to 0.85.
+- edu.cuny.ai.learning.WidrowHoffLearnerWithMomentum
+  - setup() updated
+    to check the validity of momentum.
+
+
+- edu.cuny.cat.server.ChargeValidator
+  - check() modified
+    to allow the choice whether or not banning a specialist when an invalid 
+    price is imposed.
+
+
+- edu.cuny.cat.stat.HistoricalDataReport
+  - eventOccurred() modified
+    to process edu.cuny.cat.event.IdAssignedEvent to obtain the Id of the GD 
+    trader for debug purpose.
+
+
+- edu.cuny.util.Utils
+  - align() added
+    to generate nicer text output.
+
+
+- edu.cuny.ui.UIUtils added
+  to include utility methods for UI, e.g., setting default style of renderers.
+
+
+- edu.cuny.util.PriorityQueueTest added
+  to test the usage of java.util.PriorityQueue with a comparator.
+
+
+- jfreechart and jcommon libs updated to have latest versions
+  edu.cuny.cat.ui.*, edu.cuny.jfree.chart.*, and edu.cuny.jfree.data.* updated 
+  to comply with the APIs of the new versions of jfreechart and jcommon libs.
+
+
+
+* BUG FIXES
+
+
+- event/message dispatching mechanism refactored
+  This aims to make sure the following order at any party in the game: shout 
+  placed, shout posted, transaction executed, transaction posted. This order was 
+  not fully guaranteed and was not checked against thoroughly previously.
+  - edu.cuny.cat.task package added
+    contains classes for processing tasks of dispatching events or messages.
+  - edu.cuny.cat.event.*Dispatch* classes
+    for event dispatching, moved to edu.cuny.cat.task.
+  - edu.cuny.cat.task.*MessageDispatchingTask added
+    for message dispatching.
+  - edu.cuny.cat.task.DispatchingTask added
+    as super class of EventDispatchingTask and MessageDispatchingTask.
+  - edu.cuny.cat.task.EventDispatcher renamed
+    to Dispatcher as the interface for all types of dispatchers
+  - edu.cuny.cat.task.Priority[As|S]ynchronousDispatcher added
+    supports dispatching events with high priority and incoming messages with 
+    low priority and uses task IDs to implement stable ordering
+  - edu.cuny.cat.comm.MessageHandler added
+    as an interface for classes that can process CATP messages, which is used in 
+    dispatching incoming CATP messages.
+  - edu.cuny.cat.server.ConnectionManager.dispatcher
+    now uses Priority[As|S]ynchronousDispatcher so as to support dispatching 
+    tasks with different priority.
+  - edu.cuny.cat.server.ConnectionManager.dispatchIncomingMessage() added
+    to enqueue incoming messages.
+  - edu.cuny.cat.server.ConnectionManager.dispatchOutgoingMessage() added
+    to enqueue outgoing messages.
+  - edu.cuny.cat.server.ConnectionManager.EventBeforeMessageComparator added
+    to set high priority for processing enqueued events and low priority for 
+    processing enqueued incoming CATP messages.
+  - edu.cuny.cat.server.ConnectionAdaptor.messageArrived() modified
+    to dispatch incoming messages.
+  - edu.cuny.cat.server.ConnectionAdaptor.dispatchIncomingMessage() added
+    to dispatch incoming messages via ConnectionManager.
+  - edu.cuny.cat.server.ConnectionAdaptor.handleMessage() added
+    implementing MessageHandler interface, to do what was done in 
+    messageArrived() previously.
+
+
+- edu.cuny.cat.server.GameClock.day_open() modified
+  now waits a certain period of time after DayOpenedEvent is fired so that when 
+  asynchronous communication infrastructure is used traders will have enough 
+  time to get subscribed for information if they need.
+
+
+- edu.cuny.cat.ui.ClockPanel
+  - processDayOpening()
+    modified to invoke a thread to add a scoring day on the clock meter, which 
+    avoids exceptions on concurrent access to dataset for the meterplot
+
+
+- edu.cuny.cat.server.ConnectionManager
+  - randomize()
+    synchronized so as to avoid concurrent access to the uniform distribution 
+    that is used in the randomization of event dispatching.
+
+
+- edu.cuny.cat.market.matching.LazyMaxVolumeShoutEngine
+  invocation of Uniform.staticNextIntFrom() replaced by non-static equivalent 
+  method to achieve replicable experimental results.
+
+- edu.cuny.cat.GameClient
+  List used instead of HashSet to present the available markets and traders now 
+  so that the iterating order is deterministic.
+
+
+- edu.cuny.event.Event
+  - getKeys()
+    bug fixed that NullPointerException is thrown when no value is set
+
+
+
+
+
+
+Version 0.16 - 10/03/2009
+-------------------------
+
+
+* NEW FEATURES AND MODIFICATIONS
+
+
+- edu.cuny.cat.Game refactored
+  - createMarkets(Parameter base)
+    added so that multiple groups of specialists are created from different 
+    parameter bases
+
+
+- edu.cuny.cat.GameClient
+  - cleanUpDaily(), cleanUpGamely()
+    added to reset or clean up respectively after a trading day and after a 
+    game.
+
+
+- HashMap and HashSet replaced by TreeMap and LinkedHashSet wherever the order 
+of elements matters in JCAT, which makes sure that the result of a game with the 
+same configuration will have the same result across different runs.
+
+
+- edu.cuny.cat.market.GenericDoubleAuctioneer refactored
+  - currentQuote
+    now updated whenever accessed.
+  - clearingQuote
+    removed, and currentQuote used in clear() instead.
+
+
+- edu.cuny.cat.server.ConnectionManager
+  - clientCheckIn()
+    modified to display checkin info about specialists only.
+
+
+- edu.cuny.cat.trader.strategy.AbstractTradingAgent refactored
+  - isActive
+    removed.
+  - active()
+    renamed to isActive() and made abstract.
+  - resetting currentShout
+    moved to processDayOpened() instead of processGameStarting() previously.
+
+- edu.cuny.cat.trader.strategy.AbstractStrategy refactored
+  - MIN_PRICE_DIFFERENCE
+    added in case a strategy, say GD, may need to interpolate between two 
+    discrete points and need to know how small an interpolation step could be.
+
+- edu.cuny.cat.stat.HistorialReport refactored and modified
+  - DEFAULT_MEMORYSIZE
+    changed to 5 from 10 after GD is fixed to work fine.
+  - debug
+    renamed to isDebugging, and its getter and setter also renamed.
+  - printShortState()
+    added to print out concise state info.
+  - updateTransPriceLog(TransactionExecutedEvent), 
+  updateShoutLog(ShoutPlacedEvent)
+    removed since it is TransactionPostedEvent and ShoutPostedEvent that are 
+    used now.
+
+
+- edu.cuny.util.ObjectRegistry
+  - defaultSystem
+    added so as for utility packages to obtain the correct version of object 
+    from the registry automatically, replacing the previous approach that uses 
+    the package names as separate systems.
+  - edu.cuny.cat.Game.setupObjectRegistry() and cleanupObjectRegistry()
+    modified to backup and restore the default system in the object registry 
+    automatically.
+
+
+- edu.cuny.ai.learning.ActionChoosingPolicy and subclasses refactored
+  - edu.cuny.ai.learning.ActionChoosingPolicy
+    getProbabilities() added to expose the probabilities of actions being 
+    chosen, a previously intermediate results of action choosing.
+  - edu.cuny.ai.learning.SoftmaxActionChoosingPolicy
+    toString() added;
+    field variables containing intermediate results removed.
+  - edu.cuny.ai.learning.EpsilonGreedyActionChoosingPolicy
+    internalAct() and updateEpsilon() added so that multiple actions can be 
+    chosen in a row before epsilon gets updated.
+
+- edu.cuny.ai.learning.MultiActionChoosingPolicy and subclasses added to support 
+choosing multiple actions once from a set of actions
+  - edu.cuny.ai.learning.EpsilonGreedyMultiActionChoosingPolicy
+    added, based on edu.cuny.ai.learning.EpsilonGreedyActionChoosingPolicy.
+  - edu.cuny.ai.learning.SoftmaxMultiActionChoosingPolicy
+    added, based on edu.cuny.ai.learning.SoftmaxActionChoosingPolicy.
+
+
+- edu.cuny.util.Utils having new methods manipulating arrays
+  - toArray(List<Double> list)
+    added to convert a list of Doubles to an array of double numbers.
+  - randomTest(String tag)
+    added for testing whether different runs of jcat generate identical results 
+    by printing out a random number.
+
+
+- edu.cuny.util.MathUtils refactored
+  - maxIndex()
+    new versions added to use an internal uniform distribution rather than an 
+    external specified one.
+
+
+- lib/*.jar
+  - mysql-connector-java library removed
+  - swinglabs library removed
+
+- build.xml
+  - removed the paths of libraries removed above
+
+
+
+* BUG FIXES
+
+
+- edu.cuny.cat.trader.strategy.GDStrategy refactored and modified
+  - modifyShout(Shout.MutableShout shout)
+    modified to avoid setting the calculated price with maximal expected profit 
+    when the trader has a more competitive existing shout, which previously will 
+    cause the trader to fail to sweeten its offer even when it has a huge profit 
+    margin at that price, and eventually lead to low efficiency of the market.
+    JASA does not have this issue because JASA removes the existing shout of a 
+    trader's before requesting its new shout, while JCAT does not support 
+    withdrawing a shout.
+  - getMax()
+    modified to allow a smaller interpolation step rather than 1.0 previously;
+    the step may be as small as AbstractStrategy.MIN_PRICE_DIFFERENCE.
+  - maxProb
+    added for debugging purpose.
+
+
+- edu.cuny.cat.stat.HistorialReport
+  - shoutMap
+    never cleared previously, which leads to increasing memory use.
+  - no longer reset() after a day closes
+    originally doing a daily reset() helps to obtain an okay efficiency when GD 
+    failed to work well.
+
+
+- edu.cuny.cat.market.UniformPricingPolicy
+  - determineClearingPrice()
+    modified to use the prices of matched shouts rather than the market quotes 
+    to avoid NaN transaction prices when certain quoting policies, say 
+    SingleSidedQuotingPolicy, lead to NaN clearing prices in certain scenarios.
+
+
+- edu.cuny.ai.learning.SoftmaxActionChoosingPolicy
+  - act(double returns[], Set<Integer> actions)
+    not properly implemented previously, now fixed.
+
+
+- edu.cuny.util.io.CSVWriter
+  - open()
+    modified to automatically create parent directories of the csv file when 
+    necessary.
+
+
+- edu.cuny.util.MathUtils
+  - round(double, int)
+    modified to round the double value after shifting instead of truncating it.
+
+
+
+Version 0.15 - 09/20/2009
+-------------------------
+
+
+* NEW FEATURES AND MODIFICATIONS
+
+
+- global object referencing classes added
+  - edu.cuny.util.ObjectRegistry
+    added to support registering and retrieving objects that are accessible to 
+    various classes without direct referencing, e.g., random number generator 
+    factory and event engine.
+    supports multiple systems to run in a single JVM with each using a separate 
+    set of objects, e.g., the scenario where JCAT is invoked by another Java 
+    program to run auction simulations.
+  - edu.cuny.util.Galaxy
+    added, implementing ObjectRegistry with a two-level mapping data structure.
+
+
+- edu.cuny.random refactored to allow having separate random generator factories 
+within a JVM
+  - edu.cuny.prng.PRNGFactory
+    redefined as an interface;
+    parameteried setup moved to GlobalPRNG.
+  - edu.cuny.prng.GlobalPRNG
+    no longer a singleton within a JVM, but remains to be a singleton in a 
+    system in the context of edu.cuny.util.ObjectRegistry.
+
+
+- edu.cuny.event refactored to allow having separate event engines within a JVM
+  - edu.cuny.event.EventEngine
+    no longer a singleton within a JVM, but remains to be a singleton in a 
+    system in the context of edu.cuny.util.ObjectRegistry.
+  - classes renamed to drop the 'Typed' prefix
+  - edu.cuny.event.Event.type
+    removed; additional argument added instead in 
+    EventEngine.synchronizedDispatch() so as to match events with registered 
+    lsiteners.
+
+
+- edu.cuny.cat.comm refactored
+  - edu.cuny.cat.comm.Infrastructure
+    cleanUp() added to clean up the infrastruture after finishing using it.
+  - edu.cuny.cat.comm.CatpInfrastructure
+    added to define the communication infrastructure dedicated for cat games.
+  - edu.cuny.cat.comm.CallBasedInfrastructureImpl, QueueBasedInfrastructureImpl
+    freeServerConnector() added to release the blocked server connector that 
+    listens to accept clients.
+  - edu.cuny.cat.comm.CallBasedCatpServerConnector, 
+  QueueBasedCatpServerConnector
+    close() updated to call freeServerConnector() of corresponding CATP 
+    infrastructure implementation.
+    isClosed() added.
+
+
+- edu.cuny.cat.server refactored
+  - edu.cuny.cat.server.GameController
+    stop() split into a new stop() and exit() so that external programs that use 
+    JCAT can choose not to terminate JVM as JCAT typically does as a standalone 
+    application.
+  - edu.cuny.cat.server.SessionTimeoutTaskFactory
+    createSessionTimeoutTask() became useless after using generics and removed.
+
+
+- edu.cuny.cat refactored
+  - edu.cuny.cat.ClientSynchronizer
+    waitAllClients() split into waitForClients() and dispose() so that it can be 
+    used repeatedly and gets cleaned up in the end.
+    redefined to be no longer a singleton.
+  - edu.cuny.cat.Preferences
+    removed after adopting the object registry and the initialization of 
+    GlobalPRNG and CATP infrastructure moved to Game.setupPreferences().
+  - edu.cuny.cat.Game
+    refactored to use the object registry to register and retrieve global 
+    objects, including random number generator factory, event engine, and CATP 
+    infrastruture.
+    setupObjectRegistry() added to set up the object registry.
+    cleanupObjectRegistry() added to clean up the object registry.
+    setupPreferences() modified to take an additional argument to control 
+    whether to initialize log4j or not, which is useful when JCAT is used by an 
+    external program that already configures log4j.
+    startTraders() and startMarkets() modified to force clients to get connected 
+    in order by using ClientSynchronizer repeatedly, which guarantees not only 
+    that the server starts only after all clients connect in but also these 
+    clients connect in the order that they are created and initialized.
+
+
+- edu.cuny.cat.event refactored
+  - edu.cuny.cat.EventDispatchingTaskOnClientSide
+    moved to edu.cuny.cat.event.
+  - edu.cuny.cat.server.EventDispatchingTaskOnServerSide
+    moved to edu.cuny.cat.event and refactored to use generics and not to refer 
+    to edu.cuny.cat.server.ConnectionAdaptor any more.
+
+
+- smart conversion of object types added
+  - edu.cuny.util.Utils
+    <V> V convert(String, Class<V>) added to smartly convert a string to a 
+    specified type, including parsing the string to a number when applicable.
+    <U,V> V[] convert(U[], Class<V>) added to smartly convert an array of 
+    elements of type U to an array of elements of type V, using convert(String, 
+    Class<V>).
+    These methods help to avoid warnings of unchecked cast.
+
+- edu.cuny.util.io.CSVReader refactored
+  - Object[] nextRecordTyped()
+    replacing List nextRecord() that smartly converts strings read from the file 
+    to objects of specified types.
+  - <N extends Number> N[] nextRecordTyped(Class<N>)
+    added to support reading a list of numbers.
+  - String[] nextRecord()
+    added to read a list of strings.
+
+
+- more classes refactored to use generics
+  - the generics version of apache common collections used
+  - edu.cuny.util.GenericReflection
+    added, providing methods that wrap up the operations that use reflection and 
+    generics but still trigger warnings of unchecked cast.
+  - @SuppressWarnings("unchecked")
+    - edu.cuny.jfree.*, edu.cuny.cat.ui.SpecialistView, 
+    added to avoid warnings of unchecked cast due to the use of JFreeChart, 
+    which do not use generics.
+    - edu.cuny.util.ParameterDatabaseTreeNode, 
+    ParameterDatabase.buildTreeModel()
+    added to avoid warnings of unchecked cast due to the use of 
+    javax.swing.tree.DefaultMutableTreeNode, which do not use generics.
+
+
+- edu.cuny.prng.DiscreteProbabilityDistribution moved to edu.cuny.random
+
+
+- more unit tests added
+  - edu.cuny.util.UtilsTest
+
+
+- deprecated learner moved from source to test folder to continue to support 
+testing other learners
+  - edu.cuny.ai.learner.EpsilonGreedyLearner
+  - edu.cuny.ai.learner.EpsilonGreedyLearnerWithDiscount
+  - edu.cuny.ai.learner.SoftmaxLearner
+  - edu.cuny.ai.learner.SoftmaxLearnerWithDiscount
+
+
+- header of source files updated
+  -  "CAT - TAC Market Design Competition Server" changed to "JCAT - TAC Market 
+  Design Competition Platform"
+
+
+- lib/
+  - collections-generic-4.01, the generics version of apache common collections 
+  library
+  added to replace the non-generics version.
+
+
+- build.xml
+  - path of apache common collections library updated
+  - separate classpathes defined for compilation and execution, where the former 
+  uses the output folder whereas the latter uses the .jar file.
+  - <compilerarg value="-Xlint" /> added to enables all recommended Xlint 
+  options of javac.
+
+
+-- readme.html updated
+
+
+* BUG FIXES
+
+
+
+
+Version 0.14 - 07/02/2009
+-------------------------
+
+
+* NEW FEATURES AND MODIFICATIONS
+
+
+- event dispatching classes refactored
+  - generic classes for event dispatching
+    moved from edu.cuny.cat.server to edu.cuny.cat.event since they are now used 
+    on both the server side and the client side, including EventDispatcher, 
+    EventDispatchingTask, EventDispatchingTaskQueue, SynchronousEventDispatcher, 
+    and AsynchronousEventDispatcher.
+  - ConnectionManager
+    terminate() added to stop listening to connection requests and terminate the 
+    event dispatcher. It is called in GameController.stop() when a simulation 
+    exits.
+
+- event dispatcher used on client side to make sure local events and messages 
+to/from the server follow right order.
+  - edu.cuny.cat.server.EventDispatchingTaskOnServerSide
+    added to dispatch events to ConnectionAdaptors on the server side, and doing 
+    what the previous EventDispatchingTask does.
+  - edu.cuny.cat.EventDispatchingTaskOnClientSide
+    added to dispatch events to AuctionEventListeners on the client side.
+  - edu.cuny.cat.event.EventDispatcher
+    addTask() and process() methods added, which together are equivalent to 
+    processTask().
+    It is necessary for events to be queued and dispatched separately so as to 
+    make sure local events and messages to/from the server follow right order.
+  - edu.cuny.cat.GameClient (and its subclasses, MarketClient and TraderClient)
+    dispatcher added to use SynchronousEventDispatcher to dispatch events 
+    created on the client side in order.
+    implements Observer and gets notified if event dispatching fails.
+    dispatches events in a two-step procedure in ReactiveSessions - adding the 
+    dispatching task into the queue, and processing the task. This guarantees 
+    not only the events get dispatched before those generated after the response 
+    is sent back to the server and the response is sent before the messages 
+    generated after the event is dispatched.
+
+
+- new classes added for notifying information subscribers of shouts and 
+transactions
+  - edu.cuny.cat.event.ShoutPostedEvent
+    added for notifying subscribers of shouts placed in a market.
+    ShoutPlacedEvent is now used only for traders who place the shout of concern 
+    and the market where the shout is placed.
+  - edu.cuny.cat.event.TransactionPostedEvent
+    added for notifying subscribers of transactions executed in a market.
+    TransactionExecuted is now used only for traders who are involved in a 
+    transaction and the market that executed the transaction.
+  - edu.cuny.cat.server.ConnectionAdaptor
+    processShoutPlaced() split into processShoutPlaced() and 
+    processShoutPosted(), which respectively notify the trader who make the 
+    shout and those subscribers, including the trader itself if it's among the 
+    subscribers.
+    processTransactionExecuted() replaced by processTransactionPosted() to 
+    notify the traders who are involved in the transaction and the subscribers, 
+    and notify the traders only once even if they are among the subscribers.
+  - edu.cuny.cat.stat.HistoricalReport
+    updateShoutLog(ShoutPlacedEvent) replaced by 
+    updateShoutLog(ShoutPostedEvent) to process shouts.
+    updateTransPriceLog(TransactionExecutedEvent) replaced by 
+    updateTransPriceLog(TransactionPostedEvent) to process transactions.
+  - edu.cuny.cat.trader.strategy.MomentumStrategy and ZIQStrategy
+    shoutPlaced() replaced by shoutPosted().
+    transactionExecuted() replaced by transactionPosted().
+
+
+- regarding pending sessions for traders to forward shouts to markets
+  - edu.cuny.cat.server.ConnectionAdaptor.pendingSessions
+    renamed to pendingRequestSessions, which contains pending 
+    ShoutFromTraderSessions (only for the moment).
+  - ConnectionAdaptor.clearPendingRequestSessions()
+    added to clean up existing pending ShoutFromTraderSessions after a 
+    DayClosedEvent is received.
+
+
+- market clients subscribe for info by default now.
+  - edu.cuny.cat.MarketClient.eventOccurred()
+    now by default subscribes for information in its own market after a 
+    DayOpenedEvent is received.
+
+
+- regarding state of clients tracked by the server
+  - edu.cuny.cat.server.ConnectionAdaptor.calculateState()
+    added to make sure that the state, once set FATAL or CONN_CLOSED, will NOT 
+    be overwritten by ERROR, or other non-error state codes.
+  - edu.cuny.cat.server.ConnectionAdaptor.setState()
+    now automatically close the connection after the state is set FATAL.
+
+
+- methods added to examine the status of threads in the multi-threading mode in 
+JCAT
+  - GameClock.getThread() added to obtain the thread of running the game clock.
+  - ListenableConnection.getThread() added.
+  - Utils.getStackTrace(Thread) added to obtain the stack trace of a given 
+  thread.
+
+  
+- toString() added in various classes.
+  - edu.cuny.cat.event.AuctionEvent and its subclasses
+  - edu.cuny.cat.core.Transaction
+
+
+- edu.cuny.cat.market.EquilibriumCalculator
+  - isEquilibriaFound()
+    added to tell whether there are equilibria in the market
+
+
+- various classes updated to support generics in Java 1.5+.
+
+
+- unused database report-related classes and files removed
+  - edu.cuny.cat.stat.BufferedSQLReport
+  - edu.cuny.cat.stat.SQLReport
+  - tools/ directory
+
+
+
+* BUG FIXES
+
+
+- when a client fails to respond in a timely manner, the server may suffer from 
+problems of different kinds.
+  - edu.cuny.cat.server.GameController
+    now creates and dispatches AvailableTradersAnnouncedEvent and 
+    AvailableMarketsAnnouncedEvent after GameStartingEvent from the game clock 
+    is dispatched. These two events are previously dispatched respectively until 
+    an OK response in ConnectionAdaptor.GameStartingSession and 
+    ConnectionAdaptor.PostTraderSession is received. This change on one hand can 
+    reduce the number of event-dispatching tasks needed since GameController now 
+    does this collectively. On the other hand, previous implementation may lead 
+    to incorrect message order, e.g., OPTIONS GameStarted going before POST 
+    SPECIALIST messages, if the transmission of POST TRADER message involves a 
+    long delay and the sync timeout in GameClock for posting client lists 
+    occurs.
+  - edu.cuny.cat.server.SessionTimeoutTask
+    run() changed not to be synchronized due to risks of deadlocks. A deadlock 
+    may happen when the thread executing timeout tasks calls and waits upon the 
+    synchronized ConnectionAdaptor.timeout() and the thread reading and 
+    processing messages for a ConnectionAdaptor calls and waits upon 
+    synchronized SessionTimeoutTask.cancel(). The deadlock will freeze the 
+    client and cause all subsequent synchronized events from GameClock to 
+    timeout since the frozen client is still marked active and counted in 
+    waiting for responses.
+    run() now catches exceptions that may be thrown during the invocation of 
+    ConnectionAdaptor.timeout() because an uncatched exception will crash the 
+    thread executing the timeout tasks in JVM.
+  - edu.cuny.cat.comm.CatpProactiveSession.completed
+    added to tell whether this session has completed. A proactive session 
+    completes either after it processes a response or it times out. This flag 
+    helps to avoid processing a session that has been processed in 
+    ConnectionAdaptor.timeout().
+  - edu.cuny.cat.ConnectionAdaptor.timeout()
+    now checks the whole pendingProactiveSessions queue to remove a timeout 
+    session instead of only its head previously, because it turns out in Java 
+    that a timeout task getting enabled later than another task may actually get 
+    executed earlier.
+  - edu.cuny.cat.server.TimeoutTask
+    cancel() redefined to return a boolean, indicating whether the cancellation 
+    is successful. If a task has been canceled, invoking cancel() again will 
+    return false. SessionTimeoutTask.cancel() changed correspondingly
+  - edu.cuny.cat.GameClient
+    testTimeout(), testTraderTimeout(), and testMarketTimeout() added for 
+    debugging the impact of a delayed response to the server.
+
+
+- edu.cuny.cat.stat.HistoricalReport
+  - addToSortedShouts()
+    now allows shouts with the same id and the same price since a modifying 
+    shout with the same price may be allowed to place in a market.
+
+
+- unnecessary error messages removed
+  - edu.cuny.cat.registry.SimpleRegistry.moveClient()
+    returns a boolean value indicating the moving is successful or not. This 
+    helps to avoid duplicate error messages in addFailedClient() when a client 
+    gets more than one FATAL errors and moved from the working client list to 
+    the failed client list.
+  - edu.cuny.cat.GameClient.dectedAndRunReactiveSessions()
+    does NOT throw an error any more even if the OracleSession fails to process 
+    a message because this is expected if the connection is closed.
+
+
+- edu.cuny.cat.comm.Session
+  - sendMessage(Message)
+    changed to sendMessage(M) throw CatException to support generics and to let 
+    the upper level to process exception rather than display an error here.
+
+    
+- edu.cuny.cat.comm.SocketBasedConnection
+  - sendMessage(Message)
+    changed to sendMessage(M) to support generics.
+    changed to display error messages only when the connection is still open.
+
+
+
+
+Version 0.13 - 05/02/2009
+-------------------------
+
+
+* NEW FEATURES AND MODIFICATIONS
+
+
+- build.xml
+  - 'help' target added to display a list of available targets.
+  - requires Java 1.5+ now.
+
+    
+- edu.cuny.cat.ClientSynchronizer added to make the game server wait until all 
+local clients check in.
+  - This is useful when a simulation without manual intervention is run, the 
+  typical scenario for research experiments.
+  - local GameClients sends TypedEvent to notify of their arrival in 
+  CheckInSession.
+
+
+- methods added and modifications made to support multi-phase control of the 
+game server
+  - edu.cuny.cat.server.GameController
+    initialize(), start(), and stop() respectively make the server ready to 
+    accept connections, start the simulation, and stop the simulation and quit. 
+    reports produce outputs once the simulation is over rather than when the 
+    program quits.
+  - edu.cuny.cat.GameServer
+    initialize() and start() respectively call their counterpart methods of 
+    GameController.
+
+- edu.cuny.cat.server.ClockController
+  - start() and stop() added to control the controller itself.
+  - startClock(), pauseClock(), resumeClock(), and quitGame() added to control 
+  the clock or the game respectively.
+  - by default, the controller starts the clock when it starts and quits the 
+  game when it stops.
+
+
+- edu.cuny.cat.server.Console added to support different ways of controlling the 
+game server
+  - edu.cuny.cat.ui.GameConsole renamed to GuiConsole, still as the usual 
+  graphical console
+  - edu.cuny.cat.server.SilentConsole added to support simulations without 
+  further intervention.
+  - edu.cuny.cat.server.TelnetConsole added to support remote control of 
+  simulations through telnet.
+  - params/console.params renamed to guiconsole.params
+  - params/noconsole.params modified to use SilentConsole
+  - params/telnetconsole.params added to use TelnetConsole
+  - edu.cuny.cat.GameApplet always set the parameter cat.server.console to use 
+  GuiConsole.
+
+
+- edu.cuny.cat.comm
+  - updated to support generics in Java 1.5+.
+
+- more general plain-text message transmission supported
+  - Message added as the generic class for plain-text messages in JCAT.
+  - CatpMessage now extending Message and static utility methods promoted to 
+  Message.
+  - CatException added as the top exception class for communication in JCAT.
+  - ConnectionException replacing CatpConnectionException and used for all 
+  connection-related exceptions.
+  - MessageException added and used for all message-related exceptions.
+  - classes including CatpConnection, SocketBasedCatpConnection, 
+  CatpConnectionListener, ListenableCatpConnection, CatpConnector, 
+  CatpClientConnector, CatpServerConnector, CatpSession, ReactiveCatpSession, 
+  ProactiveCatpSession, CatpConnectionException renamed with 'Catp' removed and 
+  modified with generics to support transmitting Messages rather than 
+  CatpMessages
+  - certain CATP-specific classes remaining but modified to extend the above 
+  general-purpose, usually generic, classes, including CatpMessage, 
+  ReactiveCatpSession, ProactiveCatpSession, SocketBasedCatpConnection
+
+- Classes added to support telnet-based console
+  - edu.cuny.cat.comm.TelnetConnection, TelnetMessage, TelnetServerConnector 
+  added to support simple telnet functionality.
+  - edu.cuny.cat.server.TelnetConsole added to allow users to control the game 
+  server through telnet
+  - params/telnetconsole.params added to configure TelnetConsole
+
+
+- edu.cuny.cat.registry.Registry
+  - start() added and stop() replacing dispose() for respectively starting and 
+  stopping a registry.
+- edu.cuny.cat.registry.SimpleRegistry
+  - toString() added
+
+
+- edu.cuny.cat.Game
+  - makeSureUnsynchronousInfrastructure() added to detect misconfiguration of 
+  infrastructure.
+  - setting the values of parameters cat.name and cat.version internally, 
+  overriding the configuration in parameter files.
+- edu.cuny.cat.MarketClient and TraderClient
+  - makeSureUnsynchronousInfrastructure() added in their main() to detect 
+  misconfiguration of infrastructure.
+
+
+- edu.cuny.cat.Preferences
+  - THREAD_STACK_SIZE added to control space allocated to threads in JCAT, in 
+  particular those created in edu.cuny.cat.comm.ListenableConnection. A small 
+  value helps to increase the maximal number of threads JCAT can run on a single 
+  machine.
+  - applet removed since it is no longer needed in GameController
+
+
+- edu.cuny.cat.server.GameClock
+  - thread now created only when the clock starts, since certain scenarios, e.g. 
+  when SynchronousClockController is used, do not want this thread at all.
+  - isAlive() added to check whether the clock is actively running
+
+
+- edu.cuny.cat.server.GameController
+  - notify() renamed to notifyInsideListener()
+  - recordEvent() renamed to processEventInsideServer()
+  - PostEventToClients() removed, and connManager.dispatchEvent() called 
+  directly instead
+  - checks and makes sure console class and clock controller class are properly 
+  configured and compatible with each other.
+
+
+- edu.cuny.cat.server.ConnectionManager
+  - processEvent() renamed to processEventLocally()
+
+
+- edu.cuny.cat.server.ConnectionAdaptor
+  - getTrader() and getSpecialist() removed
+  
+
+- edu.cuny.cat.GameClient
+  - report support in MarketClient promoted to GameClient.
+
+  
+- doc/
+  - .tex, .bib, and figure files removed
+  - JCAT manual and CATP specification documents updated
+
+
+- edu.cuny.cat.util.SyncTask
+  - addCount() added to allow dynamically changing number of things to be 
+  synchronized.
+
+
+* BUG FIXES
+
+
+- edu.cuny.cat.server.AutoClockController and 
+edu.cuny.cat.server.SynchronousClockController does not work as expected
+  - ClockController.start() invoked in the GameController.start() to hand over 
+  control.
+  - SimulationOverEvent would trigger the controller to quit the game 
+  automatically
+
+
+
+
+Version 0.12 - 01/02/2009
+-------------------------
+
+
+* NEW FEATURES AND MODIFICATIONS
+
+
+- to be able to replicate the exact experimental results with a same 
+configuration when everything runs in a single process, only one thread and one 
+random number generator is used if  when a synchronous infrastructure (i.e., 
+call based) is used, similar to what happens in jasa
+  - edu.cuny.cat.Game
+    ArrayList instead of HashSet used now to store initializing traders and 
+    markets so as to maintain a desired order among them.
+    starts traders and markets without running separate threads when a 
+    synchronous infrastructure is used.
+  - edu.cuny.cat.Preferences
+    sets GlobalPRGN.useMultiEngines to false when a synchronous infrastructure 
+    is used regardless of what's given in the configuration file
+  - edu.cuny.cat.util.Utils.randomize(Object[])
+    moved to edu.cuny.cat.server.ConnectionManager and revised to use the 
+    default random number generator all the time when a synchronous 
+    infrastructure is used
+
+
+- to ease the way the game clock is controlled
+  - edu.cuny.cat.server.ClockController added
+    defines an interface for controlling the game clock
+  - edu.cuny.cat.server.SynchronousClockController added
+    starts the game clock without creating a new thread, useful for replicating 
+    experimental results in different runs with a same configuration
+  - edu.cuny.cat.server.AutoClockController added
+    automatically starts and quits a simulation after certain delays without 
+    external control; originally defined as GameController.VirtualConsole
+  - edu.cuny.cat.server.EventBasedClockController added
+    allows an external source to control the game clock via TypedEvent messages
+  - edu.cuny.cat.server.GameController.clockController viable added
+    the clock controller, which listens to auction events
+  - edu.cuny.cat.server.GameClock
+    no longer listens to and acts upon TypedEvent messages, which is now dealt 
+    with in EventBasedClockController
+  - edu.cuny.cat.server.GameController.start() renamed to initialize()
+  - edu.cuny.cat.server.GameController.destroy() added
+    do post-simulation processing before terminating the process
+
+- edu.cuny.cat.ui.GameConsole.exit()
+  modified to send TypedEvent for a listener (typically 
+  EventBasedClockController) to quit the simulation, rather than calling 
+  System.exit() directly
+
+
+- edu.cuny.cat.stat.StatisticalReport added
+  added to calculate the max, min, and mean values of given report variables 
+  across game days for immediate display and checking.
+
+- to debug more easily the implementation of game clients and check concerned 
+behaviors
+  - edu.cuny.cat.stat.ClientDynamicsReport added
+    receives TypedEvent messages from a GameClient and stores them into a 
+    separate file for later examination.
+  - GameClient: reportDynamics(String) added
+    sends text info via TypedEvent messages to 
+    edu.cuny.cat.stat.ClientDynamicsReport.
+
+- edu.cuny.cat.stat.AbstractReportVariableReport
+  added as an abstract super class for all reports that relies upon the 
+  declaration of a list of report variables.
+- edu.cuny.cat.stat.ReportVariableWriterReport
+  now extends AbstractReportVariableReport.
+
+
+- to randomly redraw the private values for traders after each game
+  - edu.cuny.cat.valuation.GamelyRandomValuer added
+  - edu.cuny.cat.valuation.GamelyRandomValuerGenerator added
+
+
+- edu.cuny.cat.trader.strategy.AbstractStrategy.endOfRound() removed
+  subclasses updated to do the processing in eventOccurred() instead.
+
+- edu.cuny.cat.trader.strategy.GDStrategy.calculateProbability()
+  refactored to avoid query HistoricalReport on a same thing twice.
+
+- edu.cuny.cat.trader.strategy.PriestVanTolStrategy
+  It is different from the implementation in JASA. Here, when a trader is 
+  inactive, it never reduces its profit margin, not even letting its learner to 
+  learn; while in JASA, the trader's learner continues to learn, though the 
+  current price remains the same. This additional learning of reduced margins 
+  would be reflected on the next trading day, however, when the trader becomes 
+  active again. This implementation in JCAT is believed what Priest and van Tol 
+  meant to do, since it is against their aim for those inactive traders to 
+  reduce profit margins when they become active again.
+
+
+- edu.cuny.cat.market.SlidingAverageBeatingAcceptingPolicy
+  a variant of edu.cuny.cat.market.EquilibriumBeatingAcceptingPolicy that was 
+  introduced by PSUCAT in CAT 2007.
+
+- edu.cuny.cat.market.HistoryBasedAcceptingPolicy.toString() added
+
+
+- edu.cuny.cat.server.TimeController renamed to TimeoutController
+  to accurately indicate what it does.
+
+
+- edu.cuny.cat.GameClient.run() promoted from subclasses
+- edu.cuny.cat.startProactiveSession() promoted from subclasses
+
+
+- edu.cuny.ai.learning.RandomActionChoosingPolicy added
+
+
+- params/cat.params
+  sample markets changed to CH and CDA so as to make it more interesting.
+  game length and num of iterations changed.
+  call-based infrastructure used by default for faster execution.
+  new report added to show the distribution of market metrics, e.g. efficiency.
+- params/specialist.params
+  changed to use a continuous double auction mechanism.
+- params/tournament.params
+  call-based infrastructure used by default for faster execution.
+- params/modules/clock.params
+  default game length, day length, and num of iterations changed
+- params/modules/traders.params
+  four subpopulations reduced to two.
+  trader id changed.
+- params/modules/specialists.params
+  default specialist id added.
+
+
+
+* BUG FIXES
+
+
+- ZIP trading strategy
+  - edu.cuny.cat.trader.strategy.MomentumStrategy
+    modified to comply with the idea of Cliff's original ZIP with the different 
+    persistant shout-based market framework in JCAT.
+    trPrice, trAskPrice, trBidPrice removed; lastShoutPrice added.
+    scaling set to 0.05 instead of 0.01. 
+  - edu.cuny.cat.trader.strategy.ZIPStrategy
+    modified to use exactly the heuristic rules in Cliff's original ZIP.
+    uses lastShoutPrice as the target to learn.
+  - edu.cuny.cat.trader.strategy.ZIQStrategy added
+    the old implementation of ZIP in JCAT and JASA, which seems to work well in 
+    continuous double auction markets.
+    uses lastShoutPrice as the target to learn.
+
+- GD trading strategy
+  - edu.cuny.cat.trader.strategy.GDStrategy
+    now forwards events to its HistoricalReport first, then process them 
+    locally, instead of in the reverse order previously.
+  - edu.cuny.cat.stat.HistoricalReport.SortedView
+    sortedAsks and sortedBids do not get refilled after having been cleared in 
+    reset(), which at least partly led to GD's strange, cyclic, behavior.
+    sortedAsks and sortedBids inccorrectly initialized twice, which causes 
+    incorrect counts of shouts meeting certain criteria.
+  - edu.cuny.cat.stat.HistoricalReport.memorysize
+    default value changed to 10 instead of previously 50.
+  - edu.cuny.cat.market.HistoryBasedAcceptingPolicy.DEFAULT_THRESHOLD
+    changed back to 0.5.
+  - edu.cuny.cat.stat.HistoricalReport.highestUnacceptedBid renamed to 
+  highestUnmatchedBid
+  - edu.cuny.cat.stat.HistoricalReport.lowestUnacceptedAsk renamed to 
+  lowestUnmatchedAsk
+
+- edu.cuny.cat.trader.strategy.PureSimpleStrategy.DEFAULT_DELTA
+  changed to 5 instead of 0 to avoid making PS a truth telling by default
+
+
+- Epsilon-greedy exploration in market selection over-favors one of several even 
+choices that has slightly higher among its peers
+  - edu.cuny.util.ApproxNumberComparator added
+    compares double values and see if one is approximately equal to, bigger 
+    than, or smaller than the other value.
+  - edu.cuny.util.NumberComparator added
+    defines the interface for ApproxNumberComparator.
+  - ExactNumberComparator added
+    defines the common strict comparison, in contrast to that in 
+    ApproxNumberComparator
+  - edu.cuny.util.MathUtil.maxIndex(double[], NumberComparator) added
+    allows to use a specific NumberComparator in comparing array elements to 
+    determining the index of the maximal element; used by  to select the best 
+    action.
+  - edu.cuny.ai.learning.EpsilonGreedyActionChoosingPolicy
+    uses the above method to select the best action
+  - edu.cuny.ai.learning.ReturnUpdatingPolicy
+    removed the random initialization of returns array that had used to avoid 
+    this problem (though ineffectively)
+
+
+
+Version 0.11 - 06/24/2008
+-------------------------
+
+* NEW FEATURES AND MODIFICATIONS
+
+- edu.cuny.cat.server.ConnectionAdaptor.processDayClosed()
+  reports the profit share and market share info of all specialists, even 
+  including those failed ones and yet-to-come ones, which enables clients 
+  checking in late to have access to the complete list of specialists
+- edu.cuny.cat.GameClient.PostFeeSession.processRequest()
+  do not throw exception even when the specialist in the POST FEE message is 
+  unknown to the game client; instead, the client simply overlooks the unknown 
+  ones
+
+
+Version 0.10 - 06/12/2008
+-------------------------
+
+* NEW FEATURES AND MODIFICATIONS
+
+- edu.cuny.cat.market.ThetaShoutEngine added
+  allows matching intra-marginal shouts with extra-marginal ones, called MV 
+  matching.
+- edu.cuny.cat.market.DoubleSidedQuotingPolicy
+- edu.cuny.cat.market.SingleSidedQuotingPolicy
+
+- edu.cuny.cat.market.UniformPricingPolicy
+  modified to adjust the quote-based transaction price to fall into the ask-bid 
+  price interval when the price falls out.
+
+- edu.cuny.ai.learning.NArmedBanditLearner
+- edu.cuny.ai.learning.AveragingLearner
+- edu.cuny.ai.learning.LearningPolicy
+- edu.cuny.ai.learning.ActionChoosingPolicy
+- edu.cuny.ai.learning.EpsilonGreedyActionChoosingPolicy
+- edu.cuny.ai.learning.SoftmaxActionChoosingPolicy
+- edu.cuny.ai.learning.ReturnUpdatingPolicy
+- edu.cuny.ai.learning.AdaptiveReturnUpdatingPolicy
+- edu.cuny.ai.learning.AdaptiveReturnUpdatingPolicyWithBias
+  provides a modular solution framework for n-armed bandit problems, replacing 
+  deprecated EpsilonGreedyLearner and SoftmaxLearner
+
+- edu.cuny.cat.valuation.*
+  overhauled; now there are 3 levels in the valuation architecture, valuation 
+  factory, valuation generator, and valuation policy.
+- edu.cuny.cat.valuation.RandomValuer/RandomValuerGenerator
+  supports any distribution defined in edu.cuny.random
+- edu.cuny.cat.valuation.ValuationFactory
+  supports separate valuation configuration for buyers and sellers
+
+- edu.cuny.cat.core.Shout.isAccepted()
+  removed; Shout.state used instead to check whether a shout is matched or not.
+
+- edu.cuny.cat.comm.CallBasedCatp*
+  method-calling based infrastructure, an alternative to socket-based 
+  infrastructure, allowing fast synchronous single-threading simulations within 
+  a single process
+- edu.cuny.cat.comm.QueueBasedCatp*
+  message-queue based infrastructure, an alternative to socket-based 
+  infrastructure, allowing asynchronous multi-threading simulations within a 
+  single process
+
+- edu.cuny.cat.comm.SocketBasedCatp*
+- edu.cuny.cat.comm.ListenableCatpConnection
+  refactored to use Channels in java.nio so that even when reading or writing is 
+  blocked, the connections is interruptable and closable
+
+- edu.cuny.cat.comm.ProactiveCatpConnection
+- edu.cuny.cat.comm.ReactiveCatpConnection
+  respectively support event-driven-style connections and query-style 
+  connections
+
+- edu.cuny.cat.event.DayInitPassEvent
+  enables day initialization orders in event listeners before day starting by 
+  introducing the concept of pass
+
+- edu.cuny.cat.server.EventDispatcher
+- edu.cuny.cat.server.SynchronousEventDispatcher
+- edu.cuny.cat.server.AsynchronousEventDispatcher
+- edu.cuny.cat.server.EventDispatchingTaskQueue
+- edu.cuny.cat.server.ConnectionManager
+  refactored to use a separate dispatching thread to spread events.
+
+- edu.cuny.cat.server.TimoutTask
+- edu.cuny.cat.server.SessionTimeoutTask
+- edu.cuny.cat.server.SessionTimeoutTaskFactory
+- edu.cuny.cat.server.TimerController
+  applied the scheme of resource pool to manage timeout-able sessions; do not 
+  monitor timeout-able sessions if infrastructure is synchronous
+
+- edu.cuny.cat.server.ClientIdentityController
+  supports a list of expected specialists, allowing specialists to check in 
+  after a game started.
+
+- edu.cuny.cat.server.ClientBehaviorController
+  the concepts of penalty and incurring behavior now separated; two types of 
+  penalty added to ban day participation and ban reconnection respectively.
+
+- edu.cuny.prng.GlobalPRNG
+  modified to be controllable on either using multiple engines or a single 
+  default engine for engine requests
+
+- edu.cuny.util.ResourcePool
+- edu.cuny.util.ResourceFactory
+
+* BUG FIXES
+
+- unneeded history requirement in RE removed
+
+- edu.cuny.cat.stat.HistoricalReport
+  refactored and corrected mistakes that seems to lead to bizaar behavior of GD, 
+  however problems with GD remain.
+
+
+
+Version 0.9 - 09/11/2007
+-------------------------
+
+
+* NEW FEATURES AND MODIFICATIONS
+
+- edu.cuny.cat.market.QuotingPolicy
+  Quoting policies are separated from the generic auctioneer framework.
+- edu.cuny.cat.market.DefaultQuotingPolicy
+- edu.cuny.cat.market.SpreadBasedQuotingPolicy
+
+- edu.cuny.cat.market.AuctioneerPolicy
+  It provides a framework for all types of policies that an auctioneer may be 
+  configured to use. Existing shout accepting policies, clearing conditions, 
+  pricing policies, and quoting policies are refactored to inherit this class.
+
+- edu.cuny.cat.market.ShoutAcceptingPolicy
+- edu.cuny.cat.market.OnlyNewShoutDecidingAcceptingPolicy
+  Shout accepting policies are modified to allow to make decisions on both the 
+  new shout and the shout to be replaced.
+- edu.cuny.cat.market.CombiAcceptingPolicy
+- edu.cuny.cat.market.LooserCombiAcceptingPolicy
+- edu.cuny.cat.market.TighterCombiAcceptingPolicy
+- edu.cuny.cat.market.SelfBeatingAcceptingPolicy
+- edu.cuny.cat.market.HistoryBasedAcceptingPolicy
+- edu.cuny.cat.market.NotAnImprovementOverSelfException
+
+- edu.cuny.cat.market.LazyMaxVolumeShoutEngine
+  A new shout engine that tries to match intra-marginal shouts and 
+  extra-marginal ones to increase transaction volumes.
+
+- edu.cuny.cat.market.EfficiencyCalculator
+- edu.cuny.cat.market.EquilibriumCalculator
+  Calculates various metrics on a market.
+
+- edu.cuny.cat.server.TransactionValidator
+
+- edu.cuny.cat.server.GameClock.roundClosingLen
+  An interval before round closing and round closed added so as for the 
+  specialists to have more time to submit intended transactions. It is 
+  configurable through the parameter files.
+
+- edu.cuny.cat.stat.SpecialistReport renamed to ConnectionStateReport
+- edu.cuny.cat.stat.MarketStatusReport renamed to MarketMetricsReport
+
+- edu.cuny.cat.stat.TraderReport
+  Records the private values of traders and the specialists they choose to do 
+  business with each day.
+
+- edu.cuny.cat.ui.SpecialistView
+  Updated to work normally, showing shout improvements and transaction price 
+  changes at a specialist.
+
+- edu.cuny.util.SortedTreeList
+  It is separated from HistricalReport and can now be reused for other purposes.
+
+- edu.cuny.util.MathUtil.approxBigger()
+- edu.cuny.util.MathUtil.approxSmaller()
+  Added to allow a value barely falling out of its valid range possibly due to 
+  limited precision presentation of a double number.
+
+
+* BUG FIXES
+
+- edu.cuny.cat.*:
+  Traders and specialists are now created before and started after the game 
+  server is started so as to prevent clients from throwing "failed to connect" 
+  exceptions due to waiting too long on some platforms.
+
+- edu.cuny.cat.trader.strategy.GDStrategy
+- edu.cuny.cat.stat.HistoricalReport
+  Default memory size is increased from 10 to 50, which is essential for GD 
+  traders to bid effectively and for the overall market to obtain high 
+  efficiency as expected.
+
+- edu.cuny.cat.market.UniformPricingPolicy
+  The default k was set to be 0 by mistake instead of 0.5.
+
+
+
+Version 0.8 - 07/04/2007
+------------------------
+
+* NEW FEATURES AND MODIFICATIONS
+
+- CATP
+  Value header added in traders' responses to OPTIONS DAYOPENING messages to 
+  notify the game server of the daily entitlement so that the server may do 
+  correctly trader account initialization, fund transfer, calculation of 
+  theoretical profits and efficiency, etc.
+
+- edu.cuny.cat.stat.SpecialistReport
+  Added to record the state of specialists in a CSV file; two columns in the 
+  file with one for specialists' names and the other for states defined in 
+  ClientState.
+
+- deprecated edu.cuny.cat.stat.DailyTraderDistributionReport removed
+- edu.cuny.cat.stat.MarketStatusReport refactored
+- edu.cuny.cat.stat.DirectRevelationReport refactored

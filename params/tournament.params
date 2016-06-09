@@ -1,0 +1,580 @@
+#####################################################################
+#  sample configuration file for tac market design tournament (cat) #
+#####################################################################
+
+
+###############################################################
+# infrastructure for catp
+
+cat.infrastructure = edu.cuny.cat.comm.CallBasedInfrastructureImpl
+cat.infrastructure = edu.cuny.cat.comm.SocketBasedInfrastructureImpl
+#cat.infrastructure.server = tac.csc.liv.ac.uk
+cat.infrastructure.port = 9090
+
+
+###############################################################
+# common server setup
+
+cat.server.security.tradertoken = 
+cat.server.security.specialisttoken = 
+
+cat.server.gc = false
+
+###############################################################
+# trading agents  (100 GDs, 100 ZIPs, 100 REs, 100 ZICs)
+
+cat.agent.n = 8
+
+size = 50
+
+cat.agent.0 = edu.cuny.cat.TraderClient
+cat.agent.0.n = &size;
+cat.agent.0.isseller = false
+cat.agent.0.type = buyer
+cat.agent.0.id = buyer_gd
+cat.agent.0.strategy = edu.cuny.cat.trader.strategy.GDStrategy
+
+cat.agent.1 = edu.cuny.cat.TraderClient
+cat.agent.1.n = &size;
+cat.agent.1.isseller = true
+cat.agent.1.type = seller
+cat.agent.1.id = seller_gd
+cat.agent.1.strategy = edu.cuny.cat.trader.strategy.GDStrategy
+
+cat.agent.2 = edu.cuny.cat.TraderClient
+cat.agent.2.n = &size;
+cat.agent.2.isseller = false
+cat.agent.2.type = buyer
+cat.agent.2.id = buyer_zip
+cat.agent.2.strategy = edu.cuny.cat.trader.strategy.ZIPStrategy
+
+cat.agent.3 = edu.cuny.cat.TraderClient
+cat.agent.3.n = &size;
+cat.agent.3.isseller = true
+cat.agent.3.type = seller
+cat.agent.3.id = seller_zip
+cat.agent.3.strategy = edu.cuny.cat.trader.strategy.ZIPStrategy
+
+cat.agent.4 = edu.cuny.cat.TraderClient
+cat.agent.4.n = &size;
+cat.agent.4.isseller = false
+cat.agent.4.type = buyer
+cat.agent.4.id = buyer_re
+cat.agent.4.strategy = edu.cuny.cat.trader.strategy.StimuliResponseStrategy
+
+cat.agent.5 = edu.cuny.cat.TraderClient
+cat.agent.5.n = &size;
+cat.agent.5.isseller = true
+cat.agent.5.type = seller
+cat.agent.5.id = seller_re
+cat.agent.5.strategy = edu.cuny.cat.trader.strategy.StimuliResponseStrategy
+
+cat.agent.6 = edu.cuny.cat.TraderClient
+cat.agent.6.n = &size;
+cat.agent.6.isseller = false
+cat.agent.6.type = buyer
+cat.agent.6.id = buyer_zic
+cat.agent.6.strategy = edu.cuny.cat.trader.strategy.RandomConstrainedStrategy
+
+cat.agent.7 = edu.cuny.cat.TraderClient
+cat.agent.7.n = &size;
+cat.agent.7.isseller = true
+cat.agent.7.type = seller
+cat.agent.7.id = seller_zic
+cat.agent.7.strategy = edu.cuny.cat.trader.strategy.RandomConstrainedStrategy
+
+
+
+###############################################################
+# specialists
+
+cat.specialist.n = 5
+
+cat.specialist.0 = edu.cuny.cat.MarketClient
+cat.specialist.0.n = 2
+cat.specialist.0.type = specialist
+cat.specialist.0.id = M1
+#cat.specialist.0.logging = true
+cat.specialist.0.auctioneer = edu.cuny.cat.market.GenericDoubleAuctioneer
+cat.specialist.0.auctioneer.pricing = edu.cuny.cat.market.pricing.DiscriminatoryPricingPolicy
+cat.specialist.0.auctioneer.clearing = edu.cuny.cat.market.clearing.RoundClearingCondition
+cat.specialist.0.auctioneer.accepting = edu.cuny.cat.market.accepting.QuoteBeatingAcceptingPolicy
+cat.specialist.0.auctioneer.charging = edu.cuny.cat.market.charging.FixedChargingPolicy
+cat.specialist.0.auctioneer.charging.registration = 1
+cat.specialist.0.auctioneer.charging.information = 1.2
+cat.specialist.0.auctioneer.charging.shout = 1.4
+cat.specialist.0.auctioneer.charging.transaction = 1.6
+cat.specialist.0.auctioneer.charging.profit = 0.2
+
+cat.specialist.1 = edu.cuny.cat.MarketClient
+cat.specialist.1.n = 2
+cat.specialist.1.type = specialist
+cat.specialist.1.id = M2
+#cat.specialist.1.logging = true
+cat.specialist.1.auctioneer = edu.cuny.cat.market.GenericDoubleAuctioneer
+cat.specialist.1.auctioneer.pricing = edu.cuny.cat.market.pricing.DiscriminatoryPricingPolicy
+cat.specialist.1.auctioneer.clearing = edu.cuny.cat.market.clearing.ProbabilisticClearingCondition
+cat.specialist.1.auctioneer.accepting = edu.cuny.cat.market.accepting.QuoteBeatingAcceptingPolicy
+cat.specialist.1.auctioneer.charging = edu.cuny.cat.market.charging.FixedChargingPolicy
+cat.specialist.1.auctioneer.charging.registration = 2
+cat.specialist.1.auctioneer.charging.information = 2.2
+cat.specialist.1.auctioneer.charging.shout = 2.4
+cat.specialist.1.auctioneer.charging.transaction = 2.6
+cat.specialist.1.auctioneer.charging.profit = 0.4
+
+cat.specialist.2 = edu.cuny.cat.MarketClient
+cat.specialist.2.n = 2
+cat.specialist.2.type = specialist
+cat.specialist.2.id = M3
+#cat.specialist.2.logging = true
+cat.specialist.2.auctioneer = edu.cuny.cat.market.GenericDoubleAuctioneer
+cat.specialist.2.auctioneer.pricing = edu.cuny.cat.market.pricing.DiscriminatoryPricingPolicy
+cat.specialist.2.auctioneer.clearing = edu.cuny.cat.market.clearing.ProbabilisticClearingCondition
+cat.specialist.2.auctioneer.accepting = edu.cuny.cat.market.accepting.QuoteBeatingAcceptingPolicy
+cat.specialist.2.auctioneer.charging = edu.cuny.cat.market.charging.FixedChargingPolicy
+cat.specialist.2.auctioneer.charging.registration = 3
+cat.specialist.2.auctioneer.charging.information = 3.2
+cat.specialist.2.auctioneer.charging.shout = 3.4
+cat.specialist.2.auctioneer.charging.transaction = 3.6
+cat.specialist.2.auctioneer.charging.profit = 0.6
+
+cat.specialist.3 = edu.cuny.cat.MarketClient
+cat.specialist.3.n = 2
+cat.specialist.3.type = specialist
+cat.specialist.3.id = M4
+#cat.specialist.3.logging = true
+cat.specialist.3.auctioneer = edu.cuny.cat.market.GenericDoubleAuctioneer
+cat.specialist.3.auctioneer.pricing = edu.cuny.cat.market.pricing.DiscriminatoryPricingPolicy
+cat.specialist.3.auctioneer.clearing = edu.cuny.cat.market.clearing.ProbabilisticClearingCondition
+cat.specialist.3.auctioneer.accepting = edu.cuny.cat.market.accepting.QuoteBeatingAcceptingPolicy
+cat.specialist.3.auctioneer.charging = edu.cuny.cat.market.charging.FixedChargingPolicy
+cat.specialist.3.auctioneer.charging.registration = 4
+cat.specialist.3.auctioneer.charging.information = 4.2
+cat.specialist.3.auctioneer.charging.shout = 4.4
+cat.specialist.3.auctioneer.charging.transaction = 4.6
+cat.specialist.3.auctioneer.charging.profit = 0.8
+
+cat.specialist.4 = edu.cuny.cat.MarketClient
+cat.specialist.4.n = 2
+cat.specialist.4.type = specialist
+cat.specialist.4.id = M5
+#cat.specialist.4.logging = true
+cat.specialist.4.auctioneer = edu.cuny.cat.market.GenericDoubleAuctioneer
+cat.specialist.4.auctioneer.pricing = edu.cuny.cat.market.pricing.DiscriminatoryPricingPolicy
+cat.specialist.4.auctioneer.clearing = edu.cuny.cat.market.clearing.ProbabilisticClearingCondition
+cat.specialist.4.auctioneer.accepting = edu.cuny.cat.market.accepting.QuoteBeatingAcceptingPolicy
+cat.specialist.4.auctioneer.charging = edu.cuny.cat.market.charging.FixedChargingPolicy
+cat.specialist.4.auctioneer.charging.registration = 5
+cat.specialist.4.auctioneer.charging.information = 5.2
+cat.specialist.4.auctioneer.charging.shout = 5.4
+cat.specialist.4.auctioneer.charging.transaction = 5.6
+cat.specialist.4.auctioneer.charging.profit = 1
+
+###############################################################
+# game server
+
+# clock
+
+cat.server.iterations = 1
+
+cat.server.gamelen = 500
+cat.server.daylen = 10
+cat.server.roundlen = 500
+
+cat.server.gameinit = 0
+cat.server.dayinit = 0
+
+cat.server.gamebreak = 100
+cat.server.daybreak = 0
+cat.server.roundbreak = 0
+
+cat.server.synctimeout = 60000
+
+cat.server.sessiontimeout = 30000
+
+
+# registry
+
+cat.server.registry = edu.cuny.cat.registry.SimpleRegistry
+
+# valuer
+
+cat.server.valuation.buyer = edu.cuny.cat.valuation.RandomValuerGenerator
+cat.server.valuation.buyer.minvalue = 50
+cat.server.valuation.buyer.maxvalue = 150
+
+cat.server.valuation.seller = edu.cuny.cat.valuation.RandomValuerGenerator
+cat.server.valuation.seller.minvalue = 50
+cat.server.valuation.seller.maxvalue = 150
+
+# game report
+
+cat.server.report = edu.cuny.cat.stat.CombiGameReport
+cat.server.report.n = 13
+cat.server.report.0 = edu.cuny.cat.stat.ProfitReport
+cat.server.report.1 = edu.cuny.cat.stat.TraderDistributionReport
+cat.server.report.2 = edu.cuny.cat.stat.FeeReport
+cat.server.report.3 = edu.cuny.cat.stat.ShoutReport
+cat.server.report.4 = edu.cuny.cat.stat.MarketMetricsReport
+
+cat.server.report.5 = edu.cuny.cat.stat.ScoreReport
+cat.server.report.5.condition = edu.cuny.cat.stat.CombiScoreDaysCondition
+cat.server.report.5.condition.debug = true
+cat.server.report.5.condition.isor = false
+
+cat.server.report.5.condition.n = 1
+cat.server.report.5.condition.0 = edu.cuny.cat.stat.RangeBasedScoreDaysCondition
+cat.server.report.5.condition.0.start = 0
+cat.server.report.5.condition.0.end = &cat.server.gamelen;
+cat.server.report.5.condition.1 = edu.cuny.cat.stat.DistributionBasedScoreDaysCondition
+
+
+# lambda = 1/gamelen
+#cat.server.report.5.condition.1.distribution = edu.cuny.random.Exponential
+#cat.server.report.5.condition.1.distribution.lambda = 0.0025
+#cat.server.report.5.condition.1.a = 1
+#cat.server.report.5.condition.1.b = 0
+
+# a = gamelen/10
+#cat.server.report.5.condition.1.distribution = edu.cuny.random.ChiSquare
+#cat.server.report.5.condition.1.distribution.freedom = 6
+#cat.server.report.5.condition.1.a = 40
+#cat.server.report.5.condition.1.b = 0
+
+# a = gamelen/10; b = gamelen/5
+#cat.server.report.5.condition.1.distribution = edu.cuny.random.Binomial
+#cat.server.report.5.condition.1.distribution.n = 10
+#cat.server.report.5.condition.1.distribution.p = 0.5
+#cat.server.report.5.condition.1.a = 40
+#cat.server.report.5.condition.1.b = 80
+
+# a = gamelen/10; b = gamelen/2
+#cat.server.report.5.condition.1.distribution = edu.cuny.random.StudentT
+#cat.server.report.5.condition.1.distribution.mean = 1
+#cat.server.report.5.condition.1.a = 40
+#cat.server.report.5.condition.1.b = 200
+
+# a = gamelen/10; b = - 2*gamelen/5
+#cat.server.report.5.condition.1.distribution = edu.cuny.random.Poisson
+#cat.server.report.5.condition.1.distribution.mean = 10
+#cat.server.report.5.condition.1.a = 40
+#cat.server.report.5.condition.1.b = -160
+
+# a = gamelen
+#cat.server.report.5.condition.1.distribution = edu.cuny.random.Beta
+#cat.server.report.5.condition.1.distribution.alpha = 0.5
+#cat.server.report.5.condition.1.distribution.beta = 0.5
+#cat.server.report.5.condition.1.a = &cat.server.gamelen;
+#cat.server.report.5.condition.1.b = 0
+
+cat.server.report.6 = edu.cuny.cat.stat.ReportVariableWriterReport
+cat.server.report.6.filename = log.csv
+cat.server.report.6.separator = ,
+cat.server.report.6.var.n = 31
+cat.server.report.6.var.0 = <specialist>.score
+cat.server.report.6.var.1 = <specialist>.score.marketshare
+cat.server.report.6.var.2 = <specialist>.score.profit
+cat.server.report.6.var.3 = <specialist>.score.transactionrate
+cat.server.report.6.var.4 = <specialist>.profit
+cat.server.report.6.var.5 = <specialist>.trader
+cat.server.report.6.var.6 = <specialist>.equilibrium.price
+cat.server.report.6.var.7 = <specialist>.equilibrium.quantity
+cat.server.report.6.var.8 = <specialist>.equilibrium.profit
+cat.server.report.6.var.9 = <specialist>.efficiency
+cat.server.report.6.var.10 = global.efficiency
+cat.server.report.6.var.11 = <specialist>.convergence_coefficient
+cat.server.report.6.var.12 = global.convergence_coefficient
+cat.server.report.6.var.13 = <specialist>.profit_dispersion
+cat.server.report.6.var.14 = global.profit_dispersion
+cat.server.report.6.var.15 = <specialist>.<shout>.placed
+cat.server.report.6.var.16 = <specialist>.<shout>.placed.price.min
+cat.server.report.6.var.17 = <specialist>.<shout>.placed.price.max
+cat.server.report.6.var.18 = <specialist>.<shout>.placed.price.mean
+cat.server.report.6.var.19 = <specialist>.<shout>.placed.price.stdev
+cat.server.report.6.var.20 = <specialist>.<shout>.accepted
+cat.server.report.6.var.21 = <specialist>.<shout>.accepted.price.min
+cat.server.report.6.var.22 = <specialist>.<shout>.accepted.price.max
+cat.server.report.6.var.23 = <specialist>.<shout>.accepted.price.mean
+cat.server.report.6.var.24 = <specialist>.<shout>.accepted.price.stdev
+cat.server.report.6.var.25 = <specialist>.transaction
+cat.server.report.6.var.26 = <specialist>.transaction.price.min
+cat.server.report.6.var.27 = <specialist>.transaction.price.max
+cat.server.report.6.var.28 = <specialist>.transaction.price.mean
+cat.server.report.6.var.29 = <specialist>.transaction.price.stdev
+cat.server.report.6.var.30 = <specialist>.<fee>
+
+cat.server.report.7 = edu.cuny.cat.stat.ConnectionStateReport
+cat.server.report.7.filename = specialists.csv
+
+cat.server.report.8 = edu.cuny.cat.stat.ResourceReport
+cat.server.report.9 = edu.cuny.cat.stat.ReportVariableWriterReport
+cat.server.report.9.filename = memory.csv
+cat.server.report.9.separator = ,
+cat.server.report.9.var.n = 4
+cat.server.report.9.var.0 = memory.max
+cat.server.report.9.var.1 = memory.total
+cat.server.report.9.var.2 = memory.used
+cat.server.report.9.var.3 = memory.free
+
+cat.server.report.10 = edu.cuny.cat.stat.TraderReport
+
+cat.server.report.11 = edu.cuny.cat.stat.ReportVariableWriterReport
+cat.server.report.11.filename = traders.csv
+cat.server.report.11.separator = ,
+cat.server.report.11.var.n = 2
+cat.server.report.11.var.0 = <trader>.value
+cat.server.report.11.var.1 = <trader>.specialist
+
+cat.server.report.12 = edu.cuny.cat.stat.StatisticalReport
+cat.server.report.12.var.n = 1
+cat.server.report.12.var.0 = <specialist>.efficiency
+
+
+# gui logger
+
+cat.appender = guihtml
+
+###############################################################
+# log4j configuration - substitute INFO for DEBUG to turn on debugging output
+
+log4j.rootLogger=INFO, stdout
+
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%m%n
+
+log4j.appender.guihtml=edu.cuny.util.log4j.GraphicalAppender
+log4j.appender.guihtml.layout=edu.cuny.util.log4j.MyHTMLLayout
+log4j.appender.guihtml.layout.LocationInfo=true
+
+
+###############################################################
+# prng
+
+#  Use the 32bit version of the Mersenne Twister algorithm 
+cat.prng = edu.cuny.prng.MT32
+
+# use separate engine for each demand or not
+cat.usemultiengine = true
+
+#  with the following PRNG seed
+cat.seed = 4523
+
+
+###############################################################
+#  configuration for cat game console and clock controller
+
+
+# name and version would always be overridden by jcat internally
+cat.name = JCAT
+cat.version = 0.16
+
+
+# clock controller
+
+#cat.server.clockcontroller = edu.cuny.cat.server.AutoClockController
+#cat.server.clockcontroller = edu.cuny.cat.server.SynchronousClockController
+cat.server.clockcontroller = edu.cuny.cat.server.EventBasedClockController
+
+# to use telnet console
+cat.server.console = edu.cuny.cat.server.TelnetConsole
+cat.server.console.port = 9091
+cat.server.console.code = cat
+
+# to use graphical console, uncomment the following line
+cat.server.console = edu.cuny.cat.ui.GuiConsole
+
+cat.server.console.title = &cat.name; &cat.version; - The Software Platform for TAC Market Design Tournament (CAT Game)
+cat.server.console.homeurl=http://jcat.sourceforge.net/
+cat.server.console.icon = timeseriesDisplay.gif
+
+# Images configuration
+
+images.url=resources/images/
+
+#########################################################
+# frame
+
+cat.server.console.width = 1280
+cat.server.console.height = 768
+
+#########################################################
+# overview
+
+cat.server.console.overview.title = General View
+cat.server.console.overview.width = 400
+cat.server.console.overview.height = 300
+
+cat.server.console.overview.orientation = y
+cat.server.console.overview.panel.n = 2
+
+cat.server.console.overview.panel.0.panel.n = 2
+cat.server.console.overview.panel.0.panel.0.orientation = y
+cat.server.console.overview.panel.0.panel.0.panel.n = 2
+cat.server.console.overview.panel.0.panel.0.panel.0 = edu.cuny.cat.ui.PlayerLabelPanel
+cat.server.console.overview.panel.0.panel.0.panel.1 = edu.cuny.cat.ui.ClientStatePanel
+cat.server.console.overview.panel.0.panel.0.panel.1 = edu.cuny.cat.ui.ProfitPlotPanel
+cat.server.console.overview.panel.0.panel.0.panel.1.showtype = true
+cat.server.console.overview.panel.0.panel.1 = edu.cuny.cat.ui.ClockPanel
+cat.server.console.overview.panel.0.panel.1.angle = 260
+cat.server.console.overview.panel.0.panel.1.width = 150
+cat.server.console.overview.panel.0.panel.1.height = 150
+
+cat.server.console.overview.panel.1.panel.n = 3
+cat.server.console.overview.panel.1.panel.0 = edu.cuny.cat.ui.ScorePlotPanel
+cat.server.console.overview.panel.1.panel.0.showtype = true
+#cat.server.console.overview.panel.1.panel.0 = edu.cuny.cat.ui.ProfitPlotPanel
+cat.server.console.overview.panel.1.panel.1 = edu.cuny.cat.ui.CumulativeTraderDistributionPanel
+cat.server.console.overview.panel.1.panel.1.legend = true
+cat.server.console.overview.panel.1.panel.2 = edu.cuny.cat.ui.ChargePlotPanel
+
+
+
+#########################################################
+# menus
+
+cat.server.console.menu.n = 1
+
+cat.server.console.menu.0 = ?
+cat.server.console.menu.0.text = Help
+cat.server.console.menu.0.param = ^H^
+cat.server.console.menu.0.icon = Help.gif
+cat.server.console.menu.0.item.n = 2
+
+cat.server.console.menu.0.item.0.name = menu.help.about
+cat.server.console.menu.0.item.0.text = About
+cat.server.console.menu.0.item.0.param = ^A^~A~
+cat.server.console.menu.0.item.0.icon = About.gif
+cat.server.console.menu.0.item.1.name = menu.help.home
+cat.server.console.menu.0.item.1.text = Home
+cat.server.console.menu.0.item.1.param = ^H^~H~
+cat.server.console.menu.0.item.1.icon = Home.gif
+
+
+#########################################################
+# buttons
+
+cat.server.console.button.start.text = Start
+cat.server.console.button.start.icon = VCRPlay.gif
+
+cat.server.console.button.pause.text = Pause
+cat.server.console.button.pause.icon = VCRPause.gif
+
+cat.server.console.button.resume.text = Resume
+cat.server.console.button.resume.icon = VCRForward.gif
+
+cat.server.console.button.exit.text = Exit
+cat.server.console.button.exit.icon = VCRStop.gif
+
+
+#########################################################
+# About Dialog
+
+cat.server.console.aboutdialog.title = About &cat.name;
+cat.server.console.aboutdialog.text = &cat.server.console.title;
+cat.server.console.aboutdialog.width = 300
+cat.server.console.aboutdialog.height = 200
+cat.server.console.aboutdialog.icon = About.gif
+
+
+
+###############################################################
+# default values                                              #
+###############################################################
+
+agent.marketselectionstrategy = edu.cuny.cat.trader.marketselection.StimuliResponseMarketSelectionStrategy
+agent.initialtradeentitlement = 3
+agent.resetting = edu.cuny.cat.trader.PeriodicResettingCondition
+
+##################
+# behavior control
+
+behavior.reconnection = 50
+behavior.request_at_wrong_time = 20
+
+####################
+# trader resetting condition
+
+periodic_resetting.days = -1
+
+####################
+# trading strategies
+
+#gd
+gd_strategy.maxprice = 300
+historical_report.memorysize = 5
+
+#zip
+momentum_strategy.scaling = 0.05
+momentum_strategy.learner = edu.cuny.ai.learning.WidrowHoffLearnerWithMomentum
+
+#re
+stimuli_response_strategy.learner = edu.cuny.ai.learning.RothErevLearner
+
+##################
+# market selection strategies
+
+adaptive_market_selection_strategy.learner = edu.cuny.ai.learning.NArmedBanditLearner
+
+
+###################
+# learners
+
+rotherev_learner.k = 100
+rotherev_learner.recency = 0.1
+rotherev_learner.experimentation = 0.2
+rotherev_learner.scaling = 1.0
+
+widrowhoff_learner.learningrate = 0.85
+widrowhoff_learner.momentum = 0.5
+
+sliding_window_learner.windowsize = 4
+
+n_armed_bandit_learner.action_choosing = edu.cuny.ai.learning.EpsilonGreedyActionChoosingPolicy
+n_armed_bandit_learner.return_updating = edu.cuny.ai.learning.AdaptiveReturnUpdatingPolicy
+
+# pluggable learning policy
+
+epsilon_greedy_action_choosing.epsilon = 0.1
+epsilon_greedy_action_choosing.alpha = 1
+softmax_action_choosing.temperature = 0.2
+softmax_action_choosing.alpha = 1
+
+adaptive_return_updating.learner = edu.cuny.ai.learning.WidrowHoffLearner 
+
+###################
+# clearing conditions
+
+probabilistic_clearing.threshold = 1
+
+###################
+# shout accepting policy
+
+equilibrium_beating_accepting.learner = edu.cuny.ai.learning.SlidingWindowLearner
+equilibrium_beating_accepting.delta = 0
+
+shout_type_based_accepting.q = 0.5
+
+#########################
+# charging policies
+
+charge_cutting_charging.scale = 0.8
+
+bait_and_switch_charging.cutratio = 0.5
+bait_and_switch_charging.exploitratio = 0.6
+
+best_response_charging.memorysize = 8
+
+momentum_charging.exploring = edu.cuny.cat.market.charging.SingleDayExploringMonitor
+momentum_charging.registration.scale = 0.1
+momentum_charging.information.scale = 0.1
+momentum_charging.shout.scale = 0.1
+momentum_charging.transaction.scale = 0.1
+momentum_charging.profit.scale = 0.1
+
+single_day_exploring_monitor.threshold = 0.6
+multi_day_exploring_monitor.threshold = 0.6
+multi_day_exploring_monitor.windowsize = 5
+multi_day_exploring_monitor.learner = edu.cuny.ai.learning.SlidingWindowLearner
+
+sliding_trader_exploring_monitor.learner = edu.cuny.ai.learning.SortedSlidingWindowLearner

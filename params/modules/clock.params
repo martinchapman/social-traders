@@ -1,0 +1,34 @@
+#########################
+# clock
+
+cat.server.iterations = 1
+
+cat.server.gamelen = 1
+cat.server.daylen = 10
+cat.server.roundlen = 500
+
+cat.server.gameinit = 500
+cat.server.dayinit = 200
+
+cat.server.gamebreak = 500
+cat.server.daybreak = 100
+cat.server.roundbreak = 100
+
+
+#########################
+# clock controller
+
+cat.server.clockcontroller = edu.cuny.cat.server.AutoClockController
+cat.server.clockcontroller.startdelay = 60000
+cat.server.clockcontroller.exitdelay = 30000
+
+cat.server.clockcontroller = edu.cuny.cat.server.EventBasedClockController
+
+cat.server.clockcontroller = edu.cuny.cat.server.SynchronousClockController
+
+
+#########################
+# timeout control
+
+cat.server.synctimeout = 10000
+cat.server.sessiontimeout = 10000

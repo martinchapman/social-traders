@@ -1,0 +1,10 @@
+###############################################################
+#  a general configuration file for cat game                  #
+###############################################################
+
+parent.0 = prng.params
+parent.1 = infrastructure.params
+parent.2 = learner.params
+parent.3 = server.params
+parent.4 = traders-zic.params
+parent.5 = specialists.params

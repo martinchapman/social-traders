@@ -1,0 +1,6 @@
+###############################################################
+# infrastructure for catp
+
+parent.0 = infrastructure-call.params
+# parent.0 = infrastructure-socket.params
+# parent.0 = infrastructure-queue.params

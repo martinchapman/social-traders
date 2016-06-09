@@ -1,0 +1,29 @@
+parent.0 = learner.params
+
+#########################
+# charging policies
+
+charge_cutting_charging.scale = 0.8
+
+bait_and_switch_charging.cutratio = 0.5
+bait_and_switch_charging.exploitratio = 0.6
+
+best_response_charging.memorysize = 8
+
+momentum_charging.exploring = edu.cuny.cat.market.charging.SingleDayExploringMonitor
+
+# momentum_charging.xxx = 0.1
+# momentum_charging.xxx.learner = 
+
+momentum_charging.registration.scale = 0.1
+momentum_charging.information.scale = 0.1
+momentum_charging.shout.scale = 0.1
+momentum_charging.transaction.scale = 0.1
+momentum_charging.profit.scale = 0.1
+
+single_day_exploring_monitor.threshold = 0.6
+multi_day_exploring_monitor.threshold = 0.6
+multi_day_exploring_monitor.windowsize = 5
+multi_day_exploring_monitor.learner = edu.cuny.ai.learning.SlidingWindowLearner
+
+sliding_trader_exploring_monitor.learner = edu.cuny.ai.learning.SortedSlidingWindowLearner

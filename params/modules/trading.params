@@ -1,0 +1,19 @@
+parent.0 = learner.params
+
+##################
+# trading strategies
+
+discrete_learner_strategy.markupscale = 1
+
+fixed_quantity_strategy.quantity = 1
+
+gd_strategy.maxprice = 300
+historical_report.memorysize = 5
+historical_report.roundreset = false
+
+gdl_strategy.maxprice = 300
+
+momentum_strategy.scaling = 0.05
+momentum_strategy.learner = edu.cuny.ai.learning.WidrowHoffLearnerWithMomentum
+
+stimuli_response_strategy.learner = edu.cuny.ai.learning.RothErevLearner

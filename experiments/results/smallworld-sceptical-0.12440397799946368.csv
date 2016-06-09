@@ -1,0 +1,5875 @@
+## Total Number of traders
+20
+ 
+## Total Number of markets
+4
+#Game
+0
+ 
+########################################
+#Day
+0
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 2
+GD seller, 1
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+2.154856363832949
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 3
+GD seller, 3
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+10.4
+ 
+## Number of matches
+6
+ 
+#Populations
+GD buyer, 4
+GD seller, 4
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 1
+GD seller, 2
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+0
+ 
+## Number of sellers that changed market
+0
+ 
+## Individual Trader Matches
+sellerGD_9
+2
+sellerGD_8
+0
+sellerGD_7
+0
+sellerGD_6
+4
+sellerGD_5
+4
+sellerGD_4
+0
+sellerGD_3
+0
+sellerGD_2
+0
+sellerGD_1
+4
+sellerGD_0
+0
+buyerGD_9
+2
+buyerGD_8
+1
+buyerGD_7
+4
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+0
+buyerGD_3
+0
+buyerGD_2
+4
+buyerGD_1
+0
+buyerGD_0
+3
+## Amount of Advice given:
+sellerGD_9
+3
+sellerGD_8
+0
+sellerGD_7
+1
+sellerGD_6
+1
+sellerGD_5
+1
+sellerGD_4
+0
+sellerGD_3
+2
+sellerGD_2
+4
+sellerGD_1
+0
+sellerGD_0
+0
+buyerGD_9
+0
+buyerGD_8
+0
+buyerGD_7
+0
+buyerGD_6
+0
+buyerGD_5
+1
+buyerGD_4
+2
+buyerGD_3
+2
+buyerGD_2
+2
+buyerGD_1
+0
+buyerGD_0
+1
+ 
+## Individual Trader Profits
+sellerGD_9
+34.85855765081942
+sellerGD_8
+0.0
+sellerGD_7
+0.0
+sellerGD_6
+31.87855012714863
+sellerGD_5
+117.97882427275181
+sellerGD_4
+0.0
+sellerGD_3
+0.0
+sellerGD_2
+-0.1
+sellerGD_1
+5.798289998918785
+sellerGD_0
+-0.1
+buyerGD_9
+11.367253713682294
+buyerGD_8
+7.526767682284117
+buyerGD_7
+7.523014829605806
+buyerGD_6
+0.0
+buyerGD_5
+0.0
+buyerGD_4
+-0.1
+buyerGD_3
+0.0
+buyerGD_2
+124.02805998176336
+buyerGD_1
+0.0
+buyerGD_0
+31.40162937808782
+ 
+########################################
+#Day
+1
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+8
+ 
+#Populations
+GD buyer, 6
+GD seller, 3
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+0.1
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 0
+GD seller, 2
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+2.6880000000000113
+ 
+## Number of matches
+8
+ 
+#Populations
+GD buyer, 4
+GD seller, 4
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 0
+GD seller, 1
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+5
+ 
+## Number of sellers that changed market
+5
+ 
+## Individual Trader Matches
+sellerGD_9
+4
+sellerGD_8
+0
+sellerGD_7
+4
+sellerGD_6
+1
+sellerGD_5
+4
+sellerGD_4
+0
+sellerGD_3
+0
+sellerGD_2
+0
+sellerGD_1
+0
+sellerGD_0
+3
+buyerGD_9
+4
+buyerGD_8
+4
+buyerGD_7
+0
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+0
+buyerGD_3
+0
+buyerGD_2
+4
+buyerGD_1
+0
+buyerGD_0
+4
+## Amount of Advice given:
+sellerGD_9
+3
+sellerGD_8
+2
+sellerGD_7
+3
+sellerGD_6
+2
+sellerGD_5
+3
+sellerGD_4
+2
+sellerGD_3
+3
+sellerGD_2
+4
+sellerGD_1
+2
+sellerGD_0
+1
+buyerGD_9
+1
+buyerGD_8
+1
+buyerGD_7
+0
+buyerGD_6
+0
+buyerGD_5
+2
+buyerGD_4
+2
+buyerGD_3
+3
+buyerGD_2
+2
+buyerGD_1
+1
+buyerGD_0
+3
+ 
+## Individual Trader Profits
+sellerGD_9
+60.69311530163884
+sellerGD_8
+0.0
+sellerGD_7
+46.61323093831538
+sellerGD_6
+12.696963753178693
+sellerGD_5
+124.31482427275179
+sellerGD_4
+0.0
+sellerGD_3
+0.0
+sellerGD_2
+0.0
+sellerGD_1
+-0.1
+sellerGD_0
+9.842081840280457
+buyerGD_9
+17.134507427364596
+buyerGD_8
+37.15324368372558
+buyerGD_7
+0.0
+buyerGD_6
+0.0
+buyerGD_5
+0.0
+buyerGD_4
+0.0
+buyerGD_3
+0.0
+buyerGD_2
+130.42805998176337
+buyerGD_1
+0.0
+buyerGD_0
+57.571269429791755
+ 
+########################################
+#Day
+2
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+5
+ 
+#Populations
+GD buyer, 4
+GD seller, 5
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+3.7334382002465443
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 2
+GD seller, 3
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 4
+GD seller, 2
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 0
+GD seller, 0
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+6
+ 
+## Number of sellers that changed market
+3
+ 
+## Individual Trader Matches
+sellerGD_9
+0
+sellerGD_8
+0
+sellerGD_7
+4
+sellerGD_6
+1
+sellerGD_5
+0
+sellerGD_4
+0
+sellerGD_3
+3
+sellerGD_2
+0
+sellerGD_1
+1
+sellerGD_0
+0
+buyerGD_9
+0
+buyerGD_8
+4
+buyerGD_7
+4
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+1
+buyerGD_3
+0
+buyerGD_2
+0
+buyerGD_1
+0
+buyerGD_0
+0
+## Amount of Advice given:
+sellerGD_9
+4
+sellerGD_8
+3
+sellerGD_7
+3
+sellerGD_6
+3
+sellerGD_5
+10
+sellerGD_4
+4
+sellerGD_3
+6
+sellerGD_2
+4
+sellerGD_1
+3
+sellerGD_0
+2
+buyerGD_9
+1
+buyerGD_8
+1
+buyerGD_7
+0
+buyerGD_6
+2
+buyerGD_5
+2
+buyerGD_4
+2
+buyerGD_3
+3
+buyerGD_2
+2
+buyerGD_1
+2
+buyerGD_0
+3
+ 
+## Individual Trader Profits
+sellerGD_9
+0.0
+sellerGD_8
+0.0
+sellerGD_7
+52.67204333095994
+sellerGD_6
+3.304312845565363
+sellerGD_5
+0.0
+sellerGD_4
+0.0
+sellerGD_3
+4.136736936910067
+sellerGD_2
+0.0
+sellerGD_1
+1.764507604071866
+sellerGD_0
+0.0
+buyerGD_9
+0.0
+buyerGD_8
+52.48759948850797
+buyerGD_7
+9.549334744304502
+buyerGD_6
+-0.1
+buyerGD_5
+0.0
+buyerGD_4
+0.005787156343430411
+buyerGD_3
+0.0
+buyerGD_2
+0.0
+buyerGD_1
+0.0
+buyerGD_0
+0.0
+ 
+########################################
+#Day
+3
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 2
+GD seller, 2
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+2.6299457526402574
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 3
+GD seller, 3
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 4
+GD seller, 3
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 1
+GD seller, 2
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+7
+ 
+## Number of sellers that changed market
+5
+ 
+## Individual Trader Matches
+sellerGD_9
+0
+sellerGD_8
+0
+sellerGD_7
+4
+sellerGD_6
+4
+sellerGD_5
+4
+sellerGD_4
+0
+sellerGD_3
+0
+sellerGD_2
+0
+sellerGD_1
+0
+sellerGD_0
+0
+buyerGD_9
+0
+buyerGD_8
+4
+buyerGD_7
+0
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+4
+buyerGD_3
+0
+buyerGD_2
+0
+buyerGD_1
+0
+buyerGD_0
+4
+## Amount of Advice given:
+sellerGD_9
+5
+sellerGD_8
+4
+sellerGD_7
+3
+sellerGD_6
+3
+sellerGD_5
+15
+sellerGD_4
+5
+sellerGD_3
+7
+sellerGD_2
+4
+sellerGD_1
+3
+sellerGD_0
+2
+buyerGD_9
+1
+buyerGD_8
+2
+buyerGD_7
+0
+buyerGD_6
+3
+buyerGD_5
+3
+buyerGD_4
+7
+buyerGD_3
+3
+buyerGD_2
+2
+buyerGD_1
+4
+buyerGD_0
+4
+ 
+## Individual Trader Profits
+sellerGD_9
+0.0
+sellerGD_8
+0.0
+sellerGD_7
+65.64016762237253
+sellerGD_6
+10.501141508231704
+sellerGD_5
+196.19237291884434
+sellerGD_4
+0.0
+sellerGD_3
+-0.1
+sellerGD_2
+0.0
+sellerGD_1
+-0.1
+sellerGD_0
+0.0
+buyerGD_9
+0.0
+buyerGD_8
+49.15453359541314
+buyerGD_7
+-0.1
+buyerGD_6
+0.0
+buyerGD_5
+0.0
+buyerGD_4
+0.023148625373721643
+buyerGD_3
+0.0
+buyerGD_2
+0.0
+buyerGD_1
+0.0
+buyerGD_0
+50.86947203566132
+ 
+########################################
+#Day
+4
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 3
+GD seller, 2
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+1.9272956801669827
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 3
+GD seller, 3
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+1.2000000000000002
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 2
+GD seller, 4
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+0.47882422916960915
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 2
+GD seller, 1
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+5
+ 
+## Number of sellers that changed market
+1
+ 
+## Individual Trader Matches
+sellerGD_9
+4
+sellerGD_8
+0
+sellerGD_7
+4
+sellerGD_6
+0
+sellerGD_5
+4
+sellerGD_4
+0
+sellerGD_3
+3
+sellerGD_2
+0
+sellerGD_1
+1
+sellerGD_0
+0
+buyerGD_9
+0
+buyerGD_8
+4
+buyerGD_7
+4
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+0
+buyerGD_3
+0
+buyerGD_2
+4
+buyerGD_1
+0
+buyerGD_0
+4
+## Amount of Advice given:
+sellerGD_9
+6
+sellerGD_8
+4
+sellerGD_7
+4
+sellerGD_6
+3
+sellerGD_5
+22
+sellerGD_4
+5
+sellerGD_3
+7
+sellerGD_2
+4
+sellerGD_1
+4
+sellerGD_0
+2
+buyerGD_9
+1
+buyerGD_8
+3
+buyerGD_7
+2
+buyerGD_6
+3
+buyerGD_5
+8
+buyerGD_4
+8
+buyerGD_3
+3
+buyerGD_2
+2
+buyerGD_1
+4
+buyerGD_0
+5
+ 
+## Individual Trader Profits
+sellerGD_9
+111.31711530163886
+sellerGD_8
+0.0
+sellerGD_7
+54.44760874287323
+sellerGD_6
+-0.1
+sellerGD_5
+200.74120309595565
+sellerGD_4
+0.0
+sellerGD_3
+9.73868083590813
+sellerGD_2
+0.0
+sellerGD_1
+0.9035738630220292
+sellerGD_0
+0.0
+buyerGD_9
+0.0
+buyerGD_8
+49.552731850639304
+buyerGD_7
+15.120662687895964
+buyerGD_6
+0.0
+buyerGD_5
+0.0
+buyerGD_4
+0.0
+buyerGD_3
+0.0
+buyerGD_2
+81.22805998176334
+buyerGD_1
+0.0
+buyerGD_0
+62.06203091516062
+ 
+########################################
+#Day
+5
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 1
+GD seller, 3
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+1.7003986708206102
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 1
+GD seller, 2
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+1.181187349140646
+ 
+## Number of matches
+2
+ 
+#Populations
+GD buyer, 6
+GD seller, 3
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+1.8957002320298204
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 2
+GD seller, 2
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+7
+ 
+## Number of sellers that changed market
+2
+ 
+## Individual Trader Matches
+sellerGD_9
+2
+sellerGD_8
+0
+sellerGD_7
+4
+sellerGD_6
+0
+sellerGD_5
+4
+sellerGD_4
+0
+sellerGD_3
+4
+sellerGD_2
+0
+sellerGD_1
+0
+sellerGD_0
+0
+buyerGD_9
+0
+buyerGD_8
+4
+buyerGD_7
+4
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+1
+buyerGD_3
+0
+buyerGD_2
+1
+buyerGD_1
+0
+buyerGD_0
+4
+## Amount of Advice given:
+sellerGD_9
+8
+sellerGD_8
+4
+sellerGD_7
+4
+sellerGD_6
+3
+sellerGD_5
+29
+sellerGD_4
+5
+sellerGD_3
+9
+sellerGD_2
+4
+sellerGD_1
+6
+sellerGD_0
+2
+buyerGD_9
+2
+buyerGD_8
+3
+buyerGD_7
+2
+buyerGD_6
+3
+buyerGD_5
+13
+buyerGD_4
+9
+buyerGD_3
+3
+buyerGD_2
+2
+buyerGD_1
+4
+buyerGD_0
+5
+ 
+## Individual Trader Profits
+sellerGD_9
+58.058557650819466
+sellerGD_8
+0.0
+sellerGD_7
+50.62123656042945
+sellerGD_6
+0.0
+sellerGD_5
+196.16818455296254
+sellerGD_4
+0.0
+sellerGD_3
+12.59813039109323
+sellerGD_2
+0.0
+sellerGD_1
+-0.1
+sellerGD_0
+0.0
+buyerGD_9
+0.0
+buyerGD_8
+54.126634655957105
+buyerGD_7
+10.445520195126184
+buyerGD_6
+0.0
+buyerGD_5
+-0.1
+buyerGD_4
+2.368580643296218
+buyerGD_3
+0.0
+buyerGD_2
+18.816421320870496
+buyerGD_1
+0.0
+buyerGD_0
+69.88377865854318
+ 
+########################################
+#Day
+6
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 2
+GD seller, 2
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+2.551443753160374
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 1
+GD seller, 4
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+5.190026643216604
+ 
+## Number of matches
+5
+ 
+#Populations
+GD buyer, 2
+GD seller, 3
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+2.067543023951212
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 5
+GD seller, 1
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+6
+ 
+## Number of sellers that changed market
+2
+ 
+## Individual Trader Matches
+sellerGD_9
+4
+sellerGD_8
+0
+sellerGD_7
+4
+sellerGD_6
+4
+sellerGD_5
+4
+sellerGD_4
+0
+sellerGD_3
+0
+sellerGD_2
+1
+sellerGD_1
+0
+sellerGD_0
+0
+buyerGD_9
+0
+buyerGD_8
+4
+buyerGD_7
+4
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+2
+buyerGD_3
+0
+buyerGD_2
+3
+buyerGD_1
+0
+buyerGD_0
+4
+## Amount of Advice given:
+sellerGD_9
+8
+sellerGD_8
+5
+sellerGD_7
+4
+sellerGD_6
+3
+sellerGD_5
+35
+sellerGD_4
+5
+sellerGD_3
+9
+sellerGD_2
+4
+sellerGD_1
+13
+sellerGD_0
+2
+buyerGD_9
+3
+buyerGD_8
+3
+buyerGD_7
+2
+buyerGD_6
+3
+buyerGD_5
+15
+buyerGD_4
+9
+buyerGD_3
+4
+buyerGD_2
+2
+buyerGD_1
+4
+buyerGD_0
+7
+ 
+## Individual Trader Profits
+sellerGD_9
+116.11711530163893
+sellerGD_8
+0.0
+sellerGD_7
+45.72801088347575
+sellerGD_6
+5.57848067549157
+sellerGD_5
+194.0036780999386
+sellerGD_4
+0.0
+sellerGD_3
+-0.1
+sellerGD_2
+0.19231795817614739
+sellerGD_1
+-0.1
+sellerGD_0
+0.0
+buyerGD_9
+0.0
+buyerGD_8
+60.31467387799843
+buyerGD_7
+14.310491438766107
+buyerGD_6
+-0.1
+buyerGD_5
+0.0
+buyerGD_4
+4.737161286592436
+buyerGD_3
+-0.1
+buyerGD_2
+46.025448835693254
+buyerGD_1
+-0.1
+buyerGD_0
+70.7816287745581
+ 
+########################################
+#Day
+7
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 3
+GD seller, 3
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+1.9748998654952266
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 1
+GD seller, 3
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 2
+GD seller, 1
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+4.482372644784705
+ 
+## Number of matches
+8
+ 
+#Populations
+GD buyer, 4
+GD seller, 3
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+5
+ 
+## Number of sellers that changed market
+4
+ 
+## Individual Trader Matches
+sellerGD_9
+4
+sellerGD_8
+0
+sellerGD_7
+0
+sellerGD_6
+0
+sellerGD_5
+4
+sellerGD_4
+4
+sellerGD_3
+0
+sellerGD_2
+0
+sellerGD_1
+0
+sellerGD_0
+0
+buyerGD_9
+0
+buyerGD_8
+4
+buyerGD_7
+4
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+0
+buyerGD_3
+0
+buyerGD_2
+4
+buyerGD_1
+0
+buyerGD_0
+0
+## Amount of Advice given:
+sellerGD_9
+8
+sellerGD_8
+5
+sellerGD_7
+4
+sellerGD_6
+3
+sellerGD_5
+41
+sellerGD_4
+5
+sellerGD_3
+9
+sellerGD_2
+5
+sellerGD_1
+15
+sellerGD_0
+2
+buyerGD_9
+6
+buyerGD_8
+3
+buyerGD_7
+2
+buyerGD_6
+3
+buyerGD_5
+19
+buyerGD_4
+9
+buyerGD_3
+5
+buyerGD_2
+4
+buyerGD_1
+4
+buyerGD_0
+8
+ 
+## Individual Trader Profits
+sellerGD_9
+127.91603818777386
+sellerGD_8
+-0.1
+sellerGD_7
+0.0
+sellerGD_6
+-0.1
+sellerGD_5
+211.34173258588797
+sellerGD_4
+-0.7599998555013523
+sellerGD_3
+-0.1
+sellerGD_2
+0.0
+sellerGD_1
+0.0
+sellerGD_0
+0.0
+buyerGD_9
+-0.1
+buyerGD_8
+38.149881290106485
+buyerGD_7
+18.388042988639175
+buyerGD_6
+0.0
+buyerGD_5
+0.0
+buyerGD_4
+0.0
+buyerGD_3
+0.0
+buyerGD_2
+41.001565531373885
+buyerGD_1
+0.0
+buyerGD_0
+0.0
+ 
+########################################
+#Day
+8
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 4
+GD seller, 2
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+1.6728474939656288
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 2
+GD seller, 1
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+0.7284749396562802
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 2
+GD seller, 2
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+2.2301791088863294
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 2
+GD seller, 5
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+4
+ 
+## Number of sellers that changed market
+5
+ 
+## Individual Trader Matches
+sellerGD_9
+4
+sellerGD_8
+0
+sellerGD_7
+0
+sellerGD_6
+0
+sellerGD_5
+4
+sellerGD_4
+0
+sellerGD_3
+4
+sellerGD_2
+0
+sellerGD_1
+0
+sellerGD_0
+4
+buyerGD_9
+0
+buyerGD_8
+4
+buyerGD_7
+4
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+4
+buyerGD_3
+0
+buyerGD_2
+4
+buyerGD_1
+0
+buyerGD_0
+0
+## Amount of Advice given:
+sellerGD_9
+8
+sellerGD_8
+5
+sellerGD_7
+4
+sellerGD_6
+3
+sellerGD_5
+44
+sellerGD_4
+8
+sellerGD_3
+9
+sellerGD_2
+8
+sellerGD_1
+15
+sellerGD_0
+2
+buyerGD_9
+9
+buyerGD_8
+7
+buyerGD_7
+2
+buyerGD_6
+3
+buyerGD_5
+23
+buyerGD_4
+9
+buyerGD_3
+5
+buyerGD_2
+4
+buyerGD_1
+4
+buyerGD_0
+8
+ 
+## Individual Trader Profits
+sellerGD_9
+124.28661409476399
+sellerGD_8
+0.0
+sellerGD_7
+-0.1
+sellerGD_6
+-0.1
+sellerGD_5
+189.88671158599485
+sellerGD_4
+0.0
+sellerGD_3
+3.293395791365969
+sellerGD_2
+0.0
+sellerGD_1
+-0.1
+sellerGD_0
+4.229359135579557
+buyerGD_9
+-0.1
+buyerGD_8
+38.264967228669434
+buyerGD_7
+19.67780597170843
+buyerGD_6
+0.0
+buyerGD_5
+0.0
+buyerGD_4
+2.938723538684826
+buyerGD_3
+0.0
+buyerGD_2
+70.289993559634
+buyerGD_1
+0.0
+buyerGD_0
+0.0
+ 
+########################################
+#Day
+9
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 3
+GD seller, 6
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+3.439182854082612
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 4
+GD seller, 2
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+0.04136782097363039
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 3
+GD seller, 1
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 0
+GD seller, 1
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+5
+ 
+## Number of sellers that changed market
+6
+ 
+## Individual Trader Matches
+sellerGD_9
+4
+sellerGD_8
+0
+sellerGD_7
+4
+sellerGD_6
+0
+sellerGD_5
+0
+sellerGD_4
+0
+sellerGD_3
+4
+sellerGD_2
+0
+sellerGD_1
+0
+sellerGD_0
+0
+buyerGD_9
+0
+buyerGD_8
+4
+buyerGD_7
+0
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+0
+buyerGD_3
+0
+buyerGD_2
+4
+buyerGD_1
+0
+buyerGD_0
+4
+## Amount of Advice given:
+sellerGD_9
+8
+sellerGD_8
+5
+sellerGD_7
+4
+sellerGD_6
+3
+sellerGD_5
+46
+sellerGD_4
+8
+sellerGD_3
+10
+sellerGD_2
+15
+sellerGD_1
+15
+sellerGD_0
+2
+buyerGD_9
+11
+buyerGD_8
+12
+buyerGD_7
+2
+buyerGD_6
+3
+buyerGD_5
+26
+buyerGD_4
+9
+buyerGD_3
+5
+buyerGD_2
+4
+buyerGD_1
+4
+buyerGD_0
+8
+ 
+## Individual Trader Profits
+sellerGD_9
+118.81828154415841
+sellerGD_8
+0.0
+sellerGD_7
+47.12722495815976
+sellerGD_6
+0.0
+sellerGD_5
+0.0
+sellerGD_4
+0.0
+sellerGD_3
+11.520379851548581
+sellerGD_2
+0.0
+sellerGD_1
+0.0
+sellerGD_0
+0.0
+buyerGD_9
+0.0
+buyerGD_8
+49.52969154027588
+buyerGD_7
+-0.1
+buyerGD_6
+0.0
+buyerGD_5
+0.0
+buyerGD_4
+0.0
+buyerGD_3
+0.0
+buyerGD_2
+74.88552591827016
+buyerGD_1
+0.0
+buyerGD_0
+69.38241469987409
+ 
+########################################
+#Day
+10
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 3
+GD seller, 4
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+2.2200000491941903
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 4
+GD seller, 2
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+0.034068013844256485
+ 
+## Number of matches
+1
+ 
+#Populations
+GD buyer, 3
+GD seller, 3
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 0
+GD seller, 1
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+6
+ 
+## Number of sellers that changed market
+4
+ 
+## Individual Trader Matches
+sellerGD_9
+0
+sellerGD_8
+0
+sellerGD_7
+4
+sellerGD_6
+0
+sellerGD_5
+1
+sellerGD_4
+0
+sellerGD_3
+4
+sellerGD_2
+0
+sellerGD_1
+0
+sellerGD_0
+0
+buyerGD_9
+0
+buyerGD_8
+1
+buyerGD_7
+4
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+1
+buyerGD_3
+0
+buyerGD_2
+3
+buyerGD_1
+0
+buyerGD_0
+0
+## Amount of Advice given:
+sellerGD_9
+9
+sellerGD_8
+5
+sellerGD_7
+4
+sellerGD_6
+3
+sellerGD_5
+48
+sellerGD_4
+8
+sellerGD_3
+10
+sellerGD_2
+21
+sellerGD_1
+15
+sellerGD_0
+2
+buyerGD_9
+14
+buyerGD_8
+17
+buyerGD_7
+2
+buyerGD_6
+3
+buyerGD_5
+26
+buyerGD_4
+11
+buyerGD_3
+5
+buyerGD_2
+5
+buyerGD_1
+4
+buyerGD_0
+8
+ 
+## Individual Trader Profits
+sellerGD_9
+0.0
+sellerGD_8
+0.0
+sellerGD_7
+50.020066516241286
+sellerGD_6
+0.0
+sellerGD_5
+35.13627205537703
+sellerGD_4
+0.0
+sellerGD_3
+23.605885770376705
+sellerGD_2
+0.0
+sellerGD_1
+0.0
+sellerGD_0
+0.0
+buyerGD_9
+0.0
+buyerGD_8
+9.885842174226061
+buyerGD_7
+14.982599711278226
+buyerGD_6
+0.0
+buyerGD_5
+0.0
+buyerGD_4
+13.883540316833233
+buyerGD_3
+-0.1
+buyerGD_2
+33.218268191580286
+buyerGD_1
+0.0
+buyerGD_0
+0.0
+ 
+########################################
+#Day
+11
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 5
+GD seller, 4
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+0.30000000000000004
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 2
+GD seller, 2
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+8.096711325392988
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 2
+GD seller, 3
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+0.2
+ 
+## Number of matches
+1
+ 
+#Populations
+GD buyer, 1
+GD seller, 1
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+5
+ 
+## Number of sellers that changed market
+5
+ 
+## Individual Trader Matches
+sellerGD_9
+2
+sellerGD_8
+0
+sellerGD_7
+4
+sellerGD_6
+0
+sellerGD_5
+1
+sellerGD_4
+0
+sellerGD_3
+0
+sellerGD_2
+2
+sellerGD_1
+0
+sellerGD_0
+0
+buyerGD_9
+0
+buyerGD_8
+4
+buyerGD_7
+0
+buyerGD_6
+0
+buyerGD_5
+1
+buyerGD_4
+0
+buyerGD_3
+0
+buyerGD_2
+4
+buyerGD_1
+0
+buyerGD_0
+0
+## Amount of Advice given:
+sellerGD_9
+14
+sellerGD_8
+5
+sellerGD_7
+5
+sellerGD_6
+3
+sellerGD_5
+50
+sellerGD_4
+8
+sellerGD_3
+10
+sellerGD_2
+23
+sellerGD_1
+15
+sellerGD_0
+2
+buyerGD_9
+16
+buyerGD_8
+22
+buyerGD_7
+2
+buyerGD_6
+3
+buyerGD_5
+26
+buyerGD_4
+11
+buyerGD_3
+5
+buyerGD_2
+8
+buyerGD_1
+4
+buyerGD_0
+8
+ 
+## Individual Trader Profits
+sellerGD_9
+54.37592194901532
+sellerGD_8
+0.0
+sellerGD_7
+54.95937094204123
+sellerGD_6
+-0.1
+sellerGD_5
+14.295631576246018
+sellerGD_4
+0.0
+sellerGD_3
+-0.1
+sellerGD_2
+0.020000000000010232
+sellerGD_1
+0.0
+sellerGD_0
+0.0
+buyerGD_9
+0.0
+buyerGD_8
+49.788500274345324
+buyerGD_7
+0.0
+buyerGD_6
+0.0
+buyerGD_5
+-0.09019411048888629
+buyerGD_4
+0.0
+buyerGD_3
+0.0
+buyerGD_2
+57.20510656142022
+buyerGD_1
+-0.1
+buyerGD_0
+0.0
+ 
+########################################
+#Day
+12
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 5
+GD seller, 4
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+0.1
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 0
+GD seller, 1
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+2.1657627094365384
+ 
+## Number of matches
+1
+ 
+#Populations
+GD buyer, 5
+GD seller, 4
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 0
+GD seller, 1
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+7
+ 
+## Number of sellers that changed market
+5
+ 
+## Individual Trader Matches
+sellerGD_9
+0
+sellerGD_8
+0
+sellerGD_7
+0
+sellerGD_6
+0
+sellerGD_5
+1
+sellerGD_4
+0
+sellerGD_3
+0
+sellerGD_2
+0
+sellerGD_1
+0
+sellerGD_0
+0
+buyerGD_9
+0
+buyerGD_8
+0
+buyerGD_7
+0
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+0
+buyerGD_3
+1
+buyerGD_2
+0
+buyerGD_1
+0
+buyerGD_0
+0
+## Amount of Advice given:
+sellerGD_9
+19
+sellerGD_8
+5
+sellerGD_7
+5
+sellerGD_6
+3
+sellerGD_5
+52
+sellerGD_4
+8
+sellerGD_3
+11
+sellerGD_2
+25
+sellerGD_1
+15
+sellerGD_0
+2
+buyerGD_9
+18
+buyerGD_8
+27
+buyerGD_7
+2
+buyerGD_6
+3
+buyerGD_5
+26
+buyerGD_4
+11
+buyerGD_3
+5
+buyerGD_2
+11
+buyerGD_1
+4
+buyerGD_0
+8
+ 
+## Individual Trader Profits
+sellerGD_9
+0.0
+sellerGD_8
+0.0
+sellerGD_7
+0.0
+sellerGD_6
+0.0
+sellerGD_5
+23.05868241399217
+sellerGD_4
+0.0
+sellerGD_3
+-0.1
+sellerGD_2
+0.0
+sellerGD_1
+0.0
+sellerGD_0
+0.0
+buyerGD_9
+0.0
+buyerGD_8
+0.0
+buyerGD_7
+0.0
+buyerGD_6
+0.0
+buyerGD_5
+0.0
+buyerGD_4
+0.0
+buyerGD_3
+0.00851977037429208
+buyerGD_2
+0.0
+buyerGD_1
+0.0
+buyerGD_0
+0.0
+ 
+########################################
+#Day
+13
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 1
+GD seller, 3
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+0.2
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 3
+GD seller, 0
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+19.063050837746154
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 4
+GD seller, 5
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 2
+GD seller, 2
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+8
+ 
+## Number of sellers that changed market
+6
+ 
+## Individual Trader Matches
+sellerGD_9
+0
+sellerGD_8
+0
+sellerGD_7
+0
+sellerGD_6
+4
+sellerGD_5
+4
+sellerGD_4
+0
+sellerGD_3
+0
+sellerGD_2
+0
+sellerGD_1
+0
+sellerGD_0
+0
+buyerGD_9
+0
+buyerGD_8
+4
+buyerGD_7
+0
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+0
+buyerGD_3
+0
+buyerGD_2
+4
+buyerGD_1
+0
+buyerGD_0
+0
+## Amount of Advice given:
+sellerGD_9
+20
+sellerGD_8
+5
+sellerGD_7
+5
+sellerGD_6
+3
+sellerGD_5
+52
+sellerGD_4
+8
+sellerGD_3
+12
+sellerGD_2
+31
+sellerGD_1
+15
+sellerGD_0
+2
+buyerGD_9
+21
+buyerGD_8
+32
+buyerGD_7
+2
+buyerGD_6
+3
+buyerGD_5
+28
+buyerGD_4
+13
+buyerGD_3
+5
+buyerGD_2
+11
+buyerGD_1
+4
+buyerGD_0
+8
+ 
+## Individual Trader Profits
+sellerGD_9
+0.0
+sellerGD_8
+0.0
+sellerGD_7
+0.0
+sellerGD_6
+2.0904236185549507
+sellerGD_5
+133.8347296559687
+sellerGD_4
+0.0
+sellerGD_3
+0.0
+sellerGD_2
+0.0
+sellerGD_1
+0.0
+sellerGD_0
+0.0
+buyerGD_9
+0.0
+buyerGD_8
+59.895197237730144
+buyerGD_7
+0.0
+buyerGD_6
+0.0
+buyerGD_5
+-0.1
+buyerGD_4
+0.0
+buyerGD_3
+0.0
+buyerGD_2
+109.10910376080034
+buyerGD_1
+0.0
+buyerGD_0
+-0.1
+ 
+########################################
+#Day
+14
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 3
+GD seller, 4
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+0.2
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 2
+GD seller, 2
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+14.397221942768589
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 3
+GD seller, 3
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+0.019121110402805796
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 2
+GD seller, 1
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+6
+ 
+## Number of sellers that changed market
+6
+ 
+## Individual Trader Matches
+sellerGD_9
+2
+sellerGD_8
+0
+sellerGD_7
+4
+sellerGD_6
+4
+sellerGD_5
+2
+sellerGD_4
+0
+sellerGD_3
+0
+sellerGD_2
+0
+sellerGD_1
+0
+sellerGD_0
+0
+buyerGD_9
+0
+buyerGD_8
+4
+buyerGD_7
+0
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+4
+buyerGD_3
+0
+buyerGD_2
+0
+buyerGD_1
+0
+buyerGD_0
+4
+## Amount of Advice given:
+sellerGD_9
+22
+sellerGD_8
+5
+sellerGD_7
+5
+sellerGD_6
+4
+sellerGD_5
+52
+sellerGD_4
+8
+sellerGD_3
+13
+sellerGD_2
+37
+sellerGD_1
+15
+sellerGD_0
+2
+buyerGD_9
+23
+buyerGD_8
+37
+buyerGD_7
+2
+buyerGD_6
+3
+buyerGD_5
+28
+buyerGD_4
+13
+buyerGD_3
+5
+buyerGD_2
+12
+buyerGD_1
+5
+buyerGD_0
+9
+ 
+## Individual Trader Profits
+sellerGD_9
+32.980174009638944
+sellerGD_8
+0.0
+sellerGD_7
+52.087023531275236
+sellerGD_6
+1.5284148639644293
+sellerGD_5
+66.97706935084082
+sellerGD_4
+0.0
+sellerGD_3
+-0.1
+sellerGD_2
+0.0
+sellerGD_1
+0.0
+sellerGD_0
+0.0
+buyerGD_9
+0.0
+buyerGD_8
+60.43808488191786
+buyerGD_7
+0.0
+buyerGD_6
+0.0
+buyerGD_5
+0.0
+buyerGD_4
+47.73020175541321
+buyerGD_3
+-0.1
+buyerGD_2
+0.0
+buyerGD_1
+0.0
+buyerGD_0
+64.42261612675861
+ 
+########################################
+#Day
+15
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 5
+GD seller, 3
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 0
+GD seller, 2
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 2
+GD seller, 4
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+0.03166956588661945
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 3
+GD seller, 1
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+4
+ 
+## Number of sellers that changed market
+6
+ 
+## Individual Trader Matches
+sellerGD_9
+0
+sellerGD_8
+0
+sellerGD_7
+0
+sellerGD_6
+4
+sellerGD_5
+0
+sellerGD_4
+0
+sellerGD_3
+0
+sellerGD_2
+0
+sellerGD_1
+0
+sellerGD_0
+0
+buyerGD_9
+0
+buyerGD_8
+3
+buyerGD_7
+0
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+0
+buyerGD_3
+0
+buyerGD_2
+1
+buyerGD_1
+0
+buyerGD_0
+0
+## Amount of Advice given:
+sellerGD_9
+23
+sellerGD_8
+5
+sellerGD_7
+6
+sellerGD_6
+5
+sellerGD_5
+52
+sellerGD_4
+8
+sellerGD_3
+14
+sellerGD_2
+40
+sellerGD_1
+15
+sellerGD_0
+2
+buyerGD_9
+26
+buyerGD_8
+42
+buyerGD_7
+2
+buyerGD_6
+3
+buyerGD_5
+28
+buyerGD_4
+13
+buyerGD_3
+5
+buyerGD_2
+17
+buyerGD_1
+5
+buyerGD_0
+9
+ 
+## Individual Trader Profits
+sellerGD_9
+0.0
+sellerGD_8
+0.0
+sellerGD_7
+0.0
+sellerGD_6
+20.625277250639027
+sellerGD_5
+0.0
+sellerGD_4
+0.0
+sellerGD_3
+0.0
+sellerGD_2
+0.0
+sellerGD_1
+0.0
+sellerGD_0
+0.0
+buyerGD_9
+0.0
+buyerGD_8
+30.996505529819586
+buyerGD_7
+0.0
+buyerGD_6
+0.0
+buyerGD_5
+0.0
+buyerGD_4
+0.0
+buyerGD_3
+0.0
+buyerGD_2
+11.812415823096586
+buyerGD_1
+0.0
+buyerGD_0
+0.0
+ 
+########################################
+#Day
+16
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 3
+GD seller, 4
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+0.30000000000000004
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 1
+GD seller, 2
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+6.491243070420968
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 4
+GD seller, 3
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+5.590481679428687
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 2
+GD seller, 1
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+6
+ 
+## Number of sellers that changed market
+8
+ 
+## Individual Trader Matches
+sellerGD_9
+4
+sellerGD_8
+0
+sellerGD_7
+4
+sellerGD_6
+0
+sellerGD_5
+4
+sellerGD_4
+0
+sellerGD_3
+0
+sellerGD_2
+0
+sellerGD_1
+0
+sellerGD_0
+0
+buyerGD_9
+1
+buyerGD_8
+3
+buyerGD_7
+0
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+3
+buyerGD_3
+0
+buyerGD_2
+1
+buyerGD_1
+0
+buyerGD_0
+4
+## Amount of Advice given:
+sellerGD_9
+23
+sellerGD_8
+5
+sellerGD_7
+7
+sellerGD_6
+5
+sellerGD_5
+52
+sellerGD_4
+8
+sellerGD_3
+15
+sellerGD_2
+43
+sellerGD_1
+15
+sellerGD_0
+2
+buyerGD_9
+29
+buyerGD_8
+47
+buyerGD_7
+2
+buyerGD_6
+3
+buyerGD_5
+29
+buyerGD_4
+13
+buyerGD_3
+6
+buyerGD_2
+22
+buyerGD_1
+5
+buyerGD_0
+9
+ 
+## Individual Trader Profits
+sellerGD_9
+62.60104380428574
+sellerGD_8
+-0.1
+sellerGD_7
+52.77600920295322
+sellerGD_6
+-0.1
+sellerGD_5
+198.21871257948385
+sellerGD_4
+0.0
+sellerGD_3
+0.0
+sellerGD_2
+0.0
+sellerGD_1
+0.0
+sellerGD_0
+0.0
+buyerGD_9
+0.0018163390140415459
+buyerGD_8
+30.99650561082138
+buyerGD_7
+-0.1
+buyerGD_6
+0.0
+buyerGD_5
+0.0
+buyerGD_4
+45.18416189835894
+buyerGD_3
+0.0
+buyerGD_2
+22.760442445311096
+buyerGD_1
+0.0
+buyerGD_0
+63.73363045508063
+ 
+########################################
+#Day
+17
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 4
+GD seller, 2
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+0.1
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 1
+GD seller, 0
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+6.6542675304874646
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 4
+GD seller, 4
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+0.4040963229336083
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 1
+GD seller, 4
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+4
+ 
+## Number of sellers that changed market
+5
+ 
+## Individual Trader Matches
+sellerGD_9
+4
+sellerGD_8
+0
+sellerGD_7
+0
+sellerGD_6
+3
+sellerGD_5
+1
+sellerGD_4
+0
+sellerGD_3
+0
+sellerGD_2
+0
+sellerGD_1
+0
+sellerGD_0
+0
+buyerGD_9
+2
+buyerGD_8
+0
+buyerGD_7
+0
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+2
+buyerGD_3
+0
+buyerGD_2
+4
+buyerGD_1
+0
+buyerGD_0
+0
+## Amount of Advice given:
+sellerGD_9
+25
+sellerGD_8
+6
+sellerGD_7
+8
+sellerGD_6
+5
+sellerGD_5
+54
+sellerGD_4
+9
+sellerGD_3
+16
+sellerGD_2
+45
+sellerGD_1
+15
+sellerGD_0
+2
+buyerGD_9
+31
+buyerGD_8
+50
+buyerGD_7
+2
+buyerGD_6
+3
+buyerGD_5
+31
+buyerGD_4
+13
+buyerGD_3
+6
+buyerGD_2
+25
+buyerGD_1
+5
+buyerGD_0
+9
+ 
+## Individual Trader Profits
+sellerGD_9
+45.34023834038338
+sellerGD_8
+0.0
+sellerGD_7
+0.0
+sellerGD_6
+12.228475832683372
+sellerGD_5
+52.43942401429982
+sellerGD_4
+0.0
+sellerGD_3
+0.0
+sellerGD_2
+0.0
+sellerGD_1
+0.0
+sellerGD_0
+0.0
+buyerGD_9
+10.62855852550087
+buyerGD_8
+-0.1
+buyerGD_7
+0.0
+buyerGD_6
+0.0
+buyerGD_5
+0.0
+buyerGD_4
+37.979653254682546
+buyerGD_3
+0.0
+buyerGD_2
+51.35968247539599
+buyerGD_1
+0.0
+buyerGD_0
+0.0
+ 
+########################################
+#Day
+18
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+2.886895269817279
+ 
+## Number of matches
+5
+ 
+#Populations
+GD buyer, 4
+GD seller, 3
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 0
+GD seller, 0
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+0.75960255227983
+ 
+## Number of matches
+1
+ 
+#Populations
+GD buyer, 5
+GD seller, 3
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+0.6331148321055069
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 1
+GD seller, 4
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+6
+ 
+## Number of sellers that changed market
+5
+ 
+## Individual Trader Matches
+sellerGD_9
+0
+sellerGD_8
+0
+sellerGD_7
+4
+sellerGD_6
+0
+sellerGD_5
+1
+sellerGD_4
+0
+sellerGD_3
+3
+sellerGD_2
+0
+sellerGD_1
+1
+sellerGD_0
+1
+buyerGD_9
+0
+buyerGD_8
+4
+buyerGD_7
+1
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+0
+buyerGD_3
+0
+buyerGD_2
+1
+buyerGD_1
+0
+buyerGD_0
+4
+## Amount of Advice given:
+sellerGD_9
+27
+sellerGD_8
+7
+sellerGD_7
+8
+sellerGD_6
+5
+sellerGD_5
+55
+sellerGD_4
+9
+sellerGD_3
+16
+sellerGD_2
+45
+sellerGD_1
+15
+sellerGD_0
+2
+buyerGD_9
+34
+buyerGD_8
+55
+buyerGD_7
+3
+buyerGD_6
+3
+buyerGD_5
+32
+buyerGD_4
+17
+buyerGD_3
+6
+buyerGD_2
+26
+buyerGD_1
+5
+buyerGD_0
+10
+ 
+## Individual Trader Profits
+sellerGD_9
+0.0
+sellerGD_8
+0.0
+sellerGD_7
+46.820525935904826
+sellerGD_6
+0.0
+sellerGD_5
+49.9241601889953
+sellerGD_4
+0.0
+sellerGD_3
+7.183787986801292
+sellerGD_2
+0.0
+sellerGD_1
+0.010000000000005116
+sellerGD_0
+0.010000000000005116
+buyerGD_9
+0.0
+buyerGD_8
+54.57235142700027
+buyerGD_7
+7.250666556879878
+buyerGD_6
+0.0
+buyerGD_5
+0.0
+buyerGD_4
+0.0
+buyerGD_3
+0.0
+buyerGD_2
+14.440986306183035
+buyerGD_1
+0.0
+buyerGD_0
+60.22883223927734
+ 
+########################################
+#Day
+19
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+3.8386876047278036
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 2
+GD seller, 4
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+0.1
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 1
+GD seller, 0
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+0.045026092979583154
+ 
+## Number of matches
+1
+ 
+#Populations
+GD buyer, 5
+GD seller, 2
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+0.7020300096175291
+ 
+## Number of matches
+7
+ 
+#Populations
+GD buyer, 2
+GD seller, 4
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+8
+ 
+## Number of sellers that changed market
+3
+ 
+## Individual Trader Matches
+sellerGD_9
+0
+sellerGD_8
+0
+sellerGD_7
+4
+sellerGD_6
+0
+sellerGD_5
+4
+sellerGD_4
+0
+sellerGD_3
+3
+sellerGD_2
+0
+sellerGD_1
+0
+sellerGD_0
+1
+buyerGD_9
+0
+buyerGD_8
+4
+buyerGD_7
+3
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+0
+buyerGD_3
+0
+buyerGD_2
+4
+buyerGD_1
+0
+buyerGD_0
+1
+## Amount of Advice given:
+sellerGD_9
+29
+sellerGD_8
+8
+sellerGD_7
+8
+sellerGD_6
+5
+sellerGD_5
+55
+sellerGD_4
+9
+sellerGD_3
+17
+sellerGD_2
+45
+sellerGD_1
+15
+sellerGD_0
+2
+buyerGD_9
+37
+buyerGD_8
+60
+buyerGD_7
+3
+buyerGD_6
+3
+buyerGD_5
+33
+buyerGD_4
+21
+buyerGD_3
+6
+buyerGD_2
+27
+buyerGD_1
+7
+buyerGD_0
+10
+ 
+## Individual Trader Profits
+sellerGD_9
+0.0
+sellerGD_8
+0.0
+sellerGD_7
+50.42736791453976
+sellerGD_6
+0.0
+sellerGD_5
+190.4276780281216
+sellerGD_4
+0.0
+sellerGD_3
+6.0
+sellerGD_2
+0.0
+sellerGD_1
+0.0
+sellerGD_0
+0.010000000000005116
+buyerGD_9
+-0.1
+buyerGD_8
+50.481815697118996
+buyerGD_7
+21.751999670639634
+buyerGD_6
+0.0
+buyerGD_5
+0.0
+buyerGD_4
+0.0
+buyerGD_3
+0.0
+buyerGD_2
+61.608213488916434
+buyerGD_1
+0.0
+buyerGD_0
+13.508997608494482
+ 
+########################################
+#Day
+20
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+3.695169339642102
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 2
+GD seller, 4
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 0
+GD seller, 0
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 3
+GD seller, 4
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+4.39095148611068
+ 
+## Number of matches
+8
+ 
+#Populations
+GD buyer, 5
+GD seller, 2
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+8
+ 
+## Number of sellers that changed market
+4
+ 
+## Individual Trader Matches
+sellerGD_9
+0
+sellerGD_8
+0
+sellerGD_7
+4
+sellerGD_6
+4
+sellerGD_5
+4
+sellerGD_4
+0
+sellerGD_3
+0
+sellerGD_2
+0
+sellerGD_1
+0
+sellerGD_0
+0
+buyerGD_9
+0
+buyerGD_8
+4
+buyerGD_7
+3
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+1
+buyerGD_3
+0
+buyerGD_2
+0
+buyerGD_1
+0
+buyerGD_0
+4
+## Amount of Advice given:
+sellerGD_9
+34
+sellerGD_8
+8
+sellerGD_7
+8
+sellerGD_6
+6
+sellerGD_5
+55
+sellerGD_4
+9
+sellerGD_3
+17
+sellerGD_2
+46
+sellerGD_1
+15
+sellerGD_0
+2
+buyerGD_9
+37
+buyerGD_8
+63
+buyerGD_7
+9
+buyerGD_6
+3
+buyerGD_5
+34
+buyerGD_4
+24
+buyerGD_3
+6
+buyerGD_2
+27
+buyerGD_1
+7
+buyerGD_0
+10
+ 
+## Individual Trader Profits
+sellerGD_9
+0.0
+sellerGD_8
+0.0
+sellerGD_7
+50.391235995128994
+sellerGD_6
+4.796366610378026
+sellerGD_5
+192.5443116331547
+sellerGD_4
+0.0
+sellerGD_3
+0.0
+sellerGD_2
+0.0
+sellerGD_1
+0.0
+sellerGD_0
+0.0
+buyerGD_9
+-0.1
+buyerGD_8
+56.20718509443106
+buyerGD_7
+13.636829488351983
+buyerGD_6
+0.0
+buyerGD_5
+-0.1
+buyerGD_4
+1.919374439679086
+buyerGD_3
+0.0
+buyerGD_2
+0.0
+buyerGD_1
+0.0
+buyerGD_0
+62.423234323262754
+ 
+########################################
+#Day
+21
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 3
+GD seller, 3
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+0.1
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 1
+GD seller, 0
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+1.2768113102227518
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 3
+GD seller, 3
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+3.3085519335448232
+ 
+## Number of matches
+8
+ 
+#Populations
+GD buyer, 3
+GD seller, 4
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+5
+ 
+## Number of sellers that changed market
+5
+ 
+## Individual Trader Matches
+sellerGD_9
+1
+sellerGD_8
+0
+sellerGD_7
+0
+sellerGD_6
+0
+sellerGD_5
+4
+sellerGD_4
+0
+sellerGD_3
+4
+sellerGD_2
+0
+sellerGD_1
+3
+sellerGD_0
+0
+buyerGD_9
+0
+buyerGD_8
+4
+buyerGD_7
+4
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+0
+buyerGD_3
+0
+buyerGD_2
+4
+buyerGD_1
+0
+buyerGD_0
+0
+## Amount of Advice given:
+sellerGD_9
+39
+sellerGD_8
+8
+sellerGD_7
+8
+sellerGD_6
+6
+sellerGD_5
+56
+sellerGD_4
+9
+sellerGD_3
+17
+sellerGD_2
+46
+sellerGD_1
+16
+sellerGD_0
+2
+buyerGD_9
+37
+buyerGD_8
+67
+buyerGD_7
+13
+buyerGD_6
+3
+buyerGD_5
+35
+buyerGD_4
+28
+buyerGD_3
+6
+buyerGD_2
+27
+buyerGD_1
+7
+buyerGD_0
+10
+ 
+## Individual Trader Profits
+sellerGD_9
+35.36372381275892
+sellerGD_8
+0.0
+sellerGD_7
+0.0
+sellerGD_6
+0.0
+sellerGD_5
+198.8676475552678
+sellerGD_4
+0.0
+sellerGD_3
+7.173857443801552
+sellerGD_2
+0.0
+sellerGD_1
+0.030000000000015348
+sellerGD_0
+0.0
+buyerGD_9
+0.0
+buyerGD_8
+55.61254615759057
+buyerGD_7
+15.86734116872353
+buyerGD_6
+0.0
+buyerGD_5
+-0.1
+buyerGD_4
+-0.1
+buyerGD_3
+0.0
+buyerGD_2
+57.39752527325747
+buyerGD_1
+0.0
+buyerGD_0
+0.0
+ 
+########################################
+#Day
+22
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+0.11199999999999365
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 2
+GD seller, 2
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+0.1
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 0
+GD seller, 1
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 4
+GD seller, 3
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 4
+GD seller, 4
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+6
+ 
+## Number of sellers that changed market
+4
+ 
+## Individual Trader Matches
+sellerGD_9
+0
+sellerGD_8
+0
+sellerGD_7
+4
+sellerGD_6
+0
+sellerGD_5
+0
+sellerGD_4
+0
+sellerGD_3
+0
+sellerGD_2
+0
+sellerGD_1
+0
+sellerGD_0
+0
+buyerGD_9
+0
+buyerGD_8
+0
+buyerGD_7
+0
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+4
+buyerGD_3
+0
+buyerGD_2
+0
+buyerGD_1
+0
+buyerGD_0
+0
+## Amount of Advice given:
+sellerGD_9
+44
+sellerGD_8
+9
+sellerGD_7
+8
+sellerGD_6
+7
+sellerGD_5
+56
+sellerGD_4
+9
+sellerGD_3
+17
+sellerGD_2
+46
+sellerGD_1
+16
+sellerGD_0
+2
+buyerGD_9
+39
+buyerGD_8
+72
+buyerGD_7
+15
+buyerGD_6
+3
+buyerGD_5
+36
+buyerGD_4
+31
+buyerGD_3
+6
+buyerGD_2
+27
+buyerGD_1
+7
+buyerGD_0
+10
+ 
+## Individual Trader Profits
+sellerGD_9
+-0.1
+sellerGD_8
+0.0
+sellerGD_7
+36.68799999999996
+sellerGD_6
+0.0
+sellerGD_5
+0.0
+sellerGD_4
+0.0
+sellerGD_3
+0.0
+sellerGD_2
+0.0
+sellerGD_1
+0.0
+sellerGD_0
+0.0
+buyerGD_9
+0.0
+buyerGD_8
+0.0
+buyerGD_7
+0.0
+buyerGD_6
+0.0
+buyerGD_5
+0.0
+buyerGD_4
+8.07749775871639
+buyerGD_3
+0.0
+buyerGD_2
+0.0
+buyerGD_1
+0.0
+buyerGD_0
+0.0
+ 
+########################################
+#Day
+23
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+3.6810962792992625
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 7
+GD seller, 2
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+0.1
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 0
+GD seller, 1
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+4.945725490459424
+ 
+## Number of matches
+6
+ 
+#Populations
+GD buyer, 3
+GD seller, 4
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 0
+GD seller, 3
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+8
+ 
+## Number of sellers that changed market
+2
+ 
+## Individual Trader Matches
+sellerGD_9
+4
+sellerGD_8
+0
+sellerGD_7
+4
+sellerGD_6
+0
+sellerGD_5
+0
+sellerGD_4
+0
+sellerGD_3
+0
+sellerGD_2
+0
+sellerGD_1
+2
+sellerGD_0
+0
+buyerGD_9
+2
+buyerGD_8
+4
+buyerGD_7
+0
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+0
+buyerGD_3
+0
+buyerGD_2
+4
+buyerGD_1
+0
+buyerGD_0
+0
+## Amount of Advice given:
+sellerGD_9
+48
+sellerGD_8
+9
+sellerGD_7
+8
+sellerGD_6
+8
+sellerGD_5
+57
+sellerGD_4
+9
+sellerGD_3
+17
+sellerGD_2
+46
+sellerGD_1
+18
+sellerGD_0
+2
+buyerGD_9
+44
+buyerGD_8
+74
+buyerGD_7
+17
+buyerGD_6
+3
+buyerGD_5
+36
+buyerGD_4
+34
+buyerGD_3
+6
+buyerGD_2
+27
+buyerGD_1
+7
+buyerGD_0
+10
+ 
+## Individual Trader Profits
+sellerGD_9
+97.96425701376845
+sellerGD_8
+0.0
+sellerGD_7
+46.57593800985984
+sellerGD_6
+0.0
+sellerGD_5
+-0.1
+sellerGD_4
+0.0
+sellerGD_3
+0.0
+sellerGD_2
+0.0
+sellerGD_1
+0.020000000000010232
+sellerGD_0
+0.0
+buyerGD_9
+0.0036326780280830917
+buyerGD_8
+54.490836927227456
+buyerGD_7
+0.0
+buyerGD_6
+0.0
+buyerGD_5
+0.0
+buyerGD_4
+0.0
+buyerGD_3
+0.0
+buyerGD_2
+60.9859615408726
+buyerGD_1
+0.0
+buyerGD_0
+0.0
+ 
+########################################
+#Day
+24
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+0.39260322528859437
+ 
+## Number of matches
+8
+ 
+#Populations
+GD buyer, 5
+GD seller, 3
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 0
+GD seller, 0
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 4
+GD seller, 2
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+1.6345311008025327
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 1
+GD seller, 5
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+4
+ 
+## Number of sellers that changed market
+4
+ 
+## Individual Trader Matches
+sellerGD_9
+0
+sellerGD_8
+0
+sellerGD_7
+4
+sellerGD_6
+0
+sellerGD_5
+4
+sellerGD_4
+0
+sellerGD_3
+0
+sellerGD_2
+4
+sellerGD_1
+0
+sellerGD_0
+0
+buyerGD_9
+0
+buyerGD_8
+2
+buyerGD_7
+4
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+0
+buyerGD_3
+0
+buyerGD_2
+3
+buyerGD_1
+0
+buyerGD_0
+3
+## Amount of Advice given:
+sellerGD_9
+52
+sellerGD_8
+10
+sellerGD_7
+8
+sellerGD_6
+8
+sellerGD_5
+62
+sellerGD_4
+9
+sellerGD_3
+18
+sellerGD_2
+46
+sellerGD_1
+18
+sellerGD_0
+2
+buyerGD_9
+46
+buyerGD_8
+76
+buyerGD_7
+18
+buyerGD_6
+3
+buyerGD_5
+37
+buyerGD_4
+36
+buyerGD_3
+7
+buyerGD_2
+27
+buyerGD_1
+7
+buyerGD_0
+10
+ 
+## Individual Trader Profits
+sellerGD_9
+0.0
+sellerGD_8
+0.0
+sellerGD_7
+62.25424763356581
+sellerGD_6
+0.0
+sellerGD_5
+202.7163285177856
+sellerGD_4
+0.0
+sellerGD_3
+0.0
+sellerGD_2
+0.03999999999996362
+sellerGD_1
+0.0
+sellerGD_0
+0.0
+buyerGD_9
+0.0
+buyerGD_8
+19.84465756781401
+buyerGD_7
+11.9898303944331
+buyerGD_6
+0.0
+buyerGD_5
+0.0
+buyerGD_4
+0.0
+buyerGD_3
+0.0
+buyerGD_2
+35.41788088080245
+buyerGD_1
+0.0
+buyerGD_0
+39.78986531524936
+ 
+########################################
+#Day
+25
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+1.4679921790957453
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 5
+GD seller, 1
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+0.1
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 0
+GD seller, 1
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+0.4632388072200058
+ 
+## Number of matches
+8
+ 
+#Populations
+GD buyer, 2
+GD seller, 3
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 3
+GD seller, 5
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+6
+ 
+## Number of sellers that changed market
+5
+ 
+## Individual Trader Matches
+sellerGD_9
+4
+sellerGD_8
+0
+sellerGD_7
+0
+sellerGD_6
+0
+sellerGD_5
+4
+sellerGD_4
+2
+sellerGD_3
+0
+sellerGD_2
+2
+sellerGD_1
+0
+sellerGD_0
+4
+buyerGD_9
+4
+buyerGD_8
+4
+buyerGD_7
+0
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+0
+buyerGD_3
+0
+buyerGD_2
+4
+buyerGD_1
+0
+buyerGD_0
+4
+## Amount of Advice given:
+sellerGD_9
+55
+sellerGD_8
+11
+sellerGD_7
+8
+sellerGD_6
+8
+sellerGD_5
+68
+sellerGD_4
+9
+sellerGD_3
+19
+sellerGD_2
+46
+sellerGD_1
+18
+sellerGD_0
+2
+buyerGD_9
+48
+buyerGD_8
+76
+buyerGD_7
+19
+buyerGD_6
+3
+buyerGD_5
+37
+buyerGD_4
+40
+buyerGD_3
+7
+buyerGD_2
+29
+buyerGD_1
+7
+buyerGD_0
+10
+ 
+## Individual Trader Profits
+sellerGD_9
+73.24435737294726
+sellerGD_8
+0.0
+sellerGD_7
+-0.1
+sellerGD_6
+0.0
+sellerGD_5
+200.4411503204405
+sellerGD_4
+0.01999999999998181
+sellerGD_3
+0.0
+sellerGD_2
+1.564129560645739
+sellerGD_1
+0.0
+sellerGD_0
+0.040000000000020464
+buyerGD_9
+0.007265356056166183
+buyerGD_8
+40.986334185153225
+buyerGD_7
+0.0
+buyerGD_6
+0.0
+buyerGD_5
+0.0
+buyerGD_4
+0.0
+buyerGD_3
+0.0
+buyerGD_2
+61.56573393407467
+buyerGD_1
+0.0
+buyerGD_0
+45.58339161266382
+ 
+########################################
+#Day
+26
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+1.4748937896957943
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 4
+GD seller, 2
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+0.1
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 0
+GD seller, 1
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 3
+GD seller, 3
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 3
+GD seller, 4
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+6
+ 
+## Number of sellers that changed market
+4
+ 
+## Individual Trader Matches
+sellerGD_9
+0
+sellerGD_8
+0
+sellerGD_7
+4
+sellerGD_6
+0
+sellerGD_5
+0
+sellerGD_4
+0
+sellerGD_3
+0
+sellerGD_2
+0
+sellerGD_1
+0
+sellerGD_0
+0
+buyerGD_9
+0
+buyerGD_8
+4
+buyerGD_7
+0
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+0
+buyerGD_3
+0
+buyerGD_2
+0
+buyerGD_1
+0
+buyerGD_0
+0
+## Amount of Advice given:
+sellerGD_9
+60
+sellerGD_8
+12
+sellerGD_7
+8
+sellerGD_6
+8
+sellerGD_5
+71
+sellerGD_4
+9
+sellerGD_3
+19
+sellerGD_2
+46
+sellerGD_1
+18
+sellerGD_0
+2
+buyerGD_9
+51
+buyerGD_8
+79
+buyerGD_7
+20
+buyerGD_6
+3
+buyerGD_5
+37
+buyerGD_4
+42
+buyerGD_3
+7
+buyerGD_2
+30
+buyerGD_1
+8
+buyerGD_0
+10
+ 
+## Individual Trader Profits
+sellerGD_9
+0.0
+sellerGD_8
+0.0
+sellerGD_7
+62.2654454375517
+sellerGD_6
+-0.1
+sellerGD_5
+0.0
+sellerGD_4
+0.0
+sellerGD_3
+0.0
+sellerGD_2
+0.0
+sellerGD_1
+0.0
+sellerGD_0
+0.0
+buyerGD_9
+0.0
+buyerGD_8
+41.00753198913907
+buyerGD_7
+0.0
+buyerGD_6
+0.0
+buyerGD_5
+0.0
+buyerGD_4
+0.0
+buyerGD_3
+0.0
+buyerGD_2
+0.0
+buyerGD_1
+0.0
+buyerGD_0
+0.0
+ 
+########################################
+#Day
+27
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 6
+GD seller, 2
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+0.1
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 0
+GD seller, 1
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+1.2294915494967456
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 4
+GD seller, 3
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 0
+GD seller, 4
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+5
+ 
+## Number of sellers that changed market
+6
+ 
+## Individual Trader Matches
+sellerGD_9
+4
+sellerGD_8
+0
+sellerGD_7
+0
+sellerGD_6
+0
+sellerGD_5
+0
+sellerGD_4
+0
+sellerGD_3
+0
+sellerGD_2
+0
+sellerGD_1
+0
+sellerGD_0
+0
+buyerGD_9
+1
+buyerGD_8
+0
+buyerGD_7
+2
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+1
+buyerGD_3
+0
+buyerGD_2
+0
+buyerGD_1
+0
+buyerGD_0
+0
+## Amount of Advice given:
+sellerGD_9
+64
+sellerGD_8
+12
+sellerGD_7
+8
+sellerGD_6
+8
+sellerGD_5
+74
+sellerGD_4
+10
+sellerGD_3
+19
+sellerGD_2
+47
+sellerGD_1
+18
+sellerGD_0
+2
+buyerGD_9
+53
+buyerGD_8
+82
+buyerGD_7
+21
+buyerGD_6
+3
+buyerGD_5
+38
+buyerGD_4
+43
+buyerGD_3
+7
+buyerGD_2
+31
+buyerGD_1
+9
+buyerGD_0
+11
+ 
+## Individual Trader Profits
+sellerGD_9
+73.55403772058885
+sellerGD_8
+0.0
+sellerGD_7
+0.0
+sellerGD_6
+0.0
+sellerGD_5
+-0.1
+sellerGD_4
+0.0
+sellerGD_3
+0.0
+sellerGD_2
+0.0
+sellerGD_1
+0.0
+sellerGD_0
+0.0
+buyerGD_9
+0.4626449240485897
+buyerGD_8
+0.0
+buyerGD_7
+36.41731135230762
+buyerGD_6
+0.0
+buyerGD_5
+0.0
+buyerGD_4
+12.677363800039458
+buyerGD_3
+0.0
+buyerGD_2
+0.0
+buyerGD_1
+0.0
+buyerGD_0
+0.0
+ 
+########################################
+#Day
+28
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 5
+GD seller, 1
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 0
+GD seller, 0
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+7.018874738659338
+ 
+## Number of matches
+8
+ 
+#Populations
+GD buyer, 5
+GD seller, 5
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 0
+GD seller, 4
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+7
+ 
+## Number of sellers that changed market
+3
+ 
+## Individual Trader Matches
+sellerGD_9
+4
+sellerGD_8
+0
+sellerGD_7
+3
+sellerGD_6
+0
+sellerGD_5
+0
+sellerGD_4
+0
+sellerGD_3
+0
+sellerGD_2
+0
+sellerGD_1
+1
+sellerGD_0
+0
+buyerGD_9
+0
+buyerGD_8
+4
+buyerGD_7
+0
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+0
+buyerGD_3
+0
+buyerGD_2
+4
+buyerGD_1
+0
+buyerGD_0
+0
+## Amount of Advice given:
+sellerGD_9
+69
+sellerGD_8
+12
+sellerGD_7
+8
+sellerGD_6
+8
+sellerGD_5
+75
+sellerGD_4
+10
+sellerGD_3
+19
+sellerGD_2
+47
+sellerGD_1
+19
+sellerGD_0
+2
+buyerGD_9
+57
+buyerGD_8
+83
+buyerGD_7
+25
+buyerGD_6
+3
+buyerGD_5
+38
+buyerGD_4
+46
+buyerGD_3
+7
+buyerGD_2
+32
+buyerGD_1
+9
+buyerGD_0
+11
+ 
+## Individual Trader Profits
+sellerGD_9
+74.95062100534065
+sellerGD_8
+0.0
+sellerGD_7
+5.429385980661346
+sellerGD_6
+0.0
+sellerGD_5
+0.0
+sellerGD_4
+0.0
+sellerGD_3
+0.0
+sellerGD_2
+0.0
+sellerGD_1
+0.010000000000005116
+sellerGD_0
+0.0
+buyerGD_9
+0.0
+buyerGD_8
+86.36852296995608
+buyerGD_7
+0.0
+buyerGD_6
+0.0
+buyerGD_5
+0.0
+buyerGD_4
+0.0
+buyerGD_3
+0.0
+buyerGD_2
+112.25901554638085
+buyerGD_1
+0.0
+buyerGD_0
+0.0
+ 
+########################################
+#Day
+29
+ 
+########################################
+#Market
+jacakroo_40_dj
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+4
+ 
+#Populations
+GD buyer, 3
+GD seller, 1
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+0.1
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 0
+GD seller, 1
+ 
+ 
+########################################
+#Market
+PersianCAT
+ 
+## Market profit
+13.488254359963992
+ 
+## Number of matches
+12
+ 
+#Populations
+GD buyer, 7
+GD seller, 6
+ 
+ 
+########################################
+#Market
+PoleCAT
+ 
+## Market profit
+0.0
+ 
+## Number of matches
+0
+ 
+#Populations
+GD buyer, 0
+GD seller, 2
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+8
+ 
+## Number of sellers that changed market
+6
+ 
+## Individual Trader Matches
+sellerGD_9
+4
+sellerGD_8
+0
+sellerGD_7
+4
+sellerGD_6
+2
+sellerGD_5
+4
+sellerGD_4
+0
+sellerGD_3
+2
+sellerGD_2
+0
+sellerGD_1
+0
+sellerGD_0
+0
+buyerGD_9
+0
+buyerGD_8
+4
+buyerGD_7
+4
+buyerGD_6
+0
+buyerGD_5
+0
+buyerGD_4
+0
+buyerGD_3
+0
+buyerGD_2
+4
+buyerGD_1
+0
+buyerGD_0
+4
+## Amount of Advice given:
+sellerGD_9
+72
+sellerGD_8
+12
+sellerGD_7
+8
+sellerGD_6
+8
+sellerGD_5
+77
+sellerGD_4
+10
+sellerGD_3
+19
+sellerGD_2
+47
+sellerGD_1
+21
+sellerGD_0
+2
+buyerGD_9
+59
+buyerGD_8
+84
+buyerGD_7
+31
+buyerGD_6
+3
+buyerGD_5
+38
+buyerGD_4
+46
+buyerGD_3
+7
+buyerGD_2
+36
+buyerGD_1
+9
+buyerGD_0
+11

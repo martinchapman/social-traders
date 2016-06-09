@@ -1,0 +1,7 @@
+###############################################################
+# socket-based infrastructure for catp
+
+cat.infrastructure = edu.cuny.cat.comm.SocketBasedInfrastructureImpl
+
+# cat.infrastructure.server = localhost
+# cat.infrastructure.port = 9090

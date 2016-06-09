@@ -1,0 +1,6 @@
+parent.0 = learner.params
+
+##################
+# market selection strategies
+
+adaptive_market_selection_strategy.learner = edu.cuny.ai.learning.EpsilonGreedyLearner

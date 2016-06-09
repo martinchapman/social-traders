@@ -1,0 +1,19 @@
+parent.0 = specialists.params
+
+
+###############################################################
+# specialists (1 CDA)
+
+cat.specialist.n = 1
+
+cat.specialist.0.id = CDA
+cat.specialist.0.auctioneer = edu.cuny.cat.market.GenericDoubleAuctioneer
+cat.specialist.0.auctioneer.pricing = edu.cuny.cat.market.pricing.DiscriminatoryPricingPolicy
+cat.specialist.0.auctioneer.clearing = edu.cuny.cat.market.clearing.ProbabilisticClearingCondition
+cat.specialist.0.auctioneer.accepting = edu.cuny.cat.market.accepting.QuoteBeatingAcceptingPolicy
+cat.specialist.0.auctioneer.charging = edu.cuny.cat.market.charging.FixedChargingPolicy
+cat.specialist.0.auctioneer.charging.shout = 0.0
+cat.specialist.0.auctioneer.charging.transaction = 0.0
+cat.specialist.0.auctioneer.charging.information = 0.0
+cat.specialist.0.auctioneer.charging.registration = 0.0
+cat.specialist.0.auctioneer.charging.profit = 0.0

@@ -1,0 +1,132 @@
+## Total Number of traders
+20
+ 
+## Total Number of markets
+2
+#Game
+0
+ 
+########################################
+#Day
+0
+ 
+########################################
+#Market
+CDA
+ 
+## Market profit
+25.20000000000001
+ 
+## Number of matches
+8
+ 
+#Populations
+GD buyer, 6
+GD seller, 3
+ 
+ 
+########################################
+#Market
+CH
+ 
+## Market profit
+30.300000000000004
+ 
+## Number of matches
+12
+ 
+#Populations
+GD buyer, 4
+GD seller, 7
+ 
+########################################
+#Traders
+ 
+## Number of buyers that changed market
+0
+ 
+## Number of sellers that changed market
+0
+ 
+## Individual Trader Matches
+sellerGD_9
+4
+sellerGD_8
+0
+sellerGD_7
+4
+sellerGD_6
+0
+sellerGD_5
+0
+sellerGD_4
+0
+sellerGD_3
+4
+sellerGD_2
+4
+sellerGD_1
+4
+sellerGD_0
+0
+buyerGD_9
+1
+buyerGD_8
+4
+buyerGD_7
+0
+buyerGD_6
+4
+buyerGD_5
+0
+buyerGD_4
+4
+buyerGD_3
+4
+buyerGD_2
+3
+buyerGD_1
+0
+buyerGD_0
+0
+## Amount of Advice given:
+sellerGD_9
+0
+sellerGD_8
+1
+sellerGD_7
+2
+sellerGD_6
+0
+sellerGD_5
+0
+sellerGD_4
+1
+sellerGD_3
+2
+sellerGD_2
+1
+sellerGD_1
+0
+sellerGD_0
+2
+buyerGD_9
+0
+buyerGD_8
+0
+buyerGD_7
+0
+buyerGD_6
+3
+buyerGD_5
+3
+buyerGD_4
+2
+buyerGD_3
+0
+buyerGD_2
+2
+buyerGD_1
+1
+buyerGD_0
+0

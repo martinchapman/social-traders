@@ -1,0 +1,363 @@
+c###############################################################
+#  default configuration file for cat game                    #
+###############################################################
+
+parent.0 = modules/telnetconsole.params
+parent.0 = modules/noconsole.params
+parent.0 = modules/guiconsole.params
+
+cat.server.gc = true
+
+###############################################################
+# social network configuration
+#
+
+# Experiment output folder path
+cat.server.registry.outputfolder = experiments/output
+
+# GUI controls
+cat.server.registry.enableGUI = true
+
+# Set mimicking market selection strategy method
+#
+#
+# available market mimicking strategy:
+#  1. RandomMimickingMarketSelectionMethod
+#  2. GivenNetworkMimickingMarketSelectionMethod
+#       -- filepath
+
+cat.server.registry.mimickingmarketselectionmethod = au.edu.unimelb.cat.socialnetwork.method.GivenNetworkInformedMarketSelectionMethod
+cat.server.registry.mimickingmarketselectionmethod.learner = edu.cuny.ai.learning.NArmedBanditLearner
+cat.server.registry.mimickingmarketselectionmethod.learner.action_choosing = edu.cuny.ai.learning.EpsilonGreedyActionChoosingPolicy
+cat.server.registry.mimickingmarketselectionmethod.learner.action_choosing.epsilon = 0.1
+cat.server.registry.mimickingmarketselectionmethod.learner.return_updating = edu.cuny.ai.learning.AdaptiveReturnUpdatingPolicy
+cat.server.registry.mimickingmarketselectionmethod.learner.return_updating.learner = edu.cuny.ai.learning.WidrowHoffLearner
+cat.server.registry.mimickingmarketselectionmethod.inputfile = experiments/input/full.adm
+
+
+# Set mimicking shouting strategy method
+#
+#
+# available shouting mimicking strategy:
+#  1. NormalMimickingShoutingMethod
+
+cat.server.registry.mimickingshoutingmethod = au.edu.unimelb.cat.socialnetwork.method.NormalInformedShoutingMethod
+cat.server.registry.mimickingshoutingmethod.learner = edu.cuny.ai.learning.NArmedBanditLearner
+cat.server.registry.mimickingshoutingmethod.learner.action_choosing = edu.cuny.ai.learning.EpsilonGreedyActionChoosingPolicy
+cat.server.registry.mimickingshoutingmethod.learner.action_choosing.epsilon = 0.1
+cat.server.registry.mimickingshoutingmethod.learner.return_updating = edu.cuny.ai.learning.AdaptiveReturnUpdatingPolicy
+cat.server.registry.mimickingshoutingmethod.learner.return_updating.learner = edu.cuny.ai.learning.WidrowHoffLearner
+
+###############################################################
+# trading agents
+
+cat.agent.n = 2
+
+initialtradeentitlement = 4
+size = 10
+
+cat.agent.0 = edu.cuny.cat.SocialNetworkTraderClient
+cat.agent.0.n = &size;
+cat.agent.0.isseller = false
+cat.agent.0.type = buyer
+cat.agent.0.id = buyerGD
+cat.agent.0.initialtradeentitlement = &initialtradeentitlement;
+cat.agent.0.strategy = edu.cuny.cat.trader.strategy.SocialNetworkShoutingStrategy
+cat.agent.0.strategy.underlyingstrategy = edu.cuny.cat.trader.strategy.GDStrategy
+cat.agent.0.strategy.profile = credulous
+cat.agent.0.marketselectionstrategy = edu.cuny.cat.trader.marketselection.SocialNetworkMarketSelectionStrategy
+cat.agent.1.marketselectionstrategy.profile = credulous
+cat.agent.0.marketselectionstrategy.underlyingstrategy = edu.cuny.cat.trader.marketselection.StimuliResponseMarketSelectionStrategy
+cat.agent.0.marketselectionstrategy.underlyingstrategy.learner = edu.cuny.ai.learning.NArmedBanditLearner
+cat.agent.0.marketselectionstrategy.underlyingstrategy.learner.action_choosing = edu.cuny.ai.learning.EpsilonGreedyActionChoosingPolicy
+cat.agent.0.marketselectionstrategy.underlyingstrategy.learner.action_choosing.epsilon = 0.1
+cat.agent.0.marketselectionstrategy.underlyingstrategy.learner.return_updating = edu.cuny.ai.learning.AdaptiveReturnUpdatingPolicy
+cat.agent.0.marketselectionstrategy.underlyingstrategy.learner.return_updating.learner = edu.cuny.ai.learning.WidrowHoffLearner
+
+cat.agent.1 = edu.cuny.cat.SocialNetworkTraderClient
+cat.agent.1.n = &size;
+cat.agent.1.isseller = true
+cat.agent.1.type = seller
+cat.agent.1.id = sellerGD
+cat.agent.1.initialtradeentitlement = &initialtradeentitlement;
+cat.agent.1.strategy = edu.cuny.cat.trader.strategy.SocialNetworkShoutingStrategy
+cat.agent.1.strategy.profile = credulous
+cat.agent.1.strategy.underlyingstrategy = edu.cuny.cat.trader.strategy.GDStrategy
+cat.agent.1.marketselectionstrategy = edu.cuny.cat.trader.marketselection.SocialNetworkMarketSelectionStrategy
+cat.agent.1.marketselectionstrategy.profile = credulous
+cat.agent.1.marketselectionstrategy.underlyingstrategy = edu.cuny.cat.trader.marketselection.StimuliResponseMarketSelectionStrategy
+cat.agent.1.marketselectionstrategy.underlyingstrategy.learner = edu.cuny.ai.learning.NArmedBanditLearner
+cat.agent.1.marketselectionstrategy.underlyingstrategy.learner.action_choosing = edu.cuny.ai.learning.EpsilonGreedyActionChoosingPolicy
+cat.agent.1.marketselectionstrategy.underlyingstrategy.learner.action_choosing.epsilon = 0.1
+cat.agent.1.marketselectionstrategy.underlyingstrategy.learner.return_updating = edu.cuny.ai.learning.AdaptiveReturnUpdatingPolicy
+cat.agent.1.marketselectionstrategy.underlyingstrategy.learner.return_updating.learner = edu.cuny.ai.learning.WidrowHoffLearner
+
+cat.agent.2 = edu.cuny.cat.TraderClient
+cat.agent.2.n = &size;
+cat.agent.2.isseller = false
+cat.agent.2.type = buyer
+cat.agent.2.id = buyerZIC
+cat.agent.2.initialtradeentitlement = &initialtradeentitlement;
+cat.agent.2.strategy = edu.cuny.cat.trader.strategy.RandomConstrainedStrategy
+cat.agent.2.marketselectionstrategy = edu.cuny.cat.trader.marketselection.StimuliResponseMarketSelectionStrategy
+cat.agent.2.marketselectionstrategy.learner = edu.cuny.ai.learning.NArmedBanditLearner
+cat.agent.2.marketselectionstrategy.learner.action_choosing = edu.cuny.ai.learning.EpsilonGreedyActionChoosingPolicy
+cat.agent.2.marketselectionstrategy.learner.action_choosing.epsilon = 0.1
+cat.agent.2.marketselectionstrategy.learner.return_updating = edu.cuny.ai.learning.AdaptiveReturnUpdatingPolicy
+cat.agent.2.marketselectionstrategy.learner.return_updating.learner = edu.cuny.ai.learning.SlidingWindowLearner
+
+cat.agent.3 = edu.cuny.cat.TraderClient
+cat.agent.3.n = &size;
+cat.agent.3.isseller = true
+cat.agent.3.type = seller
+cat.agent.3.id = sellerZIC
+cat.agent.3.initialtradeentitlement = &initialtradeentitlement;
+cat.agent.3.strategy = edu.cuny.cat.trader.strategy.RandomConstrainedStrategy
+cat.agent.3.marketselectionstrategy = edu.cuny.cat.trader.marketselection.StimuliResponseMarketSelectionStrategy
+cat.agent.3.marketselectionstrategy.learner = edu.cuny.ai.learning.NArmedBanditLearner
+cat.agent.3.marketselectionstrategy.learner.action_choosing = edu.cuny.ai.learning.EpsilonGreedyActionChoosingPolicy
+cat.agent.3.marketselectionstrategy.learner.action_choosing.epsilon = 0.1
+cat.agent.3.marketselectionstrategy.learner.return_updating = edu.cuny.ai.learning.AdaptiveReturnUpdatingPolicy
+cat.agent.3.marketselectionstrategy.learner.return_updating.learner = edu.cuny.ai.learning.SlidingWindowLearner
+
+cat.agent.4 = edu.cuny.cat.SocialNetworkTraderClient
+cat.agent.4.n = &size;
+cat.agent.4.isseller = false
+cat.agent.4.type = buyer
+cat.agent.4.id = buyerRE
+cat.agent.4.initialtradeentitlement = &initialtradeentitlement;
+cat.agent.4.strategy = edu.cuny.cat.trader.strategy.SocialNetworkShoutingStrategy
+cat.agent.4.strategy.underlyingstrategy = edu.cuny.cat.trader.strategy.StimuliResponseStrategy
+cat.agent.4.strategy.underlyingstrategy.learner = edu.cuny.ai.learning.RothErevLearner
+cat.agent.4.marketselectionstrategy = edu.cuny.cat.trader.marketselection.SocialNetworkMarketSelectionStrategy
+cat.agent.4.marketselectionstrategy.underlyingstrategy = edu.cuny.cat.trader.marketselection.StimuliResponseMarketSelectionStrategy
+cat.agent.4.marketselectionstrategy.underlyingstrategy.learner = edu.cuny.ai.learning.NArmedBanditLearner
+cat.agent.4.marketselectionstrategy.underlyingstrategy.learner.action_choosing = edu.cuny.ai.learning.EpsilonGreedyActionChoosingPolicy
+cat.agent.4.marketselectionstrategy.underlyingstrategy.learner.action_choosing.epsilon = 0.1
+cat.agent.4.marketselectionstrategy.underlyingstrategy.learner.return_updating = edu.cuny.ai.learning.AdaptiveReturnUpdatingPolicy
+cat.agent.4.marketselectionstrategy.underlyingstrategy.learner.return_updating.learner = edu.cuny.ai.learning.WidrowHoffLearner
+
+
+cat.agent.5 = edu.cuny.cat.SocialNetworkTraderClient
+cat.agent.5.n = &size;
+cat.agent.5.isseller = true
+cat.agent.5.type = seller
+cat.agent.5.id = sellerRE
+cat.agent.5.initialtradeentitlement = &initialtradeentitlement;
+cat.agent.5.strategy = edu.cuny.cat.trader.strategy.SocialNetworkShoutingStrategy
+cat.agent.5.strategy.underlyingstrategy = edu.cuny.cat.trader.strategy.StimuliResponseStrategy
+cat.agent.5.strategy.underlyingstrategy.learner = edu.cuny.ai.learning.RothErevLearner
+cat.agent.5.marketselectionstrategy = edu.cuny.cat.trader.marketselection.SocialNetworkMarketSelectionStrategy
+cat.agent.5.marketselectionstrategy.underlyingstrategy = edu.cuny.cat.trader.marketselection.StimuliResponseMarketSelectionStrategy
+cat.agent.5.marketselectionstrategy.underlyingstrategy.learner = edu.cuny.ai.learning.NArmedBanditLearner
+cat.agent.5.marketselectionstrategy.underlyingstrategy.learner.action_choosing = edu.cuny.ai.learning.EpsilonGreedyActionChoosingPolicy
+cat.agent.5.marketselectionstrategy.underlyingstrategy.learner.action_choosing.epsilon = 0.1
+cat.agent.5.marketselectionstrategy.underlyingstrategy.learner.return_updating = edu.cuny.ai.learning.AdaptiveReturnUpdatingPolicy
+cat.agent.5.marketselectionstrategy.underlyingstrategy.learner.return_updating.learner = edu.cuny.ai.learning.WidrowHoffLearner
+
+# There is a bug for ZIP strategy that it is trying to make losing money shout!
+cat.agent.6 = edu.cuny.cat.SocialNetworkTraderClient
+cat.agent.6.n = &size;
+cat.agent.6.isseller = false
+cat.agent.6.type = buyer
+cat.agent.6.id = buyerZIP
+cat.agent.6.initialtradeentitlement = &initialtradeentitlement;
+cat.agent.6.strategy = edu.cuny.cat.trader.strategy.SocialNetworkShoutingStrategy
+cat.agent.6.strategy.underlyingstrategy = edu.cuny.cat.trader.strategy.ZIPStrategy
+cat.agent.6.strategy.underlyingstrategy.learner = edu.cuny.ai.learning.AveragingLearner
+cat.agent.6.marketselectionstrategy = edu.cuny.cat.trader.marketselection.SocialNetworkMarketSelectionStrategy
+cat.agent.6.marketselectionstrategy.underlyingstrategy = edu.cuny.cat.trader.marketselection.StimuliResponseMarketSelectionStrategy
+cat.agent.6.marketselectionstrategy.underlyingstrategy.learner = edu.cuny.ai.learning.NArmedBanditLearner
+cat.agent.6.marketselectionstrategy.underlyingstrategy.learner.action_choosing = edu.cuny.ai.learning.EpsilonGreedyActionChoosingPolicy
+cat.agent.6.marketselectionstrategy.underlyingstrategy.learner.action_choosing.epsilon = 0.1
+cat.agent.6.marketselectionstrategy.underlyingstrategy.learner.return_updating = edu.cuny.ai.learning.AdaptiveReturnUpdatingPolicy
+cat.agent.6.marketselectionstrategy.underlyingstrategy.learner.return_updating.learner = edu.cuny.ai.learning.WidrowHoffLearner
+
+cat.agent.7 = edu.cuny.cat.SocialNetworkTraderClient
+cat.agent.7.n = &size;
+cat.agent.7.isseller = true
+cat.agent.7.type = seller
+cat.agent.7.id = sellerZIP
+cat.agent.7.initialtradeentitlement = &initialtradeentitlement;
+cat.agent.7.strategy = edu.cuny.cat.trader.strategy.SocialNetworkShoutingStrategy
+cat.agent.7.strategy.underlyingstrategy = edu.cuny.cat.trader.strategy.ZIPStrategy
+cat.agent.7.strategy.underlyingstrategy.learner = edu.cuny.ai.learning.AveragingLearner
+cat.agent.7.marketselectionstrategy = edu.cuny.cat.trader.marketselection.SocialNetworkMarketSelectionStrategy
+cat.agent.7.marketselectionstrategy.underlyingstrategy = edu.cuny.cat.trader.marketselection.StimuliResponseMarketSelectionStrategy
+cat.agent.7.marketselectionstrategy.underlyingstrategy.learner = edu.cuny.ai.learning.NArmedBanditLearner
+cat.agent.7.marketselectionstrategy.underlyingstrategy.learner.action_choosing = edu.cuny.ai.learning.EpsilonGreedyActionChoosingPolicy
+cat.agent.7.marketselectionstrategy.underlyingstrategy.learner.action_choosing.epsilon = 0.1
+cat.agent.7.marketselectionstrategy.underlyingstrategy.learner.return_updating = edu.cuny.ai.learning.AdaptiveReturnUpdatingPolicy
+cat.agent.7.marketselectionstrategy.underlyingstrategy.learner.return_updating.learner = edu.cuny.ai.learning.WidrowHoffLearner
+
+
+###############################################################
+# specialists
+
+
+cat.server.identity_controller.expected_specialist.n = 0
+cat.server.identity_controller.expected_specialist.0 = CH
+cat.server.identity_controller.expected_specialist.1 = CDA
+
+
+cat.specialist.n = 2
+
+cat.specialist.0 = edu.cuny.cat.MarketClient
+cat.specialist.0.n = 1
+cat.specialist.0.type = specialist
+cat.specialist.0.id = CH
+cat.specialist.0.auctioneer = edu.cuny.cat.market.GenericDoubleAuctioneer
+cat.specialist.0.auctioneer.pricing = edu.cuny.cat.market.pricing.UniformPricingPolicy
+cat.specialist.0.auctioneer.clearing = edu.cuny.cat.market.clearing.RoundClearingCondition
+cat.specialist.0.auctioneer.accepting = edu.cuny.cat.market.accepting.QuoteBeatingAcceptingPolicy
+cat.specialist.0.auctioneer.charging = edu.cuny.cat.market.charging.FixedChargingPolicy
+cat.specialist.0.auctioneer.charging.registration = 0.1
+cat.specialist.0.auctioneer.charging.information = 0.2
+cat.specialist.0.auctioneer.charging.shout = 0.3
+cat.specialist.0.auctioneer.charging.transaction = 0.4
+cat.specialist.0.auctioneer.charging.profit = 0.1
+
+cat.specialist.1 = edu.cuny.cat.MarketClient
+cat.specialist.1.n = 1
+cat.specialist.1.type = specialist
+cat.specialist.1.id = CDA
+cat.specialist.1.auctioneer = edu.cuny.cat.market.GenericDoubleAuctioneer
+cat.specialist.1.auctioneer.pricing = edu.cuny.cat.market.pricing.DiscriminatoryPricingPolicy
+cat.specialist.1.auctioneer.clearing = edu.cuny.cat.market.clearing.ProbabilisticClearingCondition
+cat.specialist.1.auctioneer.accepting = edu.cuny.cat.market.accepting.QuoteBeatingAcceptingPolicy
+cat.specialist.1.auctioneer.charging = edu.cuny.cat.market.charging.FixedChargingPolicy
+cat.specialist.1.auctioneer.charging.registration = 0.1
+cat.specialist.1.auctioneer.charging.information = 0.2
+cat.specialist.1.auctioneer.charging.shout = 0.3
+cat.specialist.1.auctioneer.charging.transaction = 0.4
+cat.specialist.1.auctioneer.charging.profit = 0.1
+
+
+###############################################################
+# optional specialists
+
+#cat.specialist.optional.dir = params/elites
+#cat.specialist.optional.base = elites
+
+
+###############################################################
+# game server
+
+# clock controller
+
+#cat.server.clockcontroller = edu.cuny.cat.server.AutoClockController
+#cat.server.clockcontroller = edu.cuny.cat.server.SynchronousClockController
+cat.server.clockcontroller = edu.cuny.cat.server.EventBasedClockController
+
+# clock
+
+cat.server.iterations = 1
+
+cat.server.gamelen = 30
+cat.server.daylen = 10
+cat.server.roundlen = 500
+
+cat.server.gameinit = 0
+cat.server.dayinit = 0
+
+cat.server.gamebreak = 100
+cat.server.daybreak = 0
+cat.server.roundbreak = 200
+
+cat.server.synctimeout = 10000
+
+cat.server.sessiontimeout = 10000
+
+# registry
+
+cat.server.registry = edu.cuny.cat.registry.SocialNetworkRegistry
+
+# valuer
+
+cat.server.valuation.buyer = edu.cuny.cat.valuation.RandomValuerGenerator
+cat.server.valuation.buyer.minvalue = 50
+cat.server.valuation.buyer.maxvalue = 150
+
+cat.server.valuation.seller = edu.cuny.cat.valuation.RandomValuerGenerator
+cat.server.valuation.seller.minvalue = 50
+cat.server.valuation.seller.maxvalue = 150
+
+# infrastructure
+
+#cat.infrastructure = edu.cuny.cat.comm.QueueBasedInfrastructureImpl
+cat.infrastructure = edu.cuny.cat.comm.SocketBasedInfrastructureImpl
+cat.infrastructure.port = 9090
+#cat.infrastructure = edu.cuny.cat.comm.CallBasedInfrastructureImpl
+
+# game report
+
+cat.server.report = edu.cuny.cat.stat.CombiGameReport
+cat.server.report.n = 9
+cat.server.report.0 = edu.cuny.cat.stat.ProfitReport
+cat.server.report.1 = edu.cuny.cat.stat.TraderDistributionReport
+cat.server.report.2 = edu.cuny.cat.stat.FeeReport
+cat.server.report.3 = edu.cuny.cat.stat.MarketMetricsReport
+cat.server.report.4 = edu.cuny.cat.stat.ScoreReport
+cat.server.report.4.condition = edu.cuny.cat.stat.DefaultScoreDaysCondition
+cat.server.report.4.condition.debug = true
+cat.server.report.4.condition.start = 0
+cat.server.report.4.condition.prob = 0.9
+cat.server.report.5 = edu.cuny.cat.stat.ReportVariableWriterReport
+cat.server.report.5.filename = log.csv
+cat.server.report.5.separator = ,
+cat.server.report.5.var.n = 8
+cat.server.report.5.var.0 = <specialist>.score
+cat.server.report.5.var.1 = <specialist>.score.marketshare
+cat.server.report.5.var.2 = <specialist>.score.profit
+cat.server.report.5.var.3 = <specialist>.score.transactionrate
+cat.server.report.5.var.4 = <specialist>.profit
+cat.server.report.5.var.5 = <specialist>.trader
+cat.server.report.5.var.6 = <specialist>.<fee>
+cat.server.report.5.var.7 = global.equilibrium.price
+cat.server.report.6 = edu.cuny.cat.stat.ResourceReport
+cat.server.report.7 = edu.cuny.cat.stat.ReportVariableWriterReport
+cat.server.report.7.filename = memory.csv
+cat.server.report.7.separator = ,
+cat.server.report.7.var.n = 4
+cat.server.report.7.var.0 = memory.max
+cat.server.report.7.var.1 = memory.total
+cat.server.report.7.var.2 = memory.used
+cat.server.report.7.var.3 = memory.free
+
+cat.server.report.8 = edu.cuny.cat.stat.StatisticalReport
+cat.server.report.8.var.n = 2
+cat.server.report.8.var.0 = <specialist>.efficiency
+cat.server.report.8.var.1 = <specialist>.score
+
+# gui logger
+
+cat.appender = guihtml
+
+###############################################################
+# log4j configuration - substitute INFO for DEBUG to turn on debugging output
+
+log4j.rootLogger=INFO, logfile
+
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%m%n
+
+log4j.appender.logfile=org.apache.log4j.FileAppender
+log4j.appender.logfile.File=experiments/logs/livelog.log
+log4j.appender.logfile.Append=false
+log4j.appender.logfile.layout=org.apache.log4j.PatternLayout
+log4j.appender.logfile.layout.ConversionPattern=%d [%t] %-5p %c %x - %m%n
+
+log4j.appender.guihtml=edu.cuny.util.log4j.GraphicalAppender
+log4j.appender.guihtml.layout=edu.cuny.util.log4j.MyHTMLLayout
+log4j.appender.guihtml.layout.LocationInfo=true
+
+
+###############################################################
+# prng
+
+#  Use the 32bit version of the Mersenne Twister algorithm 
+cat.prng = edu.cuny.prng.MT32
+
+#  with the following PRNG seed
+cat.seed = 4523

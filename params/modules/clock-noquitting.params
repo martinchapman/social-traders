@@ -1,0 +1,28 @@
+#########################
+# clock
+
+cat.server.iterations = 1
+
+cat.server.gamelen = 10
+cat.server.daylen = 30
+cat.server.roundlen = 500
+
+cat.server.gameinit = 500
+cat.server.dayinit = 200
+
+cat.server.gamebreak = 500
+cat.server.daybreak = 100
+cat.server.roundbreak = 100
+
+
+#########################
+# clock controller
+
+cat.server.clockcontroller = edu.cuny.cat.server.NoQuittingClockController
+
+
+#########################
+# timeout control
+
+cat.server.synctimeout = 10000
+cat.server.sessiontimeout = 10000

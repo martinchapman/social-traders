@@ -1,0 +1,7 @@
+parent.0 = learner.params
+
+##################
+# pricing policies
+
+k_pricing.k = 0.5
+n_pricing.n = 4

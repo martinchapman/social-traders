@@ -1,0 +1,8 @@
+###############################################################
+#  configuration file for cat game with a telnet console      #
+###############################################################
+
+
+cat.server.console = edu.cuny.cat.server.TelnetConsole
+cat.server.console.port = 9091
+cat.server.console.code = cat

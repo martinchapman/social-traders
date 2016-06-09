@@ -1,0 +1,42 @@
+parent.0 = learner.params
+parent.1 = trading.params
+parent.2 = marketselection.params
+parent.3 = resetting.params
+
+###############################################################
+# trading agents
+
+
+trader-size = 10
+trader-strategy = edu.cuny.cat.trader.strategy.RandomConstraintStrategy
+initialtradeentitlement = 3
+
+cat.agent.n = 2
+
+cat.agent.0 = edu.cuny.cat.TraderClient
+cat.agent.0.n = &trader-size;
+cat.agent.0.isseller = false
+cat.agent.0.type = buyer
+cat.agent.0.id = buyer
+cat.agent.0.initialtradeentitlement = &initialtradeentitlement;
+cat.agent.0.strategy = &trader-strategy;
+cat.agent.0.marketselectionstrategy = edu.cuny.cat.trader.marketselection.StimuliResponseMarketSelectionStrategy
+cat.agent.0.marketselectionstrategy.learner = edu.cuny.ai.learning.NArmedBanditLearner
+cat.agent.0.marketselectionstrategy.learner.action_choosing = edu.cuny.ai.learning.EpsilonGreedyActionChoosingPolicy
+cat.agent.0.marketselectionstrategy.learner.action_choosing.epsilon = 0.1
+cat.agent.0.marketselectionstrategy.learner.return_updating = edu.cuny.ai.learning.AdaptiveReturnUpdatingPolicy
+cat.agent.0.marketselectionstrategy.learner.return_updating.learner = edu.cuny.ai.learning.AveragingLearner
+
+cat.agent.1 = edu.cuny.cat.TraderClient
+cat.agent.1.n = &trader-size;
+cat.agent.1.isseller = true
+cat.agent.1.type = seller
+cat.agent.1.id = seller
+cat.agent.1.initialtradeentitlement = &initialtradeentitlement;
+cat.agent.1.strategy = &trader-strategy;
+cat.agent.1.marketselectionstrategy = edu.cuny.cat.trader.marketselection.StimuliResponseMarketSelectionStrategy
+cat.agent.1.marketselectionstrategy.learner = edu.cuny.ai.learning.NArmedBanditLearner
+cat.agent.1.marketselectionstrategy.learner.action_choosing = edu.cuny.ai.learning.EpsilonGreedyActionChoosingPolicy
+cat.agent.1.marketselectionstrategy.learner.action_choosing.epsilon = 0.1
+cat.agent.1.marketselectionstrategy.learner.return_updating = edu.cuny.ai.learning.AdaptiveReturnUpdatingPolicy
+cat.agent.1.marketselectionstrategy.learner.return_updating.learner = edu.cuny.ai.learning.AveragingLearner

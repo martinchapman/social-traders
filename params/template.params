@@ -1,0 +1,31 @@
+###############################################################
+#  sample configuration file for cat game using module files  #
+###############################################################
+
+
+parent.0 = modules/prng.params
+parent.1 = modules/infrastructure.params
+parent.2 = modules/learner.params
+parent.3 = modules/traders-zic.params
+parent.4 = modules/specialists.params
+parent.5 = modules/server.params
+
+
+###############################################################
+# log4j configuration - substitute INFO for DEBUG to turn on debugging output
+
+log4j.rootLogger=INFO, stdout
+
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%m%n
+
+log4j.appender.guihtml=edu.cuny.util.log4j.GraphicalAppender
+log4j.appender.guihtml.layout=edu.cuny.util.log4j.MyHTMLLayout
+log4j.appender.guihtml.layout.LocationInfo=true
+
+
+# gui logger
+
+cat.appender = guihtml
+

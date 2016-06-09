@@ -1,0 +1,102 @@
+###############################################################
+#  configuration file for cat game with a gui console         #
+###############################################################
+
+
+cat.server.console = edu.cuny.cat.ui.GuiConsole
+
+# name and version would be overridden inside software
+cat.name = JCAT
+cat.version = x.xx
+
+cat.server.console.title = &cat.name; &cat.version; - The Software Platform for TAC Market Design Tournament (CAT Game)
+cat.server.console.homeurl = http://jcat.sourceforge.net/
+cat.server.console.icon = timeseriesDisplay.gif
+
+# Images configuration
+
+images.url=resources/images/
+
+#########################################################
+# frame
+
+cat.server.console.width = 1280
+cat.server.console.height = 640
+
+#########################################################
+# overview
+
+cat.server.console.overview.title = General View
+cat.server.console.overview.width = 400
+cat.server.console.overview.height = 300
+
+cat.server.console.overview.orientation = y
+cat.server.console.overview.panel.n = 2
+
+cat.server.console.overview.panel.0.panel.n = 2
+cat.server.console.overview.panel.0.panel.0.orientation = y
+cat.server.console.overview.panel.0.panel.0.panel.n = 2
+cat.server.console.overview.panel.0.panel.0.panel.0 = edu.cuny.cat.ui.PlayerLabelPanel
+cat.server.console.overview.panel.0.panel.0.panel.1 = edu.cuny.cat.ui.SpecialistGridPanel
+cat.server.console.overview.panel.0.panel.0.panel.1 = edu.cuny.cat.ui.ClientStatePanel
+cat.server.console.overview.panel.0.panel.0.panel.1 = edu.cuny.cat.ui.ProfitPlotPanel
+cat.server.console.overview.panel.0.panel.0.panel.1.showtype = true
+cat.server.console.overview.panel.0.panel.1 = edu.cuny.cat.ui.ClockPanel
+cat.server.console.overview.panel.0.panel.1.angle = 260
+cat.server.console.overview.panel.0.panel.1.width = 150
+cat.server.console.overview.panel.0.panel.1.height = 150
+
+cat.server.console.overview.panel.1.panel.n = 3
+cat.server.console.overview.panel.1.panel.0 = edu.cuny.cat.ui.ScorePlotPanel
+cat.server.console.overview.panel.1.panel.0.showtype = true
+cat.server.console.overview.panel.1.panel.1 = edu.cuny.cat.ui.CumulativeTraderDistributionPanel
+cat.server.console.overview.panel.1.panel.1.legend = true
+cat.server.console.overview.panel.1.panel.2 = edu.cuny.cat.ui.ChargePlotPanel
+
+
+
+#########################################################
+# menus
+
+cat.server.console.menu.n = 1
+
+cat.server.console.menu.0 = ?
+cat.server.console.menu.0.text = Help
+cat.server.console.menu.0.param = ^H^
+cat.server.console.menu.0.icon = Help.gif
+cat.server.console.menu.0.item.n = 2
+
+cat.server.console.menu.0.item.0.name = menu.help.about
+cat.server.console.menu.0.item.0.text = About
+cat.server.console.menu.0.item.0.param = ^A^~A~
+cat.server.console.menu.0.item.0.icon = About.gif
+cat.server.console.menu.0.item.1.name = menu.help.home
+cat.server.console.menu.0.item.1.text = Home
+cat.server.console.menu.0.item.1.param = ^H^~H~
+cat.server.console.menu.0.item.1.icon = Home.gif
+
+
+#########################################################
+# buttons
+
+cat.server.console.button.start.text = Start
+cat.server.console.button.start.icon = VCRPlay.gif
+
+cat.server.console.button.pause.text = Pause
+cat.server.console.button.pause.icon = VCRPause.gif
+
+cat.server.console.button.resume.text = Resume
+cat.server.console.button.resume.icon = VCRForward.gif
+
+cat.server.console.button.exit.text = Exit
+cat.server.console.button.exit.icon = VCRStop.gif
+
+
+#########################################################
+# About Dialog
+
+cat.server.console.aboutdialog.title = About &cat.name;
+cat.server.console.aboutdialog.text = &cat.server.console.title;
+cat.server.console.aboutdialog.width = 300
+cat.server.console.aboutdialog.height = 200
+cat.server.console.aboutdialog.icon = About.gif

@@ -1,0 +1,18 @@
+###############
+# valuers
+
+random_valuer.minvalue = 50
+random_valuer.maxvalue = 200
+
+# by default, a uniform in the above range is used
+# random_valuer.distribution = edu.cuny.random.Normal
+# random_valuer.distribution.mean = 125
+# random_valuer.distribution.stdev = 50
+
+interval_valuer.minvalue = 50
+interval_valuer.step = 10
+
+distinct_distribution_valuer.minvaluemin = 161
+distinct_distribution_valuer.minvaluemax = 260
+distinct_distribution_valuer.rangemin = 90
+distinct_distribution_valuer.rangemax = 100

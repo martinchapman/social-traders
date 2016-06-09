@@ -1,0 +1,17 @@
+###############################################################
+# game report without .csv output
+
+cat.server.report = edu.cuny.cat.stat.CombiGameReport
+cat.server.report.n = 6
+cat.server.report.0 = edu.cuny.cat.stat.ProfitReport
+cat.server.report.1 = edu.cuny.cat.stat.TraderDistributionReport
+cat.server.report.2 = edu.cuny.cat.stat.FeeReport
+cat.server.report.3 = edu.cuny.cat.stat.MarketMetricsReport
+cat.server.report.4 = edu.cuny.cat.stat.ScoreReport
+cat.server.report.4.condition = edu.cuny.cat.stat.DefaultScoreDaysCondition
+cat.server.report.4.condition.start = 0
+cat.server.report.4.condition.prob = 1.0
+cat.server.report.5 = edu.cuny.cat.stat.StatisticalReport
+cat.server.report.5.var.n = 1
+cat.server.report.5.var.0 = <specialist>.efficiency
+

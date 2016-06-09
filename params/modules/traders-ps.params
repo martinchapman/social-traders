@@ -1,0 +1,6 @@
+parent.0 = traders.params
+
+###############################################################
+# trading agents
+
+trader-strategy = edu.cuny.cat.trader.strategy.PureSimpleStrategy

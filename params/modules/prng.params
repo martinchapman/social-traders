@@ -1,0 +1,11 @@
+###############################################################
+# prng
+
+#  Use the 32bit version of the Mersenne Twister algorithm 
+cat.prng = edu.cuny.prng.MT32
+
+# use separate engine for each demand or not
+cat.usemultiengine = true
+
+#  with the following PRNG seed
+cat.seed = 4523

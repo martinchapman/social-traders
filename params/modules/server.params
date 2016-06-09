@@ -1,0 +1,68 @@
+parent.0 = guiconsole.params
+parent.1 = clock.params
+parent.2 = valuer.params
+parent.3 = behavior.params
+
+###############################################################
+# game server
+
+# registry
+
+cat.server.registry = edu.cuny.cat.registry.SimpleRegistry
+
+# garbage collector
+
+# do not run gc by default
+cat.server.gc = false
+
+# security manager
+
+# no tokens by default
+cat.server.security.tradertoken = 
+cat.server.security.specialisttoken = 
+
+# shout validator
+
+cat.server.shout.maxprice = 1000
+cat.server.shout.minprice = 0
+
+# charge validator
+
+cat.server.charge.maxflat = 1000
+cat.server.charge.minflat = 0
+cat.server.charge.maxfractional = 1
+cat.server.charge.minfractional = 0
+
+# valuer
+
+cat.server.valuation.buyer = edu.cuny.cat.valuation.RandomValuerGenerator
+cat.server.valuation.buyer.minvalue = 50
+cat.server.valuation.buyer.maxvalue = 150
+
+cat.server.valuation.seller = edu.cuny.cat.valuation.RandomValuerGenerator
+cat.server.valuation.seller.minvalue = 50
+cat.server.valuation.seller.maxvalue = 150
+
+# game report
+
+cat.server.report = edu.cuny.cat.stat.CombiGameReport
+cat.server.report.n = 4
+cat.server.report.0 = edu.cuny.cat.stat.ProfitReport
+cat.server.report.1 = edu.cuny.cat.stat.TraderDistributionReport
+cat.server.report.2 = edu.cuny.cat.stat.ScoreReport
+cat.server.report.2.condition = edu.cuny.cat.stat.DefaultScoreDaysCondition
+cat.server.report.2.condition.start = 0
+cat.server.report.2.condition.prob = 0.5
+cat.server.report.3 = edu.cuny.cat.stat.ReportVariableWriterReport
+cat.server.report.3.filename = &tag;.csv
+cat.server.report.3.separator = ,
+cat.server.report.3.var.n = 6
+cat.server.report.3.var.0 = <specialist>.score
+cat.server.report.3.var.1 = <specialist>.score.marketshare
+cat.server.report.3.var.2 = <specialist>.score.profit
+cat.server.report.3.var.3 = <specialist>.score.transactionrate
+cat.server.report.3.var.4 = <specialist>.profit
+cat.server.report.3.var.5 = <specialist>.trader
+
+tag = data
+

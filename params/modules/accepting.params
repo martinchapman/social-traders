@@ -1,0 +1,9 @@
+parent.0 = learner.params
+
+#########################
+# shout accepting policy
+
+equilibrium_beating_accepting.learner = edu.cuny.ai.learning.SlidingWindowLearner
+equilibrium_beating_accepting.delta = 0
+
+shout_type_based_accepting.q = 0.5

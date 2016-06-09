@@ -1,0 +1,41 @@
+parent.0 = learner.params
+parent.1 = pricing.params
+parent.2 = clearing.params
+parent.3 = accepting.params
+parent.4 = charging.params
+
+
+###############################################################
+# specialists
+
+cat.specialist.n = 2
+
+cat.specialist.0 = edu.cuny.cat.MarketClient
+cat.specialist.0.n = 1
+cat.specialist.0.type = specialist
+cat.specialist.0.id = M0
+cat.specialist.0.auctioneer = edu.cuny.cat.market.GenericDoubleAuctioneer
+cat.specialist.0.auctioneer.pricing = edu.cuny.cat.market.pricing.DiscriminatoryPricingPolicy
+cat.specialist.0.auctioneer.clearing = edu.cuny.cat.market.clearing.ProbabilisticClearingCondition
+cat.specialist.0.auctioneer.accepting = edu.cuny.cat.market.accepting.QuoteBeatingAcceptingPolicy
+cat.specialist.0.auctioneer.charging = edu.cuny.cat.market.charging.FixedChargingPolicy
+cat.specialist.0.auctioneer.charging.shout = 0.5
+cat.specialist.0.auctioneer.charging.transaction = 0.1
+cat.specialist.0.auctioneer.charging.information = 2
+cat.specialist.0.auctioneer.charging.registration = 5
+cat.specialist.0.auctioneer.charging.profit = 0.1
+
+cat.specialist.1 = edu.cuny.cat.MarketClient
+cat.specialist.1.n = 1
+cat.specialist.1.type = specialist
+cat.specialist.1.id = M1
+cat.specialist.1.auctioneer = edu.cuny.cat.market.GenericDoubleAuctioneer
+cat.specialist.1.auctioneer.pricing = edu.cuny.cat.market.pricing.DiscriminatoryPricingPolicy
+cat.specialist.1.auctioneer.clearing = edu.cuny.cat.market.clearing.ProbabilisticClearingCondition
+cat.specialist.1.auctioneer.accepting = edu.cuny.cat.market.accepting.QuoteBeatingAcceptingPolicy
+cat.specialist.1.auctioneer.charging = edu.cuny.cat.market.charging.FixedChargingPolicy
+cat.specialist.1.auctioneer.charging.shout = 0.5
+cat.specialist.1.auctioneer.charging.transaction = 0.5
+cat.specialist.1.auctioneer.charging.information = 2
+cat.specialist.1.auctioneer.charging.registration = 5
+cat.specialist.1.auctioneer.charging.profit = 0.1
